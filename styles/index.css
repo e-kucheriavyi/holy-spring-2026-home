@@ -1,0 +1,214 @@
+.green {
+	color: #3caa3c !important;
+}
+
+.bg-green {
+	background-color: #3caa3c !important;
+}
+
+.yellow {
+	color: yellow !important;
+}
+
+.red {
+	color: red !important;
+}
+
+.bg-red {
+	background-color: red !important;
+}
+
+.orange {
+	color: orange !important;
+}
+
+.blue {
+	color: blue !important;
+}
+
+:root, .slidev, #app {
+	--slidev-theme-primary: #3caa3c;
+	--slidev-code-font-size: 2em;
+	--slidev-code-line-height: 1.5em;
+	--slidev-code-font-size: 2rem;
+}
+
+html.dark {
+	--slidev-code-background: #1b1b1b;
+}
+
+.slidev-layout blockquote {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.slidev-layout h2 {
+	line-height: 2.5rem;
+}
+
+.slidev-layout li {
+	margin-top: 2rem;
+	line-height: 2.5rem;
+	font-size: 2rem;
+}
+
+.slidev-layout p {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+
+.block {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	background: rgba(0, 0, 0, 0.9);
+}
+
+.col {
+	flex-direction: column;
+}
+
+.gap-1 {
+	gap: 1rem;
+}
+
+* {
+	font-family: monospace !important;
+}
+
+.big-title {
+	font-size: 13rem;
+	font-weight: bold;
+	color: #fff;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.small-title {
+	font-size: 9rem;
+	font-weight: bold;
+	color: #fff;
+}
+
+.little-title {
+	font-size: 7rem;
+	font-weight: bold;
+	color: #fff;
+}
+
+.tiny-title {
+	font-size: 5rem;
+	/* text-transform: uppercase; */
+	font-weight: bold;
+	color: #fff;
+}
+
+.black-slide {
+	background-color: #000;
+}
+
+.red-slide {
+	background-color: darkred;
+}
+
+.pale {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.caption {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 1.5rem;
+}
+
+.slidev-code-line-numbers .slidev-code code .line::before {
+	margin-right: 1.5rem !important;
+	min-width: 2.5rem !important;
+}
+
+.btn {
+	background: #3caa3c;
+	height: 4rem;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+}
+
+table {
+	font-size: 2.5rem;
+}
+
+.small-table table {
+	font-size: 1.35rem;
+}
+
+th {
+	padding: 0.5rem 2rem;
+}
+
+th {
+	text-align: center;
+}
+
+tr td:first-child, tr th:first-child {
+	text-align: left;
+}
+
+tr:nth-child(even) {
+	background-color: #222;
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.my-cols {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+}
+
+.my-cols div {
+	flex: 1;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.slide-grid {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	pointer-events: none;
+	z-index: 9999;
+}
+
+.slide-grid > div {
+	flex: 1;
+	border-left: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.bg-blur {
+	backdrop-filter: blur(9px);
+}
+
+li::marker {
+	color: red;
+}
+
