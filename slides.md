@@ -32,6 +32,21 @@ image: /bazil.webp
 
 ---
 layout: center
+class: text-center
+---
+
+<div class="tiny-title">Что такое «послушный дом»<span class="red">?</span></div>
+
+---
+layout: cover
+---
+
+<div style="font-size: 4rem;">Это система управления домашней сетью электрических
+устройств<span class="red">,</span> которая слушается
+владельца<span class="red">,</span> а не додумывает<span class="red">.</span></div>
+
+---
+layout: center
 ---
 
 <div class="big-title text-center">Зачем<span class="red">?</span></div>
@@ -40,37 +55,70 @@ layout: center
 
 # Два зачем
 
-- Зачем делать послушный дом самому?
-- Зачем делать это на JS?
+<br>
+
+<v-clicks>
+
+1. Зачем делать послушный дом самому<span class="red">?</span>
+2. Зачем делать это на JS<span class="red">?</span>
+
+</v-clicks>
 
 ---
-
-# Зачем делать послушный дом самому?
-
-- Он послушный, а не умный
-- Вендоры пидоры:
-    - Слежка
-    - Лок
-    - Неудобно
-    - Тупое
-    - Дорогое
-- Скоро будем жить без интернета, вендоры залочатся
-- Это очень крутой навык
-
+layout: image
+image: /home-assistant.png
 ---
 
-- Матрас жарит человека
-- Кофемашина спрашывает ваш возраст
-- Реклама на экране холодильника
-- Реклама в машине
+<Source value="https://www.home-assistant.io" />
 
 ---
-
-право на ремонт
-
+layout: center
+class: text-center
 ---
 
-home assistant
+<div class="tiny-title" style="font-size: 5rem"><span class="red">«</span>У тебя не всегда будет интернет<span class="red">»</span></div>
+
+---
+layout: image
+image: /zigbee.webp
+backgroundSize: 37rem
+class: bg-black
+---
+
+---
+layout: image-right
+image: /subaru-ad.webp
+backgroundSize: 38rem
+---
+
+# Вы <span class="red">—</span> товар
+
+<br>
+
+<v-clicks>
+
+- Смартфоны не чинятся
+- Холодильники шпионят
+- Принтеры не печают сторонними чернилами
+- Лицензии меняются
+- Автомобили отвлекают рекламой
+
+</v-clicks>
+
+<Source value="https://www.reddit.com/r/subaru/comments/1p57ohp/these_ads_should_not_be_happening_while_we_are" />
+
+---
+layout: center
+class: text-center
+---
+
+<div class="tiny-title">Если я купил железку<span class="red">,</span> то это моя железка<span class="red">!</span></div>
+
+---
+layout: center
+---
+
+<div class="tiny-title">Это крутой навык</div>
 
 ---
 layout: center
@@ -103,7 +151,10 @@ backgroundSize: 39rem
 layout: image
 image: /bro-you-will-die.jpg
 backgroundSize: 70rem
+class: text-center
 ---
+
+<div class="tiny-title bg-blur" style="font-size: 3rem">Бро, ты умрёшь и т. д.</div>
 
 ---
 layout: image
@@ -678,6 +729,16 @@ FreeCAD
 бэкдоры в контроллерах
 
 гпу в малинке не опенсорс
+
+---
+layout: image-right
+image: /pad/lamp.webp
+---
+
+<div class="tiny-title" style="font-size: 2.5rem">
+Атеисты такие типа<span class="red">:</span>
+<br><br>
+Это устройство работает благодаря высокому качеству сборки и хорошему коду</div>
 
 ---
 class: small-table
