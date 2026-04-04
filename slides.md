@@ -115,6 +115,14 @@ class: text-center
 <div class="tiny-title">Если я купил железку<span class="red">,</span> то это моя железка<span class="red">!</span></div>
 
 ---
+
+<div><SlidevVideo
+src="/pad/mic1.webm" :autoplay="true" :controls="false" :loop="true" :muted="true"
+autoreset="slide"
+style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0; right: 0;" ></SlidevVideo>
+</div>
+
+---
 layout: center
 ---
 
@@ -128,6 +136,21 @@ layout: center
 
 
 <div style="position: fixed; bottom: 2rem; font-size: 2rem;"><span class="red">*</span> пока что</div>
+
+---
+layout: image-left
+image: /ololoshka.webp
+---
+
+# Мечта детства <span color="red">№</span>2026
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div style="font-size: 2.8rem;">Застать крах ИИ и многомиллиардные убытки ИТ-гигантов</div>
 
 ---
 layout: image
@@ -154,7 +177,16 @@ backgroundSize: 70rem
 class: text-center
 ---
 
-<div class="tiny-title bg-blur" style="font-size: 3rem">Бро, ты умрёшь и т. д.</div>
+<div class="tiny-title bg-blur" style="font-size: 3rem">
+Бро<span class="red">,</span> ты умрёшь и т<span class="red">.</span> д<span class="red">.</span>
+</div>
+
+---
+layout: cover
+---
+
+# Это не шутка<span class="red">!</span> Будьте осторожны при работе с электричеством<span class="red">.</span> Особенно<span class="red">,</span> если просите советы у нейросетей<span class="red">.</span>
+
 
 ---
 layout: image
@@ -163,21 +195,6 @@ backgroundSize: 78rem
 ---
 
 <Source value="ChatGPT" />
-
----
-layout: image-left
-image: /ololoshka.webp
----
-
-# Мечта детства №<span color="red">2026</span>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div style="font-size: 2.8rem;">Застать крах ИИ и многомиллиардные убытки ИТ-гигантов</div>
 
 ---
 layout: center
@@ -190,7 +207,7 @@ class: text-center
 layout: center
 ---
 
-<div class="tiny-title"><span class="red">1.</span> Потому что мы можем</div>
+<div class="tiny-title" style="font-size: 4.9rem"><span class="red">1.</span> Потому что мы можем<span class="red">.</span></div>
 
 ---
 layout: cover
@@ -471,9 +488,10 @@ image: /esp-pc-2.png
 
 ---
 layout: center
+class: text-center
 ---
 
-# Для большинства проектов это оверкилл
+<div class="tiny-title">Для большинства проектов ESP-32 <span class="red">слишком</span> мощный</div>
 
 ---
 layout: image
@@ -523,6 +541,276 @@ layout: image
 image: /reverse.webp
 ---
 
+---
+layout: image
+image: /ron.jpg
+---
+
+
+<Source value="х/с «Парки и зоны отдыха»" />
+
+---
+
+лампочка
+
+---
+layout: center
+---
+
+```mermaid {scale: 0.9}
+%%{init: {'flowchart': {'curve': 'ortho'}}}%%
+flowchart TD
+  subgraph "Лампа"
+    Socket["Розетка"] -->|~220V| PS["Блок питания"]
+    Socket -->|~220V| PS
+    PS -->|+5V| ESP["ESP-32"]
+    PS -->|-5V| ESP
+    PS -->|+5V| Relay["Реле"]
+    PS -->|-5V| Relay
+    ESP --> Relay
+    Socket -->|~220V| Relay
+    Relay -->|~220V| Lamp["Лампа"]
+    Socket -->|~220V| Lamp
+    linkStyle 0 stroke:#00ff00,stroke-width:4px;
+    linkStyle 1 stroke:#00ff00,stroke-width:4px;
+    linkStyle 2 stroke:#ff0000,stroke-width:4px;
+    linkStyle 3 stroke:#0000ff,stroke-width:4px;
+    linkStyle 4 stroke:#ff0000,stroke-width:4px;
+    linkStyle 5 stroke:#0000ff,stroke-width:4px;
+    linkStyle 6 stroke:#ffff00,stroke-width:4px;
+    linkStyle 7 stroke:#00ff00,stroke-width:4px;
+    linkStyle 8 stroke:#00ff00,stroke-width:4px;
+    linkStyle 9 stroke:#00ff00,stroke-width:4px;
+  end
+
+```
+
+---
+
+
+код
+
+---
+
+как прошить на JS
+
+---
+
+dashboard
+
+---
+layout: center
+---
+
+<div class="tiny-title">Голосовой ассистент</div>
+
+---
+layout: image-right
+image: /zero2-hero.webp
+backgroundSize: 40rem
+---
+
+# Raspberry Pi Zero 2 W
+
+<br>
+
+<v-clicks>
+
+- 4 ядра 64-bit 1 GHz
+- 512MB SDRAM
+- Wi-Fi & Bluetooth
+- Mini HDMI & microSD
+- CSI-2 camera connector
+- 40 пинов GPIO
+
+</v-clicks>
+
+
+<Source value="https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/" />
+
+---
+layout: image
+image: /pad/pi.webp
+---
+
+---
+layout: image
+image: /pad/sound-module.webp
+---
+
+---
+layout: image
+image: /pad/pi-sound.webp
+---
+
+---
+
+<div><SlidevVideo
+src="/pad/mic2.webm" :autoplay="true" :controls="false" :loop="true" :muted="true"
+autoreset="slide"
+style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0; right: 0;" ></SlidevVideo>
+</div>
+
+---
+layout: image
+image: /pad/amp.webp
+---
+
+---
+layout: image
+image: /pad/speaker.webp
+---
+
+---
+layout: image
+image: /pad/speaker-lay.webp
+---
+
+---
+
+<div><SlidevVideo
+src="/pad/sound.webm" :autoplay="true" :controls="false" :loop="true" :muted="true"
+autoreset="slide"
+style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0; right: 0;" ></SlidevVideo>
+</div>
+
+---
+
+device
+
+---
+layout: code
+---
+
+````md magic-move
+
+```js
+import fs from "fs"
+import vosk from "vosk"
+import record from "node-record-lpcm16"
+import { exec } from "child_process"
+
+const modelPath = "./model"
+const sampleRate = 16000
+
+if (!fs.existsSync(modelPath)) {
+    console.error("Model not found at", MODEL_PATH)
+    process.exit(1)
+}
+```
+
+```js
+vosk.setLogLevel(0)
+const model = new vosk.Model(modelPath)
+const rec = new vosk.Recognizer({ model, sampleRate })
+
+const mic = record.record({
+    sampleRateHertz: SAMPLE_RATE,
+    threshold: 0,
+    verbose: false,
+    recordProgram: "rec",
+    channels: 1,
+    audioType: "raw",
+})
+```
+
+```js
+const SERVER = "http://0.0.0.0:3000"
+
+const handleLampToggle = async () => {
+    await fetch(SERVER + "/lamp/toggle")
+}
+
+const handleLightState = async (data) => {
+    await fetch(SERVER + "/led/state", {
+        method: "post", body: JSON.stringify(data),
+    })
+}
+```
+
+```js
+function run(cmd) {
+    return new Promise((resolve, reject) => {
+        exec(cmd, {shell: true}, (err, stdout, stderr) => {
+            if (err) return reject({err, stderr})
+            resolve(stdout)
+        })
+    })
+}
+
+const handlePause = () => run("mpc pause")
+const handlePlay = () => run("mpc play")
+const handlePrev = () => run("mpc prev")
+const handleNext = () => run("mpc next")
+```
+
+```js
+const ALIAS = "жаба"
+
+const commands = {
+    "пауза": handlePause,
+    "играй": handlePlay,
+    "дальше": handleNext,
+    "назад": handlePrev,
+    "свет": handleLampToggle,
+    "зелёный свет": () => handleLightState({
+        on: true, r: 0, g: 255, b: 0,
+    }),
+}
+```
+
+```js
+const micStream = mic.stream()
+
+micStream.on("error", console.error)
+
+process.on("SIGINT", () => {
+    mic.stop()
+    const final = rec.finalResult()
+    rec.free()
+    model.free()
+    process.exit(0)
+})
+```
+
+```js{all|2-4|4-11}
+micStream.on("data", (data) => {
+    if (rec.acceptWaveform(data)) {
+        // end of phrase
+    } else {
+        const partial = rec.partialResult()
+        if (partial && partial.partial) {
+            process.stdout.write(
+                `\rPartial: ${partial.partial}`,
+            )
+        }
+    }
+})
+```
+
+```js{all|2-12|3|4|7|9-10}
+micStream.on("data", (data) => {
+    if (rec.acceptWaveform(data)) {
+        const res = rec.result()
+        if (res && res.text) {
+            console.log("\nResult:", res.text)
+
+            const text = res.text.replace(`${ALIAS} `, "")
+
+            const c = commands[text]
+            c && c()
+        }
+    } else {/* Partial */}
+})
+```
+
+````
+
+---
+layout: center
+---
+
+<div class="big-title">DEMO</div>
 
 ---
 layout: image
@@ -545,16 +833,39 @@ image: /pad/tools.webp
 </v-clicks>
 
 ---
+layout: two-cols
+---
 
-# Как наладить связь
+# Способы связи
 
-- WiFi
-- Протоколы
+<br>
+
+<v-clicks>
+
+- Wi-Fi
+- Bluetooth
+- Zigbee
 - ESP now
+- Ethernet
+
+</v-clicks>
+
+::right::
+
+# Протоколы
+
+<br>
+
+<v-clicks>
+
+- TCP
+- UDP
+- HTTP
 - MQTT
-- Много клиентов и один сервер
-- Много серверов и один клиент
-- Очередь сообщений
+- I<sup class="red">2</sup>C
+- USB
+
+</v-clicks>
 
 ---
 layout: center
@@ -731,6 +1042,16 @@ FreeCAD
 гпу в малинке не опенсорс
 
 ---
+
+# Что из этого JS?
+
+- Сервер
+- Запуск модели распознавания речи
+- Управление устройством через WebSerial API
+- Написание прошивки
+- Софт для прошивки
+
+---
 layout: image-right
 image: /pad/lamp.webp
 ---
@@ -739,28 +1060,6 @@ image: /pad/lamp.webp
 Атеисты такие типа<span class="red">:</span>
 <br><br>
 Это устройство работает благодаря высокому качеству сборки и хорошему коду</div>
-
----
-class: small-table
----
-
-# Зачем нужны веб-компоненты<span class="red">?</span>
-
-<br>
-
-<v-clicks>
-
-| Фича | Результат |
-|-|-|
-| Инкапсуляция | <span class="orange">Сомнительно</span> |
-| Удобство в поддержке | <span class="orange">Сомнительно</span> |
-| Производительность | <span class="orange">Сомнительно</span> |
-| Прогрессивное улучшение | <span class="green">Есть</span> |
-| Переиспользование | <span class="green">Есть</span> |
-| Интероп | <span class="orange">Сомнительно</span> |
-| Стандартизация | <span class="red">Нет</span> |
-
-</v-clicks>
 
 ---
 
@@ -776,6 +1075,22 @@ class: small-table
 - Как подружить устройства по сети
 - В каких случаях можно использовать JS
 - В каких случаях это оправдано
+
+</v-clicks>
+
+---
+
+# Сложности
+
+<br>
+
+<v-clicks>
+
+- Информации меньше
+- Нужно уметь работать руками
+- Запчасти не всегда под рукой
+- Не всегда есть CTRL<span class="red">+</span>Z
+- Есть риск смерти
 
 </v-clicks>
 
