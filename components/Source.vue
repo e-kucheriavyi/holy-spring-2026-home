@@ -15,5 +15,6 @@
 		justify-content: center;
 		height: 3rem;
 		font-size: 1rem;
+		left: 1rem;
 	}
 </style>

@@ -31,6 +31,19 @@ image: /bazil.webp
 </v-clicks>
 
 ---
+
+# Для кого доклад<span class="red">?</span>
+
+<br>
+
+<v-clicks>
+
+- Знаешь, что такое JavaScript
+- Знаешь, что такое протокол
+
+</v-clicks>
+
+---
 layout: center
 class: text-center
 ---
@@ -46,44 +59,23 @@ layout: cover
 владельца<span class="red">,</span> а не додумывает<span class="red">.</span></div>
 
 ---
+layout: cover
+---
+
+# Это как умный дом<span class="red">,</span> но тупой<span class="red">.</span>
+
+---
 layout: center
 ---
 
 <div class="big-title text-center">Зачем<span class="red">?</span></div>
 
 ---
-
-# Два зачем
-
-<br>
-
-<v-clicks>
-
-1. Зачем делать послушный дом самому<span class="red">?</span>
-2. Зачем делать это на JS<span class="red">?</span>
-
-</v-clicks>
-
----
-layout: image
-image: /home-assistant.png
----
-
-<Source value="https://www.home-assistant.io" />
-
----
-layout: center
+layout: cover
 class: text-center
 ---
 
-<div class="tiny-title" style="font-size: 5rem"><span class="red">«</span>У тебя не всегда будет интернет<span class="red">»</span></div>
-
----
-layout: image
-image: /zigbee.webp
-backgroundSize: 37rem
-class: bg-black
----
+# Зачем делать это самому<span class="red">?</span>
 
 ---
 layout: image-right
@@ -91,7 +83,7 @@ image: /subaru-ad.webp
 backgroundSize: 38rem
 ---
 
-# Вы <span class="red">—</span> товар
+# Вендоры <span class="red">—</span> злые
 
 <br>
 
@@ -115,6 +107,11 @@ class: text-center
 <div class="tiny-title">Если я купил железку<span class="red">,</span> то это моя железка<span class="red">!</span></div>
 
 ---
+layout: image
+image: /pad/radio.webp
+---
+
+---
 
 <div><SlidevVideo
 src="/pad/mic1.webm" :autoplay="true" :controls="false" :loop="true" :muted="true"
@@ -123,16 +120,36 @@ style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0
 </div>
 
 ---
+layout: image
+image: /pad/acc.webp
+---
+
+---
+layout: image
+image: /home-assistant.png
+---
+
+<Source value="https://www.home-assistant.io" />
+
+---
+layout: center
+class: text-center
+---
+
+<div class="tiny-title" style="font-size: 5rem"><span class="red">«</span>У тебя не всегда будет интернет<span class="red">»</span></div>
+
+---
+layout: image
+image: /zigbee.webp
+backgroundSize: 37rem
+class: bg-black
+---
+
+---
 layout: center
 ---
 
-<div class="tiny-title">Это крутой навык</div>
-
----
-layout: center
----
-
-<div class="tiny-title" style="font-size: 4rem;">ИИ не заменит инженеров<span class="red">*</span></div>
+<div class="tiny-title" style="font-size: 4rem;">Это не под силу ИИ<span class="red">*</span></div>
 
 
 <div style="position: fixed; bottom: 2rem; font-size: 2rem;"><span class="red">*</span> пока что</div>
@@ -201,7 +218,7 @@ layout: center
 class: text-center
 ---
 
-<div class="tiny-title">Зачем делать на JS<span class="red">?</span></div>
+<div class="tiny-title">Зачем делать это на JS<span class="red">?</span></div>
 
 ---
 layout: center
@@ -324,32 +341,171 @@ layout: center
 <br>ВКЛ <span class="red">/</span> ВЫКЛ
 </div>
 
+---
+layout: image
+image: /led-with-btn.webp
+---
+
+# Диод с кнопкой
+
+<Arrow x1="240" x2="600" y1="280" y2="280" width="6" color="orange" v-click />
 
 ---
-layout: code
+layout: image
+image: /kiss.webp
+backgroundSize: 44rem
 ---
 
-```js{all|2,5|3,6|8-13|9-12|10|11}
-// DEVICE
-const LED_PIN = 2
-const BTN_PIN = 5
+---
+layout: image
+image: /led-with-btn.webp
+---
 
-pinMode(LED_PIN, "output")
-pinMode(BTN_PIN, "input")
+# Диод с кнопкой
 
-setInterval(() => {
-    digitalWrite(
-        LED_PIN,
-        digitalRead(BTN_PIN),
-    )
-}, 500)
-```
+<Arrow x1="390" x2="390" y1="350" y2="220" width="6" color="orange" v-click />
 
 ---
 preload: false
 ---
 
 <HLExample />
+
+---
+layout: image
+image: /led-with-esp.webp
+---
+
+# Диод и ESP-32
+
+---
+layout: code
+---
+
+```js{all|2,4|6-11|7-10|8|9}
+// DEVICE
+const LED_PIN = 33
+
+pinMode(LED_PIN, "output")
+
+setInterval(() => {
+    digitalWrite(
+        LED_PIN,
+        digitalRead(LED_PIN) ^ 1,
+    )
+}, 1000)
+```
+
+---
+layout: image
+image: /led-with-btn.webp
+---
+
+# Диод с кнопкой (и резистор)
+
+<Arrow x1="550" x2="550" y1="350" y2="220" width="6" color="orange" v-click />
+
+---
+layout: center
+---
+
+# Закон Ома
+
+<img src="/ohm.svg" style="width: 100rem" />
+
+<Source value="https://commons.wikimedia.org/wiki/File:Ohm's-law-triangle.svg" />
+
+---
+layout: two-cols
+transition: slide-left
+---
+
+# Закон Ома
+
+<br>
+
+<v-clicks>
+
+- R — Сопротивление
+- U — Напряжение
+- I — Сила тока
+
+</v-clicks>
+
+::right::
+
+<div style="font-size: 5rem; height: 100%; display: flex; align-items: center">
+I <span class="red">=</span> U <span class="red">/</span> R
+</div>
+
+---
+layout: two-cols
+---
+
+# Закон Ома
+
+<div style="font-size: 5rem; height: 81%; display: flex; align-items: center">
+I <span class="red">=</span> U <span class="red">/</span> R
+</div>
+
+::right::
+
+<v-clicks>
+
+- R = 1 Ω
+- U = 5 V
+- I = 5/1
+- I = 1 A
+
+</v-clicks>
+
+---
+layout: center
+class: text-center
+---
+
+<div class="tiny-title">Стандартный светодиод <span class="red">(</span>5 mm<span class="red">)</span> расчитан на прямой ток 10<span class="red">-</span>20 мА</div>
+
+---
+layout: center
+class: text-center
+---
+
+<div class="tiny-title" style="font-size: 4rem">Мы превышаем номинальную силу тока в 55 раз<span class="red">!</span></div>
+
+---
+layout: image-right
+image: /resistors.png
+backgroundSize: 37rem
+---
+
+# Что такое резистор<span class="red">?</span>
+
+<br>
+
+У проводников есть сопротивление. Повышая сопротивление, мы понижаем напряжение.
+
+<Source value="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg" />
+
+---
+layout: image
+image: /led-with-btn.webp
+---
+
+# Диод с кнопкой (и резистор)
+
+<Arrow x1="550" x2="550" y1="350" y2="220" width="6" color="orange" v-click />
+
+---
+layout: image
+image: /lamp-with-potentiometer.webp
+---
+
+# Лампа с потенциометром
+
+---
+
+Схема ШИМ с потенциометром
 
 ---
 layout: center
@@ -494,6 +650,13 @@ class: text-center
 <div class="tiny-title">Для большинства проектов ESP-32 <span class="red">слишком</span> мощный</div>
 
 ---
+layout: cover
+class: text-center
+---
+
+# В массовом производстве выбирают самый дешёвый контроллер, который удовлетворяет требованиям.
+
+---
 layout: image
 image: /shenzhen.png
 ---
@@ -533,11 +696,6 @@ image: /pad/e-ink-pins.webp
 
 ---
 layout: image
-image: /pad/acc.webp
----
-
----
-layout: image
 image: /reverse.webp
 ---
 
@@ -551,7 +709,87 @@ image: /ron.jpg
 
 ---
 
+Собираем устройства
+
+---
+
 лампочка
+
+---
+layout: center
+---
+
+```mermaid {scale: 1.5}
+%%{init: {'flowchart': {'curve': 'ortho'}}}%%
+flowchart TD
+  subgraph "Лампа"
+    Socket["Розетка"] -->|~220V| Lamp["Лампа"]
+    Socket -->|~220V| Lamp
+    linkStyle 0 stroke:#00ff00,stroke-width:4px;
+    linkStyle 1 stroke:#00ff00,stroke-width:4px;
+  end
+
+```
+
+
+---
+layout: center
+---
+
+```mermaid {scale: 1.3}
+%%{init: {'flowchart': {'curve': 'ortho'}}}%%
+flowchart TD
+  subgraph "Лампа"
+    Socket["Розетка"] -->|~220V| Switch["Переключатель"]
+    Switch -->|~220V| Lamp["Лампа"]
+    Socket -->|~220V| Lamp
+    linkStyle 0 stroke:#00ff00,stroke-width:4px;
+    linkStyle 1 stroke:#00ff00,stroke-width:4px;
+    linkStyle 2 stroke:#00ff00,stroke-width:4px;
+  end
+
+```
+
+---
+layout: center
+---
+
+```mermaid {scale: 1.5}
+%%{init: {'flowchart': {'curve': 'ortho'}}}%%
+flowchart TD
+  subgraph "Лампа"
+    Socket["Розетка"] -->|~220V| Lamp["Лампа"]
+    Socket -->|~220V| Lamp
+    ESP["ESP-32"]
+    linkStyle 0 stroke:#00ff00,stroke-width:4px;
+    linkStyle 1 stroke:#00ff00,stroke-width:4px;
+  end
+
+```
+
+---
+layout: center
+---
+
+```mermaid {scale: 1.3}
+%%{init: {'flowchart': {'curve': 'ortho'}}}%%
+flowchart TD
+  subgraph "Лампа"
+    Socket["Розетка"] -->|~220V| PS["Блок питания"]
+    Socket -->|~220V| PS
+    PS -->|+5V| ESP["ESP-32"]
+    PS -->|-5V| ESP
+    Socket -->|~220V| Lamp["Лампа"]
+    Socket -->|~220V| Lamp
+    linkStyle 0 stroke:#00ff00,stroke-width:4px;
+    linkStyle 1 stroke:#00ff00,stroke-width:4px;
+    linkStyle 2 stroke:#ff0000,stroke-width:4px;
+    linkStyle 3 stroke:#0000ff,stroke-width:4px;
+    linkStyle 4 stroke:#00ff00,stroke-width:4px;
+    linkStyle 5 stroke:#00ff00,stroke-width:4px;
+  end
+
+```
 
 ---
 layout: center
@@ -565,8 +803,7 @@ flowchart TD
     Socket -->|~220V| PS
     PS -->|+5V| ESP["ESP-32"]
     PS -->|-5V| ESP
-    PS -->|+5V| Relay["Реле"]
-    PS -->|-5V| Relay
+    PS -->|-5V| Relay["Реле"]
     ESP --> Relay
     Socket -->|~220V| Relay
     Relay -->|~220V| Lamp["Лампа"]
@@ -575,15 +812,94 @@ flowchart TD
     linkStyle 1 stroke:#00ff00,stroke-width:4px;
     linkStyle 2 stroke:#ff0000,stroke-width:4px;
     linkStyle 3 stroke:#0000ff,stroke-width:4px;
-    linkStyle 4 stroke:#ff0000,stroke-width:4px;
-    linkStyle 5 stroke:#0000ff,stroke-width:4px;
-    linkStyle 6 stroke:#ffff00,stroke-width:4px;
+    linkStyle 4 stroke:#0000ff,stroke-width:4px;
+    linkStyle 5 stroke:#ffff00,stroke-width:4px;
+    linkStyle 6 stroke:#00ff00,stroke-width:4px;
     linkStyle 7 stroke:#00ff00,stroke-width:4px;
     linkStyle 8 stroke:#00ff00,stroke-width:4px;
-    linkStyle 9 stroke:#00ff00,stroke-width:4px;
   end
 
 ```
+
+---
+layout: image-right
+image: /relay.webp
+backgroundSize: 24rem
+transition: slide-left
+---
+
+# Что такое реле<span class="red">?</span>
+
+<br>
+
+<v-clicks>
+
+1. Электромагнитная катушка
+2. Металлическая пластина
+3. Контакты
+
+</v-clicks>
+
+
+<Source value="https://en.wikipedia.org/wiki/File:Relay_principle_vertical.jpg" />
+
+---
+layout: image-left
+image: /relay.webp
+backgroundSize: 24rem
+---
+
+# Как работает реле<span class="red">?</span>
+
+<br>
+
+<v-clicks>
+
+1. Если подать напряжение на катушку<span class="red">,</span> она примагнитит пластину<span class="red">.</span>
+2. Металлическая пластина переключает контакты<span class="red">.</span>
+3. Чтобы пластина возвращалась в исходное положение<span class="red">,</span> к ней прикреплена пружина<span class="red">.</span>
+
+</v-clicks>
+
+
+<Source value="https://en.wikipedia.org/wiki/File:Relay_principle_vertical.jpg" />
+
+---
+layout: code
+---
+
+```ts
+// Relay peuso-code
+
+const getActivePin = (voltageOnCoil: number) => {
+    if (voltageOnCoil === 0) {
+        return PIN_1
+    } else {
+        return PIN_2
+    }
+}
+
+getActivePin(0) // PIN_1
+
+getActivePin(1) // PIN_2
+```
+
+---
+layout: image
+image: /esp-lamp.webp
+---
+
+---
+layout: image-right
+image: /pad/lamp.webp
+---
+
+<div class="tiny-title" style="font-size: 2.5rem">
+Атеисты такие типа<span class="red">:</span>
+<br><br>
+Это устройство работает благодаря высокому качеству сборки и хорошему коду</div>
+
+
 
 ---
 
@@ -627,6 +943,14 @@ backgroundSize: 40rem
 
 
 <Source value="https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/" />
+
+---
+
+Есть Mini HDMI, но нельзя использовать браузер для визуала — слишком мало оперативки
+
+---
+
+А вот ларана потянет
 
 ---
 layout: image
@@ -928,6 +1252,13 @@ setInterval(async () => {
 
 ---
 layout: center
+class: text-center
+---
+
+<div class="small-title">RPS <span class="red">=</span> N * 2</div>
+
+---
+layout: center
 ---
 
 <div class="tiny-title" style="font-size: 4rem;">Каждое устройство <span class="red">—</span> сервер</div>
@@ -1052,14 +1383,59 @@ FreeCAD
 - Софт для прошивки
 
 ---
-layout: image-right
-image: /pad/lamp.webp
+class: small-table
 ---
 
-<div class="tiny-title" style="font-size: 2.5rem">
-Атеисты такие типа<span class="red">:</span>
-<br><br>
-Это устройство работает благодаря высокому качеству сборки и хорошему коду</div>
+<v-clicks>
+
+| Компонент | Стоимость (Рубли) |
+|-|-----------|
+| ESP-32 | 235 |
+| Raspberry Pi | 3 000 (2 000) |
+| Усилитель | 319 |
+| Блок питания | 121 |
+| Модуль реле | 112 |
+| Звуковая карта | 167 |
+| Звуковой модуль | 200 |
+| Лампа | 91 |
+| __Итого__ | 4 245 |
+
+</v-clicks>
+
+---
+layout: two-cols
+---
+
+# Что не посчитано
+
+<br>
+
+<v-clicks>
+
+- Аккумулятор
+- Модуль зарядки
+- Динамик
+- Микрофон
+- Фанера
+- Тумблер
+- Проводочки
+
+</v-clicks>
+
+::right::
+
+<v-clicks>
+
+- Коннекторы
+- Флюс, припой и спирт
+- Ацетатная лента
+- Термоусадки
+- Стяжки
+- Винты
+- Инструменты
+- Время
+
+</v-clicks>
 
 ---
 
