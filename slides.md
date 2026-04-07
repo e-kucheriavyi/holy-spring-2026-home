@@ -376,6 +376,8 @@ layout: image
 image: /led-with-esp.webp
 ---
 
+<br>
+
 # Диод и ESP-32
 
 ---
@@ -434,7 +436,7 @@ transition: slide-left
 
 ::right::
 
-<div style="font-size: 5rem; height: 100%; display: flex; align-items: center">
+<div style="font-size: 5rem; height: 100%; display: flex; align-items: center" v-click>
 I <span class="red">=</span> U <span class="red">/</span> R
 </div>
 
@@ -483,7 +485,9 @@ backgroundSize: 37rem
 
 <br>
 
-У проводников есть сопротивление. Повышая сопротивление, мы понижаем напряжение.
+- Все проводники обладают сопротивлением.
+- Чем выше сопротивление, тем ниже сила тока при равном напряжении.
+- Чем выше сопротивление, тем сильнее нагревается проводник.
 
 <Source value="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg" />
 
@@ -890,7 +894,16 @@ image: /esp-lamp.webp
 ---
 
 ---
-layout: image-right
+transition: slide-left
+---
+
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; width: 100%; height: 100%;">
+<img src="/esp-lamp-8-9.webp" style="flex: 1; width: 50%; height: 100%;" />
+<img src="/pad/lamp.webp" style="flex: 1; width: 50%; height: 100%;" />
+</div>
+
+---
+layout: image-left
 image: /pad/lamp.webp
 ---
 
