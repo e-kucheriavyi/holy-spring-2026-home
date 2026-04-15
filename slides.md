@@ -44,6 +44,411 @@ image: /bazil.webp
 </v-clicks>
 
 ---
+layout: cover
+---
+
+ # Основное внимание идеям
+
+---
+
+ # Основное внимание идеям
+
+ <br>
+
+ <v-clicks>
+
+- Слишком много информации
+- Эта информация новая и непривычная
+
+ </v-clicks>
+
+---
+layout: two-cols
+---
+
+# Что будет:
+
+<br>
+
+<v-clicks>
+
+- Что нужно сделать
+- Что можно сделать
+- Зачем это делать
+- Какие альтернативы
+
+</v-clicks>
+
+::right::
+
+# Чего не будет
+
+<br>
+
+<v-clicks>
+
+- Как конкретно это сделать со всеми шагами
+
+</v-clicks>
+
+---
+
+Будем говорить про электронику
+
+---
+
+С чего ты взял, что фронтендеры потянут электронику?
+
+---
+
+Почему фротендеры идеально справятся с электроникой?
+
+- Любят называть себя инженерами
+- Красили кнопки, а будут красить светодиоды
+- Её нельзя понять до конца | Фронтендеры даже не попытаются
+
+---
+
+Анекдот про экзамен по физике
+
+---
+
+# Оглавление
+
+<br>
+
+<v-clicks>
+
+- Что такое умный дом, чем от него отличается послушный
+- Зачем всё это
+- Что такое электричество
+- Что такое микроконтроллер
+- Проблемы вендоров
+- Сети
+
+</v-clicks>
+
+---
+
+Не будем бросаться сразу в умную электронику, а сначала попробуем что-то попроще
+
+---
+layout: cover
+---
+
+# Электричество
+
+---
+layout: image
+image: /acdc/lamp.webp
+---
+
+# Обычная лампа
+
+---
+
+Нужен замкнутый контур
+
+---
+
+На электросхемах ток от плюса к минусу
+
+---
+layout: image
+image: /acdc/lamp-with-button.webp
+---
+
+# Лампа с кнопкой
+
+---
+
+<HLExample />
+
+---
+layout: cover
+---
+
+# До этого электросеть решала, будет ли у тебя гореть свет, а теперь ты сам. Дом уже послушный
+
+---
+layout: image
+image: /acdc/base.webp
+transition: slide-left
+---
+
+---
+layout: image-left
+image: /acdc/base-8.webp
+preload: false
+---
+
+<CurrentChart type="AC" :voltage="220" :freq="50" />
+
+---
+
+электричество 50 раз в секунду меняет полярность (+ -)
+
+Для лампы накаливания это подходит — там ничего сложного нет, она просто накаляется
+при прохождении тока и от того светится
+
+---
+layout: image-right
+image: /c-diode.webp
+backgroundSize: 35rem
+---
+
+# Компонент<span class="red">:</span> диод
+
+<br>
+
+<v-clicks>
+
+- Диод пропускает электричесткий ток только в одном направлении
+- Некоторые диоды при прохождении тока светятся
+
+</v-clicks>
+
+---
+layout: image
+image: /acdc/diode.webp
+transition: slide-left
+---
+
+---
+layout: image-left
+image: /acdc/diode-8.webp
+preload: false
+---
+
+<CurrentChart type="PREDC" :voltage="220" :freq="50" />
+
+---
+layout: image
+image: /acdc/bridge.webp
+transition: slide-left
+---
+
+---
+layout: image-left
+image: /acdc/bridge-8.webp
+preload: false
+---
+
+<CurrentChart type="DC" :voltage="220" :freq="50" />
+
+---
+layout: image-right
+image: /c-capacitor.webp
+backgroundSize: 35rem
+transition: slide-left
+---
+
+# Компонент<span class="red">:</span> Конденсатор
+
+<br>
+
+<v-clicks>
+
+- Конденсатор накапливает электрический заряд
+- Когда ёмкость конденсатора заполняется<span class="red">,</span> он разряжается
+
+</v-clicks>
+
+---
+layout: image-left
+image: /c-capacitor.webp
+backgroundSize: 35rem
+---
+
+<CapacitorExample />
+
+---
+layout: image
+image: /acdc/capacitor.webp
+transition: slide-left
+---
+
+---
+layout: image-left
+image: /acdc/capacitor-8.webp
+preload: false
+---
+
+<CurrentChart type="DC" :voltage="300" :max="500" :freq="0" />
+
+---
+
+Компонент: трансформатор
+
+---
+layout: image
+image: /acdc/coil.webp
+transition: slide-left
+---
+
+---
+layout: image-left
+image: /acdc/coil-8.webp
+preload: false
+---
+
+<CurrentChart type="DC" :voltage="46" :max="220" :freq="0" />
+
+---
+
+Компонент: Транзистор
+
+---
+layout: image
+image: /acdc/pwm.webp
+transition: slide-left
+---
+
+---
+layout: image-left
+image: /acdc/pwm-8.webp
+preload: false
+---
+
+<CurrentChart type="DC" :voltage="5" :max="20" :freq="0" />
+
+
+
+
+---
+layout: image
+image: /led-with-btn.webp
+---
+
+Светодиод с кнопкой
+
+---
+preload: false
+---
+
+# Постоянный ток
+
+<CurrentChart type="DC" :voltage="5" />
+
+---
+layout: cover
+---
+
+# 220 V AC нам не подходит, потому что наши компоненты работают от 5 V DC
+
+---
+layout: cover
+---
+
+# Блок питания
+
+---
+layout: image
+image: /acdc/base.webp
+---
+
+---
+preload: false
+---
+
+# 220 V AC
+
+<CurrentChart type="AC" :voltage="220" :period="50" />
+
+---
+
+Компонент: диод
+
+---
+layout: image
+image: /acdc/diode.webp
+---
+
+---
+
+Ток 50 раз в секунду то идёт, то не идёт
+
+---
+preload: false
+---
+
+# 220 V DC (диоды)
+
+<CurrentChart type="DC" :voltage="220" :period="50" />
+
+---
+layout: image
+image: /acdc/bridge.webp
+---
+
+---
+
+Ток идёт всё время, но волной
+
+---
+preload: false
+---
+
+# 220 V DC (диодный мост)
+
+<CurrentChart type="DC" :voltage="220" :period="50" />
+
+---
+
+Компонент: конденсатор
+
+---
+layout: image
+image: /acdc/capacitor.webp
+---
+
+---
+
+Ток идёт гладко, но 220 V (а может и больше)
+
+---
+preload: false
+---
+
+# 220 V DC (с конденсатором)
+
+<CurrentChart type="DC" :voltage="220" :period="0" />
+---
+
+Компонент: трансформатор
+
+---
+layout: image
+image: /acdc/coil.webp
+---
+
+---
+
+Ток идёт, напряжение ниже, но не такое, как мы хотели
+
+---
+
+Компонент: транзистор
+
+---
+layout: image
+image: /acdc/pwm.webp
+---
+
+---
+preload: false
+---
+
+# 5 V DC
+
+<CurrentChart type="DC" :voltage="5" :period="0" />
+---
+
+Поздравляю, мы придумали обратноходовый понижающий преобразователь
+
+Это очень упрощённая схема
+
+---
 layout: center
 class: text-center
 ---
@@ -473,7 +878,7 @@ layout: center
 class: text-center
 ---
 
-<div class="tiny-title" style="font-size: 4rem">Мы превышаем номинальную силу тока в 55 раз<span class="red">!</span></div>
+<div class="tiny-title" style="font-size: 4rem">Мы превышаем номинальную силу тока в ~250 раз<span class="red">!</span></div>
 
 ---
 layout: image-right

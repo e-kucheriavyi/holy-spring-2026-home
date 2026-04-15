@@ -10,8 +10,9 @@
 	"dependencies": {
 		"@slidev/cli": "^52.11.3",
 		"@slidev/theme-default": "latest",
-		"vue": "^3.5.26",
-		"slidev-addon-qrcode": "^1.0.2"
+		"current-chart": "^1.0.1",
+		"slidev-addon-qrcode": "^1.0.2",
+		"vue": "^3.5.26"
 	},
 	"slidev": {
 		"addons": [
