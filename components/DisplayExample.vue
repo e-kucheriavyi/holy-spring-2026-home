@@ -1,36 +1,86 @@
 <script setup>
 	import { ref, computed, onMounted } from "vue"
 
-	const speed = ref(100)
+	const RES = 8
+	const PAD = 8
+	const D = 32
+	const FILL_STYLE = "red"
+	const STROKE_STYLE = "#fff"
+
+	const el = ref(null)
+
+	const speed = ref(16)
 	const done = ref(false)
 
-	const index = ref(0)
-
-	const pixels = []
-
-	for (let i = 0; i < 8*8; i++) {
-		pixels.push([255, 0, 0])
-	}
-
-	const pixelColor = (p, i) => {
-		if (i === index.value || speed.value < 16) {
-			return `background-color: rgb(${p[0]}, ${p[1]}, ${p[2]});`
-		}
-	}
+	let index = 0
+	let t = 0
 
 	const update = () => {
-		index.value += 1
-		if (index.value >= pixels.length) {
-			index.value = 0
-		}
-		if (done.value) {
+		t += 1
+
+		if (t < speed.value) {
 			return
 		}
-		setTimeout(update, speed.value > 16 ? speed.value : 16)
+
+		t = 0
+
+		index += 1
+		if (index >= RES * RES) {
+			index = 0
+		}
+	}
+
+	const draw = () => {
+		if (el.value === null) {
+			return
+		}
+
+		update()
+	
+		const canvas = el.value
+		canvas.style = `width: ${PAD*4+D*RES}px; height: ${PAD*4+D*RES}px;`
+		canvas.width = canvas.clientWidth*2
+		canvas.height = canvas.clientHeight*2
+
+		const ctx = canvas.getContext("2d")
+		ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+		ctx.fillStyle = FILL_STYLE
+		ctx.strokeStyle = STROKE_STYLE
+		ctx.lineWidth = 2
+
+		const r = D * 0.5
+
+		let i = 0
+
+		for (let y = 0; y < RES; y++) {
+			for (let x = 0; x < RES; x++) {
+				ctx.beginPath()
+
+				const xx = (x+1) * D * 2
+				const yy = (y+1) * D * 2
+
+				ctx.arc(xx, yy, D, 0, Math.PI*2)
+
+				if (i === index) {
+					ctx.fill()
+				}
+
+				ctx.stroke()
+
+				i += 1
+			}
+		}
+
+		if (el.value !== null) {
+			requestAnimationFrame(() => { draw() })
+		}
 	}
 
 	onMounted(() => {
-		update()
+		// update()
+
+		draw()
 	})
 
 	// onUnmounted(() => {
@@ -42,17 +92,10 @@
 	<div class="pwm">
 		<div class="pwm-controls">
 			<h1>Display</h1>
-			<input type="range" v-model="speed" min="16" max="100" />
-			<div style="font-size: 2rem;">{{ speed }}</div>
+			<input type="range" v-model="speed" min="1" max="16" />
 		</div>
 		<div class="pwm-preview">
-			<div class="pixels">
-				<div
-					v-for="(p, i) in pixels"
-					class="pixel"
-					:style="pixelColor(p, i)"
-				></div>
-			</div>
+			<canvas ref="el" class="canvas"></canvas>
 		</div>
 	</div>
 </template>

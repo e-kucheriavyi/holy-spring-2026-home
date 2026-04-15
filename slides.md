@@ -31,15 +31,23 @@ image: /bazil.webp
 </v-clicks>
 
 ---
+layout: cover
+---
 
-# Для кого доклад<span class="red">?</span>
+# Электроника на HolyJS<span class="red">?</span>
+
+---
+
+# Почему фротендеры идеально справятся с электроникой<span class="red">:</span>
 
 <br>
 
 <v-clicks>
 
-- Знаешь, что такое JavaScript
-- Знаешь, что такое протокол
+- Любят называть себя инженерами
+- Красили кнопки<span class="red">,</span> а будут красить светодиоды
+- Электронику невозможно понять до конца <span class="red">(</span>и не нужно<span class="red">)</span>
+- Фронтендер даже не попытается
 
 </v-clicks>
 
@@ -47,437 +55,110 @@ image: /bazil.webp
 layout: cover
 ---
 
- # Основное внимание идеям
+# Анекдот
+
+---
+layout: cover
+---
+
+# Этот доклад для тебя<span class="red">,</span> если ты знаешь<span class="red">,</span> что такое JavaScript
+
+---
+layout: cover
+class: text-center
+---
+
+# Фокус на идеях
 
 ---
 
- # Основное внимание идеям
+# Основное внимание идеям
 
- <br>
+<br>
 
- <v-clicks>
+<v-clicks>
 
 - Слишком много информации
 - Эта информация новая и непривычная
 
- </v-clicks>
+</v-clicks>
 
 ---
 layout: two-cols
 ---
 
-# Что будет:
+# Что будет<span class="red">:</span>
 
 <br>
 
 <v-clicks>
 
-- Что нужно сделать
-- Что можно сделать
-- Зачем это делать
-- Какие альтернативы
+- Псевдокод
+- Схемы
+- База
 
 </v-clicks>
 
 ::right::
 
-# Чего не будет
+# Чего не будет<span class="red">:</span>
 
 <br>
 
 <v-clicks>
 
-- Как конкретно это сделать со всеми шагами
+- Пошаговых инструкций
+- Трассировок
+- Лишних абстракций
 
 </v-clicks>
 
 ---
+layout: image
+image: /pad/duck.webp
+---
 
-Будем говорить про электронику
+---
+layout: cover
+---
+
+# Что такое «послушный дом»<span class="red">?</span>
+
+---
+layout: cover
+---
+
+# Это система управления домашней сетью электрических устройств<span class="red">,</span> которая слушается владельца<span class="red">,</span> а не додумывает
+
+---
+layout: cover
+---
+
+# Послушный дом почти как умный<span class="red">,</span> но тупой
+
+<Source value="© Фонд золотых цитат" />
 
 ---
 
-С чего ты взял, что фронтендеры потянут электронику?
-
----
-
-Почему фротендеры идеально справятся с электроникой?
-
-- Любят называть себя инженерами
-- Красили кнопки, а будут красить светодиоды
-- Её нельзя понять до конца | Фронтендеры даже не попытаются
-
----
-
-Анекдот про экзамен по физике
-
----
-
-# Оглавление
+# Мы сделаем<span class="red">:</span>
 
 <br>
 
 <v-clicks>
 
-- Что такое умный дом, чем от него отличается послушный
-- Зачем всё это
-- Что такое электричество
-- Что такое микроконтроллер
-- Проблемы вендоров
-- Сети
+- Умную лампочку<span class="red">/</span>розетку
+- Голосового ассистента
 
 </v-clicks>
 
 ---
-
-Не будем бросаться сразу в умную электронику, а сначала попробуем что-то попроще
-
----
 layout: cover
 ---
 
-# Электричество
-
----
-layout: image
-image: /acdc/lamp.webp
----
-
-# Обычная лампа
-
----
-
-Нужен замкнутый контур
-
----
-
-На электросхемах ток от плюса к минусу
-
----
-layout: image
-image: /acdc/lamp-with-button.webp
----
-
-# Лампа с кнопкой
-
----
-
-<HLExample />
+# Зачем<span class="red">?</span>
 
 ---
 layout: cover
----
-
-# До этого электросеть решала, будет ли у тебя гореть свет, а теперь ты сам. Дом уже послушный
-
----
-layout: image
-image: /acdc/base.webp
-transition: slide-left
----
-
----
-layout: image-left
-image: /acdc/base-8.webp
-preload: false
----
-
-<CurrentChart type="AC" :voltage="220" :freq="50" />
-
----
-
-электричество 50 раз в секунду меняет полярность (+ -)
-
-Для лампы накаливания это подходит — там ничего сложного нет, она просто накаляется
-при прохождении тока и от того светится
-
----
-layout: image-right
-image: /c-diode.webp
-backgroundSize: 35rem
----
-
-# Компонент<span class="red">:</span> диод
-
-<br>
-
-<v-clicks>
-
-- Диод пропускает электричесткий ток только в одном направлении
-- Некоторые диоды при прохождении тока светятся
-
-</v-clicks>
-
----
-layout: image
-image: /acdc/diode.webp
-transition: slide-left
----
-
----
-layout: image-left
-image: /acdc/diode-8.webp
-preload: false
----
-
-<CurrentChart type="PREDC" :voltage="220" :freq="50" />
-
----
-layout: image
-image: /acdc/bridge.webp
-transition: slide-left
----
-
----
-layout: image-left
-image: /acdc/bridge-8.webp
-preload: false
----
-
-<CurrentChart type="DC" :voltage="220" :freq="50" />
-
----
-layout: image-right
-image: /c-capacitor.webp
-backgroundSize: 35rem
-transition: slide-left
----
-
-# Компонент<span class="red">:</span> Конденсатор
-
-<br>
-
-<v-clicks>
-
-- Конденсатор накапливает электрический заряд
-- Когда ёмкость конденсатора заполняется<span class="red">,</span> он разряжается
-
-</v-clicks>
-
----
-layout: image-left
-image: /c-capacitor.webp
-backgroundSize: 35rem
----
-
-<CapacitorExample />
-
----
-layout: image
-image: /acdc/capacitor.webp
-transition: slide-left
----
-
----
-layout: image-left
-image: /acdc/capacitor-8.webp
-preload: false
----
-
-<CurrentChart type="DC" :voltage="300" :max="500" :freq="0" />
-
----
-
-Компонент: трансформатор
-
----
-layout: image
-image: /acdc/coil.webp
-transition: slide-left
----
-
----
-layout: image-left
-image: /acdc/coil-8.webp
-preload: false
----
-
-<CurrentChart type="DC" :voltage="46" :max="220" :freq="0" />
-
----
-
-Компонент: Транзистор
-
----
-layout: image
-image: /acdc/pwm.webp
-transition: slide-left
----
-
----
-layout: image-left
-image: /acdc/pwm-8.webp
-preload: false
----
-
-<CurrentChart type="DC" :voltage="5" :max="20" :freq="0" />
-
-
-
-
----
-layout: image
-image: /led-with-btn.webp
----
-
-Светодиод с кнопкой
-
----
-preload: false
----
-
-# Постоянный ток
-
-<CurrentChart type="DC" :voltage="5" />
-
----
-layout: cover
----
-
-# 220 V AC нам не подходит, потому что наши компоненты работают от 5 V DC
-
----
-layout: cover
----
-
-# Блок питания
-
----
-layout: image
-image: /acdc/base.webp
----
-
----
-preload: false
----
-
-# 220 V AC
-
-<CurrentChart type="AC" :voltage="220" :period="50" />
-
----
-
-Компонент: диод
-
----
-layout: image
-image: /acdc/diode.webp
----
-
----
-
-Ток 50 раз в секунду то идёт, то не идёт
-
----
-preload: false
----
-
-# 220 V DC (диоды)
-
-<CurrentChart type="DC" :voltage="220" :period="50" />
-
----
-layout: image
-image: /acdc/bridge.webp
----
-
----
-
-Ток идёт всё время, но волной
-
----
-preload: false
----
-
-# 220 V DC (диодный мост)
-
-<CurrentChart type="DC" :voltage="220" :period="50" />
-
----
-
-Компонент: конденсатор
-
----
-layout: image
-image: /acdc/capacitor.webp
----
-
----
-
-Ток идёт гладко, но 220 V (а может и больше)
-
----
-preload: false
----
-
-# 220 V DC (с конденсатором)
-
-<CurrentChart type="DC" :voltage="220" :period="0" />
----
-
-Компонент: трансформатор
-
----
-layout: image
-image: /acdc/coil.webp
----
-
----
-
-Ток идёт, напряжение ниже, но не такое, как мы хотели
-
----
-
-Компонент: транзистор
-
----
-layout: image
-image: /acdc/pwm.webp
----
-
----
-preload: false
----
-
-# 5 V DC
-
-<CurrentChart type="DC" :voltage="5" :period="0" />
----
-
-Поздравляю, мы придумали обратноходовый понижающий преобразователь
-
-Это очень упрощённая схема
-
----
-layout: center
-class: text-center
----
-
-<div class="tiny-title">Что такое «послушный дом»<span class="red">?</span></div>
-
----
-layout: cover
----
-
-<div style="font-size: 4rem;">Это система управления домашней сетью электрических
-устройств<span class="red">,</span> которая слушается
-владельца<span class="red">,</span> а не додумывает<span class="red">.</span></div>
-
----
-layout: cover
----
-
-# Это как умный дом<span class="red">,</span> но тупой<span class="red">.</span>
-
----
-layout: center
----
-
-<div class="big-title text-center">Зачем<span class="red">?</span></div>
-
----
-layout: cover
-class: text-center
 ---
 
 # Зачем делать это самому<span class="red">?</span>
@@ -489,6 +170,8 @@ backgroundSize: 38rem
 ---
 
 # Вендоры <span class="red">—</span> злые
+
+TODO: картинки на каждый пункт
 
 <br>
 
@@ -505,11 +188,10 @@ backgroundSize: 38rem
 <Source value="https://www.reddit.com/r/subaru/comments/1p57ohp/these_ads_should_not_be_happening_while_we_are" />
 
 ---
-layout: center
-class: text-center
+layout: cover
 ---
 
-<div class="tiny-title">Если я купил железку<span class="red">,</span> то это моя железка<span class="red">!</span></div>
+# Если я купил железку<span class="red">,</span><br>то это моя железка<span class="red">!</span>
 
 ---
 layout: image
@@ -531,17 +213,34 @@ image: /pad/acc.webp
 
 ---
 layout: image
+image: /pad/speaker.webp
+---
+
+---
+layout: image
+image: /pad/speaker-lay.webp
+---
+
+---
+layout: cover
+---
+
+# Это вопрос безопасности
+
+TODO: безопасность, прослушка
+
+---
+layout: image
 image: /home-assistant.png
 ---
 
 <Source value="https://www.home-assistant.io" />
 
 ---
-layout: center
-class: text-center
+layout: cover
 ---
 
-<div class="tiny-title" style="font-size: 5rem"><span class="red">«</span>У тебя не всегда будет интернет<span class="red">»</span></div>
+# <span class="red">«</span>У тебя не всегда будет интернет<span class="red">»</span>
 
 ---
 layout: image
@@ -551,10 +250,10 @@ class: bg-black
 ---
 
 ---
-layout: center
+layout: cover
 ---
 
-<div class="tiny-title" style="font-size: 4rem;">Это не под силу ИИ<span class="red">*</span></div>
+# Это не под силу ИИ<span class="red">*</span>
 
 
 <div style="position: fixed; bottom: 2rem; font-size: 2rem;"><span class="red">*</span> пока что</div>
@@ -607,8 +306,7 @@ class: text-center
 layout: cover
 ---
 
-# Это не шутка<span class="red">!</span> Будьте осторожны при работе с электричеством<span class="red">.</span> Особенно<span class="red">,</span> если просите советы у нейросетей<span class="red">.</span>
-
+# Это не шутка<span class="red">!</span> Будьте осторожны при работе с электричеством<span class="red">.</span> Особенно<span class="red">,</span> если просите советы у нейросетей
 
 ---
 layout: image
@@ -619,31 +317,283 @@ backgroundSize: 78rem
 <Source value="ChatGPT" />
 
 ---
-layout: center
-class: text-center
+layout: cover
 ---
 
-<div class="tiny-title">Зачем делать это на JS<span class="red">?</span></div>
-
----
-layout: center
----
-
-<div class="tiny-title" style="font-size: 4.9rem"><span class="red">1.</span> Потому что мы можем<span class="red">.</span></div>
+# Зачем делать это на JS<span class="red">?</span>
 
 ---
 layout: cover
 ---
 
-<div class="tiny-title">
-<span class="red">2.</span> Всё<span class="red">,</span> что может быть написано на JS<span class="red">,</span> будет написано на JS<span class="red">.</span>
-</div>
+# <span class="red">1.</span> Потому что мы можем<span class="red">.</span>
 
 ---
-layout: center
+layout: cover
 ---
 
-<div class="big-title">Как<span class="red">?</span></div>
+# <span class="red">2.</span> Всё<span class="red">,</span> что может быть написано на JS<span class="red">,</span> будет написано на JS
+
+---
+layout: cover
+---
+
+# Почему светится лампа накаливания<span class="red">?</span>
+
+---
+layout: image
+image: /acdc/lamp.webp
+---
+
+# Обычная лампа
+
+---
+
+Нужен замкнутый контур
+
+---
+
+На электросхемах ток от плюса к минусу
+
+---
+layout: image
+image: /acdc/lamp-with-button.webp
+---
+
+# Лампа с кнопкой
+
+---
+
+<HLExample />
+
+---
+layout: cover
+---
+
+# До этого электросеть решала<span class="red">,</span> будет ли у тебя гореть свет<span class="red">,</span> а теперь ты сам<span class="red">.</span><br><br>Дом уже послушный
+
+---
+layout: image
+image: /acdc/base.webp
+transition: slide-left
+---
+
+---
+layout: image-left
+image: /acdc/base-8.webp
+preload: false
+---
+
+<CurrentChart type="AC" :voltage="220" :freq="50" />
+
+---
+layout: cover
+---
+
+# Переменный ток меняет полярность 50 раз в секунду <span class="red">(</span>Гц<span class="red">)</span>
+
+---
+layout: image
+image: /led-with-btn.webp
+---
+
+---
+layout: cover
+---
+
+# Вижу цель<span class="red">,</span> не вижу препятствий
+
+---
+layout: image-left
+image: /acdc/base-8.webp
+preload: false
+---
+
+<CurrentChart type="AC" :voltage="220" :freq="50" />
+
+---
+
+# Что нужно сделать<span class="red">:</span>
+
+<br>
+
+<v-clicks>
+
+- AC <span class="red" style="font-size: 4rem">→</span> DC
+- Синусоида <span class="red" style="font-size: 4rem">→</span> Прямая
+- 220 V <span class="red" style="font-size: 4rem">→</span> 5 V
+
+</v-clicks>
+
+---
+layout: image-right
+image: /c-diode.webp
+backgroundSize: 35rem
+---
+
+# Диод
+
+<br>
+
+<v-clicks>
+
+- Диод пропускает электричесткий ток только в одном направлении
+- Некоторые диоды при прохождении тока светятся
+
+</v-clicks>
+
+---
+layout: image
+image: /acdc/diode.webp
+transition: slide-left
+---
+
+---
+layout: image-left
+image: /acdc/diode-8.webp
+preload: false
+---
+
+<CurrentChart type="PREDC" :voltage="220" :freq="50" />
+
+---
+layout: image
+image: /acdc/bridge.webp
+transition: slide-left
+---
+
+---
+layout: image-left
+image: /acdc/bridge-8.webp
+preload: false
+---
+
+<CurrentChart type="DC" :voltage="220" :freq="50" />
+
+---
+layout: image-right
+image: /c-capacitor.webp
+backgroundSize: 35rem
+transition: slide-left
+---
+
+# Конденсатор
+
+<br>
+
+<v-clicks>
+
+- Конденсатор накапливает электрический заряд
+- Когда ёмкость конденсатора заполняется<span class="red">,</span> он разряжается
+
+</v-clicks>
+
+---
+layout: image-left
+image: /c-capacitor.webp
+backgroundSize: 35rem
+preload: false
+---
+
+<br>
+
+<CapacitorExample />
+
+---
+layout: image
+image: /acdc/capacitor.webp
+transition: slide-left
+---
+
+---
+layout: image-left
+image: /acdc/capacitor-8.webp
+preload: false
+---
+
+<CurrentChart type="DC" :voltage="300" :max="500" :freq="0" />
+
+---
+layout: image-right
+image: /coil.svg
+backgroundSize: 35rem
+---
+
+# Трансформатор
+
+<br>
+
+<v-clicks>
+
+- Ж-ж-ж-ж-ж-ж-ж-ж-ж-ж-ж
+- Трансформатор понижает <span class="red">(</span>или повышает<span class="red">)</span> напряжение за счёт электромагнитной индукции
+- У нас нет времени на более подробное объяснение
+
+</v-clicks>
+
+---
+layout: image
+image: /acdc/coil.webp
+transition: slide-left
+---
+
+---
+layout: image-left
+image: /acdc/coil-8.webp
+preload: false
+---
+
+<CurrentChart type="DC" :voltage="46" :max="220" :freq="0" />
+
+---
+layout: image-right
+image: /c-transistor.webp
+---
+
+# Транзистор
+
+<br>
+
+<v-clicks>
+
+-
+
+</v-clicks>
+
+---
+layout: image
+image: /acdc/pwm.webp
+transition: slide-left
+---
+
+---
+layout: image-left
+image: /acdc/pwm-8.webp
+preload: false
+---
+
+<CurrentChart type="DC" :voltage="5" :max="20" :freq="0" />
+
+---
+layout: cover
+---
+
+# Мы придумали блок питания
+
+---
+layout: cover
+---
+
+# Обратноходовый понижающий преобразователь<span class="red">*</span>
+
+<div class="position-absolute bottom-5" style="font-size: 2rem">
+<span class="red">*</span> Это очень упрощённая схема</div>
+
+---
+layout: cover
+---
+
+# Что дальше<span class="red">?</span>
 
 ---
 layout: image
@@ -656,23 +606,24 @@ image: /nanomachines.jpg
 layout: cover
 ---
 
-# Микроконтроллер <span class="red">—</span> программируемое устройство<span class="red">,</span> которое может принимать и отправлять электрические сигналы<span class="red">.</span>
+# Микроконтроллер <span class="red">—</span> программируемое устройство<span class="red">,</span> которое может принимать и отправлять электрические сигналы
 
 ---
 layout: image
-image: /esp32-chip.webp
+image: /c-esp32.webp
 backgroundSize: 60rem
+transition: slide-left
 ---
 
 <Arrow x1="800" x2="600" y1="400" y2="380" width="6" color="red" v-click />
 
 ---
 layout: image-left
-image: /esp32-chip.webp
+image: /c-esp32.webp
 backgroundSize: 40rem
 ---
 
-# ESP-32
+# ESP32
 
 <br>
 
@@ -687,21 +638,23 @@ backgroundSize: 40rem
 </v-clicks>
 
 ---
-layout: center
-class: text-center
+layout: cover
 ---
 
-<div class="tiny-title">
-General Purpose Input<span class="red">/</span>Output
+
+# General Purpose Input<span class="red">/</span>Output
+
 <br>
 <br>
-Ввод<span class="red">/</span>вывод общего назначения
-</div>
+
+# Ввод<span class="red">/</span>вывод общего назначения
+
 
 ---
 layout: image
 image: /esp32.png
 backgroundSize: 30rem
+transition: slide-left
 ---
 
 ---
@@ -710,7 +663,7 @@ image: /esp32.png
 backgroundSize: 30rem
 ---
 
-# ESP-32 DevKit
+# ESP32 DevKit
 
 <br>
 
@@ -733,18 +686,22 @@ image: /pad/esp.webp
 ---
 
 ---
-layout: center
+layout: cover
 ---
 
-<div class="tiny-title">Как это работает<span class="red">?</span></div>
+# Как это работает
 
 ---
-layout: center
+layout: cover
 ---
 
-<div class="small-title">HIGH <span class="red">/</span> LOW
-<br>ВКЛ <span class="red">/</span> ВЫКЛ
-</div>
+# HIGH <span class="red">/</span> LOW
+
+<br>
+<br>
+
+# ВКЛ <span class="red">/</span> ВЫКЛ
+
 
 ---
 layout: image
@@ -783,7 +740,7 @@ image: /led-with-esp.webp
 
 <br>
 
-# Диод и ESP-32
+# Диод и ESP32
 
 ---
 layout: code
@@ -808,7 +765,7 @@ layout: image
 image: /led-with-btn.webp
 ---
 
-# Диод с кнопкой (и резистор)
+# Диод с кнопкой <span class="red">(</span>и резистор<span class="red">)</span>
 
 <Arrow x1="550" x2="550" y1="350" y2="220" width="6" color="orange" v-click />
 
@@ -833,9 +790,9 @@ transition: slide-left
 
 <v-clicks>
 
-- R — Сопротивление
-- U — Напряжение
-- I — Сила тока
+- R <span class="red">—</span> Сопротивление
+- U <span class="red">—</span> Напряжение
+- I <span class="red">—</span> Сила тока
 
 </v-clicks>
 
@@ -859,26 +816,24 @@ I <span class="red">=</span> U <span class="red">/</span> R
 
 <v-clicks>
 
-- R = 1 Ω
-- U = 5 V
-- I = 5/1
-- I = 1 A
+- R <span class="red">=</span> 1 Ω
+- U <span class="red">=</span> 5 V
+- I <span class="red">=</span> 5 <span class="red">/</span> 1
+- I <span class="red">=</span> 1 A
 
 </v-clicks>
 
 ---
-layout: center
-class: text-center
+layout: cover
 ---
 
-<div class="tiny-title">Стандартный светодиод <span class="red">(</span>5 mm<span class="red">)</span> расчитан на прямой ток 10<span class="red">-</span>20 мА</div>
+# Стандартный светодиод <span class="red">(</span>5 mm<span class="red">)</span> расчитан на прямой ток<br>10<span class="red">-</span>20 мА
 
 ---
-layout: center
-class: text-center
+layout: cover
 ---
 
-<div class="tiny-title" style="font-size: 4rem">Мы превышаем номинальную силу тока в ~250 раз<span class="red">!</span></div>
+Мы превышаем номинальную силу тока в ~250 раз<span class="red">!</span>
 
 ---
 layout: image-right
@@ -886,13 +841,13 @@ image: /resistors.png
 backgroundSize: 37rem
 ---
 
-# Что такое резистор<span class="red">?</span>
+# Резистор
 
 <br>
 
-- Все проводники обладают сопротивлением.
-- Чем выше сопротивление, тем ниже сила тока при равном напряжении.
-- Чем выше сопротивление, тем сильнее нагревается проводник.
+- Все проводники обладают сопротивлением
+- Чем выше сопротивление<span class="red">,</span> тем ниже сила тока при равном напряжении
+- Чем выше сопротивление<span class="red">,</span> тем сильнее нагревается проводник
 
 <Source value="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg" />
 
@@ -906,6 +861,21 @@ image: /led-with-btn.webp
 <Arrow x1="550" x2="550" y1="350" y2="220" width="6" color="orange" v-click />
 
 ---
+layout: image-right
+image: /c-potentiometer.webp
+---
+
+# Потенциометр
+
+<br>
+
+<v-clicks>
+
+- Можно думать о потенциометре как о настраиваемом резистре
+
+</v-clicks>
+
+---
 layout: image
 image: /lamp-with-potentiometer.webp
 ---
@@ -913,18 +883,14 @@ image: /lamp-with-potentiometer.webp
 # Лампа с потенциометром
 
 ---
-
-Схема ШИМ с потенциометром
-
----
-layout: center
-class: text-center
+layout: cover
 ---
 
-<div class="tiny-title" style="font-size: 4rem;">
-Pulse<span class="red">-</span>width modulation
-<br><br>Широтно<span class="red">-</span>импульсная модуляция
-</div>
+# Pulse<span class="red">-</span>width modulation
+
+<br><br>
+
+# Широтно<span class="red">-</span>импульсная модуляция
 
 ---
 layout: center
@@ -933,7 +899,7 @@ layout: center
 <div style="font-size: 3rem;">
 Микроконтроллер может выдавать на пинах либо 0 В<span class="red">,</span> либо 5 В<span class="red">.</span> <span v-click>Но если очень
 быстро переключать напряжение<span class="red">,</span></span> <span v-click>то можно добиться эффекта<span class="red">,</span> как будто мы подаём
-среднее арифметическое напряжение<span class="red">.</span></span>
+среднее арифметическое напряжение</span>
 </div>
 
 ---
@@ -963,35 +929,47 @@ preload: false
 <PwmExample />
 
 ---
-layout: center
+layout: cover
 ---
 
-<div class="tiny-title">Любой пин можно использовать для ШИМ<span class="red">,</span> если захотеть</div>
-
----
-layout: center
-class: text-center
----
-
-<div class="tiny-title">Последовательное питание</div>
+# Любой пин можно использовать для ШИМ<span class="red">,</span> если захотеть
 
 ---
 preload: false
+layout: two-cols
 ---
 
-<DisplayExample />
+# Медленный ШИМ
+
+<br>
+
+<CurrentChart type="PWM" max="10", voltage="5" freq="10" len="0.5" />
+
+::right::
+
+# Быстрый ШИМ
+
+<br>
+
+<CurrentChart type="PWM" max="10", voltage="5" freq="10" len="0.5" speed="0.05" />
 
 ---
-layout: center
+layout: cover
 ---
 
-<div class="small-title">8 * 8 <span class="red">=</span> 64</div>
+# Много лампочек
 
 ---
-layout: center
+layout: cover
 ---
 
-<div class="tiny-title" style="font-size: 4.5rem;">1920 * 1080 <span class="red">=</span> 2 073 600</div>
+# 8 <span class="red">×</span> 8 <span class="red">=</span> 64
+
+---
+layout: cover
+---
+
+# 1920 <span class="red">×</span> 1080 <span class="red">=</span> 2 073 600
 
 ---
 layout: image
@@ -1001,10 +979,28 @@ image: /8x8-matrix-black.png
 <Source value="https://circuitstoday.com/interfacing-8x8-led-matrix-with-arduino" />
 
 ---
-layout: center
+layout: cover
 ---
 
-<div class="small-title">8 + 8 <span class="red">=</span> 16</div>
+# 8 <span class="red">+</span> 8 <span class="red">=</span> 16
+
+---
+layout: cover
+---
+
+# Последовательное переключение
+
+---
+preload: false
+---
+
+<DisplayExample />
+
+---
+layout: cover
+---
+
+# 1920 <span class="red">+</span> 1080 <span class="red">=</span> 3 000
 
 ---
 layout: image
@@ -1016,10 +1012,10 @@ image: /led-matrix-chip-black.webp
 <Source value="https://circuitdigest.com/microcontroller-projects/arduino-8x8-led-matrix" />
 
 ---
-layout: center
+layout: cover
 ---
 
-<div class="small-title">I<sup class="red">2</sup>C|I<span class="red">2</span>C|IIC</div>
+# I<sup class="red">2</sup>C | I<span class="red">2</span>C | IIC
 
 ---
 layout: image
@@ -1032,10 +1028,10 @@ backgroundSize: 75rem
 <Source value="https://quanser-update.azurewebsites.net/quarc/documentation/i2c_protocol.html" />
 
 ---
-layout: center
+layout: cover
 ---
 
-<div class="tiny-title">А что оно может<span class="red">?</span></div>
+# А Doom оно запустит<span class="red">?</span>
 
 ---
 layout: image
@@ -1052,18 +1048,16 @@ image: /esp-pc-2.png
 <Source value="https://youtu.be/HaO_yZFYG1Q" />
 
 ---
-layout: center
-class: text-center
+layout: cover
 ---
 
-<div class="tiny-title">Для большинства проектов ESP-32 <span class="red">слишком</span> мощный</div>
+# Для большинства проектов ESP32 <span class="red">слишком</span> мощный
 
 ---
 layout: cover
-class: text-center
 ---
 
-# В массовом производстве выбирают самый дешёвый контроллер, который удовлетворяет требованиям.
+# В массовом производстве выбирают самый дешёвый контроллер<span class="red">,</span> который удовлетворяет требованиям
 
 ---
 layout: image
@@ -1084,14 +1078,14 @@ layout: cover
 class: text-center
 ---
 
-# Везенье, если <span class="green">есть</span> data sheet
+# Везенье<span class="red">,</span> если <span class="green">есть</span> data sheet
 
 ---
 layout: cover
 class: text-center
 ---
 
-# Веселье, если его <span class="red">нет</span>
+# Веселье<span class="red">,</span> если его <span class="red">нет</span>
 
 ---
 layout: image

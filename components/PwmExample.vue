@@ -7,18 +7,18 @@
 	<div class="pwm">
 		<div class="pwm-controls">
 			<h1>PWM <span class="red">/</span> ШИМ</h1>
-			<input type="range" v-model="v" min="0" max="255" />
+			<input type="range" v-model="v" min="0" max="1" step="0.01" />
 			<div style="font-size: 2rem;">{{ v }}</div>
 			<div class="pwm-chart">
 				<div
 					class="pwm-high"
-					:style="`flex: ${v}; border-right-width: ${v == 0 || v == 255 ? 0 : 16}px;`"
+					:style="`flex: ${v}; border-right-width: ${v == 0 || v == 1 ? 0 : 16}px;`"
 				></div>
-				<div class="pwm-low" :style="`flex: ${255-v};`"></div>
+				<div class="pwm-low" :style="`flex: ${1-v};`"></div>
 			</div>
 		</div>
 		<div class="pwm-preview">
-			<LedElement :value="v"></LedElement>
+			<LedElement :value="v*255"></LedElement>
 		</div>
 	</div>
 </template>
