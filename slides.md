@@ -122,7 +122,7 @@ image: /pad/duck.webp
 layout: cover
 ---
 
-# Что такое «послушный дом»<span class="red">?</span>
+# Что такое <span class="red">«</span>послушный дом<span class="red">»?</span>
 
 ---
 layout: cover
@@ -338,22 +338,291 @@ layout: cover
 layout: cover
 ---
 
+# Голосовой ассистент
+
+---
+layout: image-right
+image: /zero2-hero.webp
+backgroundSize: 40rem
+---
+
+# Raspberry Pi Zero 2 W
+
+<br>
+
+<v-clicks>
+
+- 4 ядра 64-bit 1 GHz
+- 512MB SDRAM
+- Wi-Fi & Bluetooth
+- Mini HDMI & microSD
+- CSI-2 camera connector
+- 40 пинов GPIO
+
+</v-clicks>
+
+
+<Source value="https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/" />
+
+---
+layout: cover
+---
+
+# Есть Mini HDMI<span class="red">,</span> но нельзя использовать браузер для визуала <span class="red">—</span> слишком мало оперативки
+
+---
+layout: image
+image: /larana.png
+backgroundSize: 70rem
+---
+
+<Source value="https://larana.tech" />
+
+---
+layout: image
+image: /pad/pi.webp
+---
+
+---
+layout: image
+image: /pad/sound-module.webp
+---
+
+---
+layout: image
+image: /pad/pi-sound.webp
+---
+
+---
+
+<div><SlidevVideo
+src="/pad/mic2.webm" :autoplay="true" :controls="false" :loop="true" :muted="true"
+autoreset="slide"
+style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0; right: 0;" ></SlidevVideo>
+</div>
+
+---
+layout: image
+image: /pad/amp.webp
+---
+
+---
+layout: image
+image: /pad/speaker.webp
+---
+
+---
+layout: image
+image: /pad/speaker-lay.webp
+---
+
+---
+
+<div><SlidevVideo
+src="/pad/sound.webm" :autoplay="true" :controls="false" :loop="true" :muted="true"
+autoreset="slide"
+style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0; right: 0;" ></SlidevVideo>
+</div>
+
+---
+
+TODO: device photo
+
+---
+layout: cover
+---
+
+# Распознавание речи
+
+---
+layout: code
+---
+
+````md magic-move
+
+```js
+import fs from "fs"
+import vosk from "vosk"
+import record from "node-record-lpcm16"
+import { exec } from "child_process"
+
+const modelPath = "./model"
+const sampleRate = 16000
+
+if (!fs.existsSync(modelPath)) {
+    console.error("Model not found at", MODEL_PATH)
+    process.exit(1)
+}
+```
+
+```js
+vosk.setLogLevel(0)
+const model = new vosk.Model(modelPath)
+const rec = new vosk.Recognizer({ model, sampleRate })
+
+const mic = record.record({
+    sampleRateHertz: SAMPLE_RATE,
+    threshold: 0,
+    verbose: false,
+    recordProgram: "rec",
+    channels: 1,
+    audioType: "raw",
+})
+```
+
+```js
+const SERVER = "http://0.0.0.0:3000"
+
+const handleLampToggle = async () => {
+    await fetch(SERVER + "/lamp/toggle")
+}
+
+const handleLightState = async (data) => {
+    await fetch(SERVER + "/led/state", {
+        method: "post", body: JSON.stringify(data),
+    })
+}
+```
+
+```js
+function run(cmd) {
+    return new Promise((resolve, reject) => {
+        exec(cmd, {shell: true}, (err, stdout, stderr) => {
+            if (err) return reject({err, stderr})
+            resolve(stdout)
+        })
+    })
+}
+
+const handlePause = () => run("mpc pause")
+const handlePlay = () => run("mpc play")
+const handlePrev = () => run("mpc prev")
+const handleNext = () => run("mpc next")
+```
+
+```js
+const ALIAS = "жаба"
+
+const commands = {
+    "пауза": handlePause,
+    "играй": handlePlay,
+    "дальше": handleNext,
+    "назад": handlePrev,
+    "свет": handleLampToggle,
+    "зелёный свет": () => handleLightState({
+        on: true, r: 0, g: 255, b: 0,
+    }),
+}
+```
+
+```js
+const micStream = mic.stream()
+
+micStream.on("error", console.error)
+
+process.on("SIGINT", () => {
+    mic.stop()
+    const final = rec.finalResult()
+    rec.free()
+    model.free()
+    process.exit(0)
+})
+```
+
+```js{all|2-4|4-11}
+micStream.on("data", (data) => {
+    if (rec.acceptWaveform(data)) {
+        // end of phrase
+    } else {
+        const partial = rec.partialResult()
+        if (partial && partial.partial) {
+            process.stdout.write(
+                `\rPartial: ${partial.partial}`,
+            )
+        }
+    }
+})
+```
+
+```js{all|2-12|3|4|7|9-10}
+micStream.on("data", (data) => {
+    if (rec.acceptWaveform(data)) {
+        const res = rec.result()
+        if (res && res.text) {
+            console.log("\nResult:", res.text)
+
+            const text = res.text.replace(`${ALIAS} `, "")
+
+            const c = commands[text]
+            c && c()
+        }
+    } else {/* Partial */}
+})
+```
+
+````
+
+---
+layout: center
+---
+
+<div class="big-title">DEMO</div>
+
+---
+layout: image-right
+image: /any-padme.jpg
+---
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# С умной лампой всё будет так же просто<span class="red">.</span>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Будет же<span class="red">,</span> да<span class="red">?</span>
+
+<Source value="х/ф Звёздные войны: Эпизод 2 — Атака клонов" />
+
+---
+layout: cover
+---
+
 # Почему светится лампа накаливания<span class="red">?</span>
 
 ---
 layout: image
 image: /acdc/lamp.webp
+transition: slide-left
 ---
 
 # Обычная лампа
 
 ---
-
-Нужен замкнутый контур
-
+layout: image-left
+image: /acdc/lamp-8.webp
 ---
 
-На электросхемах ток от плюса к минусу
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Для протекания тока нужен замкнутый контур
 
 ---
 layout: image
@@ -379,18 +648,50 @@ transition: slide-left
 ---
 
 ---
-layout: image-left
-image: /acdc/base-8.webp
-preload: false
+layout: cover
 ---
 
-<CurrentChart type="AC" :voltage="220" :freq="50" />
+# С некоторыми допущениями<span class="red">,</span> электрический ток можно сравнить с течением воды
 
 ---
 layout: cover
 ---
 
-# Переменный ток меняет полярность 50 раз в секунду <span class="red">(</span>Гц<span class="red">)</span>
+# С некоторыми допущениями<span class="red">,</span> любая еда <span class="red">—</span> чизбургер
+
+<Source value="© Тихон Шёпотов" />
+
+---
+layout: image-left
+image: /acdc/base-8.webp
+preload: false
+---
+
+<br>
+
+<CurrentChart type="AC" :voltage="220" :freq="50" />
+
+---
+layout: two-cols
+preload: false
+---
+
+# В российских розетках<span class="red">:</span>
+
+<br>
+
+<v-clicks>
+
+- Переменный ток <span class="red">(</span>AC<span class="red">),</span> который меняет полярность<br>50 раз в секунду <span class="red">(</span>Гц<span class="red">)</span>
+- Примерно <span class="red">~</span>220<span class="red">-</span>230 V
+
+</v-clicks>
+
+::right::
+
+<br>
+
+<CurrentChart type="AC" :voltage="220" :freq="50" />
 
 ---
 layout: image
@@ -408,6 +709,8 @@ layout: image-left
 image: /acdc/base-8.webp
 preload: false
 ---
+
+<br>
 
 <CurrentChart type="AC" :voltage="220" :freq="50" />
 
@@ -454,6 +757,8 @@ image: /acdc/diode-8.webp
 preload: false
 ---
 
+<br>
+
 <CurrentChart type="PREDC" :voltage="220" :freq="50" />
 
 ---
@@ -467,6 +772,8 @@ layout: image-left
 image: /acdc/bridge-8.webp
 preload: false
 ---
+
+<br>
 
 <CurrentChart type="DC" :voltage="220" :freq="50" />
 
@@ -511,6 +818,8 @@ image: /acdc/capacitor-8.webp
 preload: false
 ---
 
+<br>
+
 <CurrentChart type="DC" :voltage="300" :max="500" :freq="0" />
 
 ---
@@ -525,7 +834,7 @@ backgroundSize: 35rem
 
 <v-clicks>
 
-- Ж-ж-ж-ж-ж-ж-ж-ж-ж-ж-ж
+- Ж<span class="red">-</span>ж<span class="red">-</span>ж<span class="red">-</span>ж<span class="red">-</span>ж<span class="red">-</span>ж
 - Трансформатор понижает <span class="red">(</span>или повышает<span class="red">)</span> напряжение за счёт электромагнитной индукции
 - У нас нет времени на более подробное объяснение
 
@@ -543,6 +852,8 @@ image: /acdc/coil-8.webp
 preload: false
 ---
 
+<br>
+
 <CurrentChart type="DC" :voltage="46" :max="220" :freq="0" />
 
 ---
@@ -556,9 +867,12 @@ image: /c-transistor.webp
 
 <v-clicks>
 
--
+- Три ножки<span class="red">:</span> исток<span class="red">,</span> сток и затвор
+- Ток протекает от истока к стоку<span class="red">,</span> если есть напряжение на затворе
 
 </v-clicks>
+
+<br>
 
 ---
 layout: image
@@ -572,19 +886,15 @@ image: /acdc/pwm-8.webp
 preload: false
 ---
 
+<br>
+
 <CurrentChart type="DC" :voltage="5" :max="20" :freq="0" />
 
 ---
 layout: cover
 ---
 
-# Мы придумали блок питания
-
----
-layout: cover
----
-
-# Обратноходовый понижающий преобразователь<span class="red">*</span>
+# Мы придумали блок питания<span class="red">*</span>
 
 <div class="position-absolute bottom-5" style="font-size: 2rem">
 <span class="red">*</span> Это очень упрощённая схема</div>
@@ -629,10 +939,10 @@ backgroundSize: 40rem
 
 <v-clicks>
 
-- 2 ядра 32-bit 240 MHz
+- 2 ядра 32<span class="red">-</span>bit 240 MHz
 - 520 KB SRAM
-- 4 MB Flash-память
-- Wi-Fi & Bluetooth
+- 4 MB Flash<span class="red">-</span>память
+- Wi<span class="red">-</span>Fi <span class="red">&</span> Bluetooth
 - До 32 пинов GPIO
 
 </v-clicks>
@@ -670,7 +980,7 @@ backgroundSize: 30rem
 <v-clicks>
 
 - Плата для разработки
-- USB-порт для питания и прошивки
+- USB<span class="red">-</span>порт для питания и прошивки
 - Вывод пинов для удобной работы на макетной плате
 
 </v-clicks>
@@ -689,7 +999,7 @@ image: /pad/esp.webp
 layout: cover
 ---
 
-# Как это работает
+# Как мы можем это использовать
 
 ---
 layout: cover
@@ -702,28 +1012,14 @@ layout: cover
 
 # ВКЛ <span class="red">/</span> ВЫКЛ
 
-
 ---
 layout: image
 image: /led-with-btn.webp
 ---
 
-# Диод с кнопкой
+# Светодиод с кнопкой
 
 <Arrow x1="240" x2="600" y1="280" y2="280" width="6" color="orange" v-click />
-
----
-layout: image
-image: /kiss.webp
-backgroundSize: 44rem
----
-
----
-layout: image
-image: /led-with-btn.webp
----
-
-# Диод с кнопкой
 
 <Arrow x1="390" x2="390" y1="350" y2="220" width="6" color="orange" v-click />
 
@@ -790,9 +1086,9 @@ transition: slide-left
 
 <v-clicks>
 
-- R <span class="red">—</span> Сопротивление
 - U <span class="red">—</span> Напряжение
 - I <span class="red">—</span> Сила тока
+- R <span class="red">—</span> Сопротивление
 
 </v-clicks>
 
@@ -819,7 +1115,7 @@ I <span class="red">=</span> U <span class="red">/</span> R
 - R <span class="red">=</span> 1 Ω
 - U <span class="red">=</span> 5 V
 - I <span class="red">=</span> 5 <span class="red">/</span> 1
-- I <span class="red">=</span> 1 A
+- I <span class="red">=</span> 5 A
 
 </v-clicks>
 
@@ -833,7 +1129,7 @@ layout: cover
 layout: cover
 ---
 
-Мы превышаем номинальную силу тока в ~250 раз<span class="red">!</span>
+# Мы превышаем номинальную силу тока в <span class="red">~</span>250 раз<span class="red">!</span>
 
 ---
 layout: image-right
@@ -845,9 +1141,13 @@ backgroundSize: 37rem
 
 <br>
 
+<v-clicks>
+
 - Все проводники обладают сопротивлением
 - Чем выше сопротивление<span class="red">,</span> тем ниже сила тока при равном напряжении
 - Чем выше сопротивление<span class="red">,</span> тем сильнее нагревается проводник
+
+</v-clicks>
 
 <Source value="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg" />
 
@@ -1107,122 +1407,13 @@ layout: image
 image: /ron.jpg
 ---
 
-
 <Source value="х/с «Парки и зоны отдыха»" />
 
 ---
-
-Собираем устройства
-
+layout: cover
 ---
 
-лампочка
-
----
-layout: center
----
-
-```mermaid {scale: 1.5}
-%%{init: {'flowchart': {'curve': 'ortho'}}}%%
-flowchart TD
-  subgraph "Лампа"
-    Socket["Розетка"] -->|~220V| Lamp["Лампа"]
-    Socket -->|~220V| Lamp
-    linkStyle 0 stroke:#00ff00,stroke-width:4px;
-    linkStyle 1 stroke:#00ff00,stroke-width:4px;
-  end
-
-```
-
-
----
-layout: center
----
-
-```mermaid {scale: 1.3}
-%%{init: {'flowchart': {'curve': 'ortho'}}}%%
-flowchart TD
-  subgraph "Лампа"
-    Socket["Розетка"] -->|~220V| Switch["Переключатель"]
-    Switch -->|~220V| Lamp["Лампа"]
-    Socket -->|~220V| Lamp
-    linkStyle 0 stroke:#00ff00,stroke-width:4px;
-    linkStyle 1 stroke:#00ff00,stroke-width:4px;
-    linkStyle 2 stroke:#00ff00,stroke-width:4px;
-  end
-
-```
-
----
-layout: center
----
-
-```mermaid {scale: 1.5}
-%%{init: {'flowchart': {'curve': 'ortho'}}}%%
-flowchart TD
-  subgraph "Лампа"
-    Socket["Розетка"] -->|~220V| Lamp["Лампа"]
-    Socket -->|~220V| Lamp
-    ESP["ESP-32"]
-    linkStyle 0 stroke:#00ff00,stroke-width:4px;
-    linkStyle 1 stroke:#00ff00,stroke-width:4px;
-  end
-
-```
-
----
-layout: center
----
-
-```mermaid {scale: 1.3}
-%%{init: {'flowchart': {'curve': 'ortho'}}}%%
-flowchart TD
-  subgraph "Лампа"
-    Socket["Розетка"] -->|~220V| PS["Блок питания"]
-    Socket -->|~220V| PS
-    PS -->|+5V| ESP["ESP-32"]
-    PS -->|-5V| ESP
-    Socket -->|~220V| Lamp["Лампа"]
-    Socket -->|~220V| Lamp
-    linkStyle 0 stroke:#00ff00,stroke-width:4px;
-    linkStyle 1 stroke:#00ff00,stroke-width:4px;
-    linkStyle 2 stroke:#ff0000,stroke-width:4px;
-    linkStyle 3 stroke:#0000ff,stroke-width:4px;
-    linkStyle 4 stroke:#00ff00,stroke-width:4px;
-    linkStyle 5 stroke:#00ff00,stroke-width:4px;
-  end
-
-```
-
----
-layout: center
----
-
-```mermaid {scale: 0.9}
-%%{init: {'flowchart': {'curve': 'ortho'}}}%%
-flowchart TD
-  subgraph "Лампа"
-    Socket["Розетка"] -->|~220V| PS["Блок питания"]
-    Socket -->|~220V| PS
-    PS -->|+5V| ESP["ESP-32"]
-    PS -->|-5V| ESP
-    PS -->|-5V| Relay["Реле"]
-    ESP --> Relay
-    Socket -->|~220V| Relay
-    Relay -->|~220V| Lamp["Лампа"]
-    Socket -->|~220V| Lamp
-    linkStyle 0 stroke:#00ff00,stroke-width:4px;
-    linkStyle 1 stroke:#00ff00,stroke-width:4px;
-    linkStyle 2 stroke:#ff0000,stroke-width:4px;
-    linkStyle 3 stroke:#0000ff,stroke-width:4px;
-    linkStyle 4 stroke:#0000ff,stroke-width:4px;
-    linkStyle 5 stroke:#ffff00,stroke-width:4px;
-    linkStyle 6 stroke:#00ff00,stroke-width:4px;
-    linkStyle 7 stroke:#00ff00,stroke-width:4px;
-    linkStyle 8 stroke:#00ff00,stroke-width:4px;
-  end
-
-```
+# Мы знаем почти достаточно<span class="red">,</span> чтобы собрать лампочку
 
 ---
 layout: image-right
@@ -1231,7 +1422,7 @@ backgroundSize: 24rem
 transition: slide-left
 ---
 
-# Что такое реле<span class="red">?</span>
+# Что такое реле<span class="red">:</span>
 
 <br>
 
@@ -1252,15 +1443,15 @@ image: /relay.webp
 backgroundSize: 24rem
 ---
 
-# Как работает реле<span class="red">?</span>
+# Как работает реле<span class="red">:</span>
 
 <br>
 
 <v-clicks>
 
-1. Если подать напряжение на катушку<span class="red">,</span> она примагнитит пластину<span class="red">.</span>
-2. Металлическая пластина переключает контакты<span class="red">.</span>
-3. Чтобы пластина возвращалась в исходное положение<span class="red">,</span> к ней прикреплена пружина<span class="red">.</span>
+1. Если подать напряжение на катушку<span class="red">,</span> она примагнитит пластину
+2. Металлическая пластина переключает контакты
+3. Чтобы пластина возвращалась в исходное положение<span class="red">,</span> к ней прикреплена пружина
 
 </v-clicks>
 
@@ -1310,237 +1501,6 @@ image: /pad/lamp.webp
 Атеисты такие типа<span class="red">:</span>
 <br><br>
 Это устройство работает благодаря высокому качеству сборки и хорошему коду</div>
-
-
-
----
-
-
-код
-
----
-
-как прошить на JS
-
----
-
-dashboard
-
----
-layout: center
----
-
-<div class="tiny-title">Голосовой ассистент</div>
-
----
-layout: image-right
-image: /zero2-hero.webp
-backgroundSize: 40rem
----
-
-# Raspberry Pi Zero 2 W
-
-<br>
-
-<v-clicks>
-
-- 4 ядра 64-bit 1 GHz
-- 512MB SDRAM
-- Wi-Fi & Bluetooth
-- Mini HDMI & microSD
-- CSI-2 camera connector
-- 40 пинов GPIO
-
-</v-clicks>
-
-
-<Source value="https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/" />
-
----
-
-Есть Mini HDMI, но нельзя использовать браузер для визуала — слишком мало оперативки
-
----
-
-А вот ларана потянет
-
----
-layout: image
-image: /pad/pi.webp
----
-
----
-layout: image
-image: /pad/sound-module.webp
----
-
----
-layout: image
-image: /pad/pi-sound.webp
----
-
----
-
-<div><SlidevVideo
-src="/pad/mic2.webm" :autoplay="true" :controls="false" :loop="true" :muted="true"
-autoreset="slide"
-style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0; right: 0;" ></SlidevVideo>
-</div>
-
----
-layout: image
-image: /pad/amp.webp
----
-
----
-layout: image
-image: /pad/speaker.webp
----
-
----
-layout: image
-image: /pad/speaker-lay.webp
----
-
----
-
-<div><SlidevVideo
-src="/pad/sound.webm" :autoplay="true" :controls="false" :loop="true" :muted="true"
-autoreset="slide"
-style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0; right: 0;" ></SlidevVideo>
-</div>
-
----
-
-device
-
----
-layout: code
----
-
-````md magic-move
-
-```js
-import fs from "fs"
-import vosk from "vosk"
-import record from "node-record-lpcm16"
-import { exec } from "child_process"
-
-const modelPath = "./model"
-const sampleRate = 16000
-
-if (!fs.existsSync(modelPath)) {
-    console.error("Model not found at", MODEL_PATH)
-    process.exit(1)
-}
-```
-
-```js
-vosk.setLogLevel(0)
-const model = new vosk.Model(modelPath)
-const rec = new vosk.Recognizer({ model, sampleRate })
-
-const mic = record.record({
-    sampleRateHertz: SAMPLE_RATE,
-    threshold: 0,
-    verbose: false,
-    recordProgram: "rec",
-    channels: 1,
-    audioType: "raw",
-})
-```
-
-```js
-const SERVER = "http://0.0.0.0:3000"
-
-const handleLampToggle = async () => {
-    await fetch(SERVER + "/lamp/toggle")
-}
-
-const handleLightState = async (data) => {
-    await fetch(SERVER + "/led/state", {
-        method: "post", body: JSON.stringify(data),
-    })
-}
-```
-
-```js
-function run(cmd) {
-    return new Promise((resolve, reject) => {
-        exec(cmd, {shell: true}, (err, stdout, stderr) => {
-            if (err) return reject({err, stderr})
-            resolve(stdout)
-        })
-    })
-}
-
-const handlePause = () => run("mpc pause")
-const handlePlay = () => run("mpc play")
-const handlePrev = () => run("mpc prev")
-const handleNext = () => run("mpc next")
-```
-
-```js
-const ALIAS = "жаба"
-
-const commands = {
-    "пауза": handlePause,
-    "играй": handlePlay,
-    "дальше": handleNext,
-    "назад": handlePrev,
-    "свет": handleLampToggle,
-    "зелёный свет": () => handleLightState({
-        on: true, r: 0, g: 255, b: 0,
-    }),
-}
-```
-
-```js
-const micStream = mic.stream()
-
-micStream.on("error", console.error)
-
-process.on("SIGINT", () => {
-    mic.stop()
-    const final = rec.finalResult()
-    rec.free()
-    model.free()
-    process.exit(0)
-})
-```
-
-```js{all|2-4|4-11}
-micStream.on("data", (data) => {
-    if (rec.acceptWaveform(data)) {
-        // end of phrase
-    } else {
-        const partial = rec.partialResult()
-        if (partial && partial.partial) {
-            process.stdout.write(
-                `\rPartial: ${partial.partial}`,
-            )
-        }
-    }
-})
-```
-
-```js{all|2-12|3|4|7|9-10}
-micStream.on("data", (data) => {
-    if (rec.acceptWaveform(data)) {
-        const res = rec.result()
-        if (res && res.text) {
-            console.log("\nResult:", res.text)
-
-            const text = res.text.replace(`${ALIAS} `, "")
-
-            const c = commands[text]
-            c && c()
-        }
-    } else {/* Partial */}
-})
-```
-
-````
 
 ---
 layout: center
@@ -1648,26 +1608,34 @@ const server = http.createServer(async (req, res) => {
 
 ```js
 // DEVICE
-pinMode(RELAY_PIN, "output")
+pinMode(RELAY_PIN, "output");
 
-setInterval(async () => {
-    const res = await fetch(`${SERVER}/lamp/state`)
-
-    digitalWrite(
-        RELAY_PIN,
-        Number(await res.text()),
-    )
-}, 400)
+function update() {
+    httpGet(BASE_URL, "/lamp", function (_, _, body) {
+        if (body === "1") {
+            digitalWrite(RELAY_PIN, 1);
+        } else {
+            digitalWrite(RELAY_PIN, 0);
+        }
+    });
+    setTimeout(function() { update(); }, 400);
+}
 ```
 
 ````
 
 ---
-layout: center
-class: text-center
+layout: cover
 ---
 
-<div class="small-title">RPS <span class="red">=</span> N * 2</div>
+# RPS <span class="red">=</span> N <span class="red">×</span> 2
+
+
+---
+layout: cover
+---
+
+# Лучше один раз отправить обновление на устройство<span class="red">,</span> чем всё время дудосить сервер
 
 ---
 layout: center
@@ -1704,8 +1672,8 @@ const server = http.createServer(async (req, res) => {
     switch (req.url) {
         case·"/lamp/toggle":
             state = !state
-            const body = state ? "1" : "0"
-            await fetch(DEVICE, { method: "POST", body })
+            const endpoint = state ? "1" : "0"
+            await fetch(`${DEVICE_IP}/${endpoint}`)
             res.end(body)
     }
 })
@@ -1713,18 +1681,17 @@ const server = http.createServer(async (req, res) => {
 
 ```js
 // DEVICE
-pinMode(RELAY_PIN, "output")
+pinMode(RELAY_PIN, "output");
 
-const server = http.createServer(async (req, res) => {
-    switch (req.url) {
-        case·"/update":
-            digitalWrite(
-                RELAY_PIN,
-                Number(await res.text()),
-            )
-            res.end(body)
+const server = http.createServer(function (req, res) {
+    if (req.url === "/1") {
+        digitalWrite(RELAY_PIN, 1);
+        res.end("OK: ON");
+    } else if (req.url === "/0") {
+        digitalWrite(RELAY_PIN, 0);
+        res.end("OK: OFF");
     }
-})
+});
 ```
 
 ````
@@ -1733,82 +1700,62 @@ const server = http.createServer(async (req, res) => {
 layout: cover
 ---
 
-# Лучше один раз отправить обновление на устройство<span class="red">,</span> чем всё время дудосить сервер<span class="red">.</span>
+# Заключение
 
 ---
 
-- Умная розетка
-- Умная лампочка
+# На JS можно всё<span class="red">:</span>
 
----
+<br>
 
-KiCAD
+<v-clicks>
 
----
-
-FreeCAD
-
-корпус
-
-3D-печать
-
----
-
-# Прошивка
-
-Мы просто перекладываем байтики, чтобы что-то завелось, поэтому похуй, на чём
-мы это делаем. Выбирают языки вроде Си в основном потому, что они изначально
-под это заточены + потому что есть куча готовых инструментов.
-
----
-
-Прошить плату можно даже через браузер
-
----
-
-Управлять платой можно через браузер
-
----
-
-Моргаем светодиодом на плате
-
----
-
-блок питания
-
-две вилки
-
----
-
-бэкдоры в контроллерах
-
-гпу в малинке не опенсорс
-
----
-
-# Что из этого JS?
-
-- Сервер
+- Сервер<span class="red">/</span>брокер
 - Запуск модели распознавания речи
-- Управление устройством через WebSerial API
 - Написание прошивки
+- Управление устройством через WebSerial API
 - Софт для прошивки
+
+</v-clicks>
 
 ---
 class: small-table
 ---
 
+# Бюджет<span class="red">:</span> Минимум
+
+<br>
+
 <v-clicks>
 
-| Компонент | Стоимость (Рубли) |
+| Компонент | Стоимость <span class="red">(</span>Рубли<span class="red">)</span> |
 |-|-----------|
-| ESP-32 | 235 |
-| Raspberry Pi | 3 000 (2 000) |
+| ESP32 | 235 |
+| Блок питания | 121 |
+| Модуль реле | 112 |
+| Лампа | 91 |
+| __Итого__ | 559 |
+
+</v-clicks>
+
+---
+class: small-table
+---
+
+# Бюджет<span class="red">:</span> Шикуем
+
+<br>
+
+<v-clicks>
+
+| Компонент | Стоимость <span class="red">(</span>Рубли<span class="red">)</span> |
+|-|-----------|
+| ESP32 | 235 |
+| Raspberry Pi | 3 000 |
 | Усилитель | 319 |
 | Блок питания | 121 |
 | Модуль реле | 112 |
 | Звуковая карта | 167 |
-| Звуковой модуль | 200 |
 | Лампа | 91 |
 | __Итого__ | 4 245 |
 
@@ -1818,7 +1765,7 @@ class: small-table
 layout: two-cols
 ---
 
-# Что не посчитано
+# Что не посчитано<span class="red">:</span>
 
 <br>
 
@@ -1851,7 +1798,7 @@ layout: two-cols
 
 ---
 
-# Что мы узнали<span class="red">?</span>
+# Что мы узнали<span class="red">:</span>
 
 <br>
 
@@ -1868,7 +1815,7 @@ layout: two-cols
 
 ---
 
-# Сложности
+# Сложности<span class="red">:</span>
 
 <br>
 
@@ -1879,6 +1826,7 @@ layout: two-cols
 - Запчасти не всегда под рукой
 - Не всегда есть CTRL<span class="red">+</span>Z
 - Есть риск смерти
+- Нужно прятать обновки от жены
 
 </v-clicks>
 
