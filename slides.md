@@ -201,7 +201,7 @@ image: /pad/radio.webp
 ---
 
 <div><SlidevVideo
-src="/pad/mic1.webm" :autoplay="true" :controls="false" :loop="true" :muted="true"
+src="/pad/mic1.webm" :autoplay="true" :controls="false" :muted="true"
 autoreset="slide"
 style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0; right: 0;" ></SlidevVideo>
 </div>
@@ -225,9 +225,11 @@ image: /pad/speaker-lay.webp
 layout: cover
 ---
 
-# Это вопрос безопасности
+# Полиция предупредила об опасности умных колонок<span class="red">:</span> могут шпионить
 
-TODO: безопасность, прослушка
+## МВД уличило умные колонки в подслушивании и подглядывании
+
+<Source value="https://www.mk.ru/social/2026/03/23/policiya-predupredila-ob-opasnosti-umnykh-kolonok-mogut-shpionit.html" />
 
 ---
 layout: image
@@ -237,10 +239,27 @@ image: /home-assistant.png
 <Source value="https://www.home-assistant.io" />
 
 ---
-layout: cover
+layout: image-right
+image: /rupert.jpg
+backgroundSize: 35rem
 ---
 
-# <span class="red">«</span>У тебя не всегда будет интернет<span class="red">»</span>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Не стоит недеяться на чужую инфраструктуру
+
+<div class="bg-blur" style="position: absolute; right: 13rem; top: 3rem; font-size: 2rem;">Интернет</div>
+
+<Source value="х/ф Гарри Поттер и Философский камень" />
 
 ---
 layout: image
@@ -271,7 +290,7 @@ image: /ololoshka.webp
 <br>
 <br>
 
-<div style="font-size: 2.8rem;">Застать крах ИИ и многомиллиардные убытки ИТ-гигантов</div>
+<div style="font-size: 2.8rem;">Застать крах ИИ и многомиллиардные убытки ИТ<span class="red">-</span>гигантов</div>
 
 ---
 layout: image
@@ -326,7 +345,7 @@ layout: cover
 layout: cover
 ---
 
-# <span class="red">1.</span> Потому что мы можем<span class="red">.</span>
+# <span class="red">1.</span> Потому что мы можем
 
 ---
 layout: cover
@@ -352,11 +371,11 @@ backgroundSize: 40rem
 
 <v-clicks>
 
-- 4 ядра 64-bit 1 GHz
+- 4 ядра 64<span class="red">-</span>bit 1 GHz
 - 512MB SDRAM
-- Wi-Fi & Bluetooth
-- Mini HDMI & microSD
-- CSI-2 camera connector
+- Wi<span class="red">-</span>Fi <span class="red">&</span> Bluetooth
+- Mini HDMI <span class="red">&</span> microSD
+- CSI<span class="red">-</span>2 camera connector
 - 40 пинов GPIO
 
 </v-clicks>
@@ -396,7 +415,7 @@ image: /pad/pi-sound.webp
 ---
 
 <div><SlidevVideo
-src="/pad/mic2.webm" :autoplay="true" :controls="false" :loop="true" :muted="true"
+src="/pad/mic2.webm" :autoplay="true" :controls="false" :muted="true"
 autoreset="slide"
 style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0; right: 0;" ></SlidevVideo>
 </div>
@@ -419,7 +438,7 @@ image: /pad/speaker-lay.webp
 ---
 
 <div><SlidevVideo
-src="/pad/sound.webm" :autoplay="true" :controls="false" :loop="true" :muted="true"
+src="/pad/sound.webm" :autoplay="true" :controls="false" :muted="true"
 autoreset="slide"
 style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0; right: 0;" ></SlidevVideo>
 </div>
@@ -705,16 +724,6 @@ layout: cover
 # Вижу цель<span class="red">,</span> не вижу препятствий
 
 ---
-layout: image-left
-image: /acdc/base-8.webp
-preload: false
----
-
-<br>
-
-<CurrentChart type="AC" :voltage="220" :freq="50" />
-
----
 
 # Что нужно сделать<span class="red">:</span>
 
@@ -727,6 +736,16 @@ preload: false
 - 220 V <span class="red" style="font-size: 4rem">→</span> 5 V
 
 </v-clicks>
+
+---
+layout: image-left
+image: /acdc/base-8.webp
+preload: false
+---
+
+<br>
+
+<CurrentChart type="AC" :voltage="220" :freq="50" />
 
 ---
 layout: image-right
@@ -742,6 +761,7 @@ backgroundSize: 35rem
 
 - Диод пропускает электричесткий ток только в одном направлении
 - Некоторые диоды при прохождении тока светятся
+- <span class="orange">~</span> Клапан
 
 </v-clicks>
 
@@ -791,7 +811,8 @@ transition: slide-left
 <v-clicks>
 
 - Конденсатор накапливает электрический заряд
-- Когда ёмкость конденсатора заполняется<span class="red">,</span> он разряжается
+- Когда ёмкость конденсатора заполняется<span class="red">,</span> он разряжается<span class="red">,</span> если есть нагрузка
+- <span class="orange">~</span> Сифон
 
 </v-clicks>
 
@@ -901,6 +922,32 @@ layout: cover
 
 ---
 layout: cover
+transition: slide-left
+---
+
+# И теперь придётся паять блок питания для каждого проекта<span class="red">?</span>
+
+---
+layout: image-right
+image: /ps.webp
+---
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Можно купить готовый
+
+---
+layout: cover
 ---
 
 # Что дальше<span class="red">?</span>
@@ -951,14 +998,12 @@ backgroundSize: 40rem
 layout: cover
 ---
 
-
 # General Purpose Input<span class="red">/</span>Output
 
 <br>
 <br>
 
 # Ввод<span class="red">/</span>вывод общего назначения
-
 
 ---
 layout: image
@@ -1044,16 +1089,16 @@ layout: code
 
 ```js{all|2,4|6-11|7-10|8|9}
 // DEVICE
-const LED_PIN = 33
+var LED_PIN = 33;
 
-pinMode(LED_PIN, "output")
+pinMode(LED_PIN, "output");
 
-setInterval(() => {
+setInterval(function () {
     digitalWrite(
         LED_PIN,
         digitalRead(LED_PIN) ^ 1,
-    )
-}, 1000)
+    );
+}, 1000);
 ```
 
 ---
@@ -1208,18 +1253,18 @@ layout: code
 
 ```js{all|2,4|6|8-13|9-12|10|11}
 // DEVICE
-const LED_PIN = 16
+var LED_PIN = 16;
 
-pinMode(LED_PIN, "output")
+pinMode(LED_PIN, "output");
 
-let brightness = 100
+var brightness = 0.5;
 
-setInterval(() => {
+setInterval(function () {
     analogWrite(
         LED_PIN,
-        brightness / 255,
-    )
-}, 500)
+        brightness,
+    );
+}, 500);
 ```
 
 ---
@@ -1399,8 +1444,19 @@ image: /pad/e-ink-pins.webp
 
 ---
 layout: image
-image: /reverse.webp
+image: /reverse-clean.webp
 ---
+
+<div style="display: flex; gap: 6rem;">
+
+<div class="bg-blur" style="font-size: 2rem; flex: 1;">
+Дорогой<span class="red">,</span> хватит ломать технику<span class="red">,</span>
+ты не реверс-инженер<span class="red">...</span>
+</div>
+
+<div style="font-size: 2rem; flex: 1;">Сниму трансформатор с микроволновки</div>
+
+</div>
 
 ---
 layout: image
@@ -1462,20 +1518,20 @@ backgroundSize: 24rem
 layout: code
 ---
 
-```ts
+```js
 // Relay peuso-code
 
-const getActivePin = (voltageOnCoil: number) => {
+function getActivePin(voltageOnCoil) {
     if (voltageOnCoil === 0) {
-        return PIN_1
+        return PIN_1;
     } else {
-        return PIN_2
+        return PIN_2;
     }
 }
 
-getActivePin(0) // PIN_1
+getActivePin(0); // PIN_1
 
-getActivePin(1) // PIN_2
+getActivePin(1); // PIN_2
 ```
 
 ---
@@ -1509,24 +1565,101 @@ layout: center
 <div class="big-title">DEMO</div>
 
 ---
-layout: image
-image: /pad/tools.webp
+layout: cover
 ---
+
+# Как написать прошивку на JS
 
 ---
 
-# Инструменты
+# Есть два способа запустить код на контроллере<span class="red">:</span>
 
 <br>
 
 <v-clicks>
 
-- Паяльник
-- Флюс и припой
-- Пинцет и кусачки
-- Проводочки и термоусадки
+1. Компиляция прошивки
+2. Загрузить среду исполнения на контроллер
 
 </v-clicks>
+
+---
+layout: image
+image: /pico-2s.png
+backgroundSize: 60rem
+---
+
+<Source value="https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html" />
+
+---
+layout: cover
+---
+
+# Мы не на конфе для питонистов
+
+---
+layout: image
+image: /iskra-js.1.webp
+backgroundSize: 40rem
+---
+
+<Source value="https://amperka.ru/product/iskra-js" />
+
+---
+layout: image-right
+image: /iskra-js.1.webp
+backgroundSize: 40rem
+transition: slide-left
+---
+
+# Почему я не выбрал Iskra JS
+
+<br>
+
+<v-clicks>
+
+- Нет Wi<span>-</span>Fi <span class="red">&</span> Bluetooth
+- Такой доклад уже был 10 лет назад
+- У нас есть Iskra дома
+
+</v-clicks>
+
+<Source value="https://amperka.ru/product/iskra-js" />
+
+---
+layout: image-left
+image: /espruino.png
+backgroundSize: 5rem
+---
+
+# Espruino
+
+<br>
+
+<v-clicks>
+
+- Среда выполнения JS для микроконтроллеров
+- Веб<span class="red">-</span>IDE с настройкой в один клик
+- Прошивки для популярных плат
+- Готовые устройства
+
+</v-clicks>
+
+<Source value="https://www.espruino.com" />
+
+---
+layout: image
+image: /espruino-ide-1.png
+---
+
+<Source value="https://www.espruino.com" />
+
+---
+layout: image
+image: /espruino-ide-2.png
+---
+
+<Source value="https://www.espruino.com" />
 
 ---
 layout: two-cols
@@ -1538,11 +1671,12 @@ layout: two-cols
 
 <v-clicks>
 
-- Wi-Fi
+- Wi<span class="red">-</span>Fi
 - Bluetooth
 - Zigbee
 - ESP now
 - Ethernet
+- Проводочки
 
 </v-clicks>
 
@@ -1564,10 +1698,10 @@ layout: two-cols
 </v-clicks>
 
 ---
-layout: center
+layout: cover
 ---
 
-<div class="tiny-title" style="font-size: 4rem;">1 Сервер <span class="red">&</span> Много клиентов</div>
+# 1 Сервер <span class="red">&</span> Много клиентов
 
 ---
 layout: center
@@ -1638,10 +1772,10 @@ layout: cover
 # Лучше один раз отправить обновление на устройство<span class="red">,</span> чем всё время дудосить сервер
 
 ---
-layout: center
+layout: cover
 ---
 
-<div class="tiny-title" style="font-size: 4rem;">Каждое устройство <span class="red">—</span> сервер</div>
+# Каждое устройство <span class="red">—</span> сервер
 
 ---
 layout: center
@@ -1700,8 +1834,10 @@ const server = http.createServer(function (req, res) {
 layout: cover
 ---
 
-# Заключение
+# Итоги
 
+---
+layout: two-cols
 ---
 
 # На JS можно всё<span class="red">:</span>
@@ -1711,10 +1847,22 @@ layout: cover
 <v-clicks>
 
 - Сервер<span class="red">/</span>брокер
-- Запуск модели распознавания речи
-- Написание прошивки
+- Распознавания речи
+- Синтез речи
 - Управление устройством через WebSerial API
-- Софт для прошивки
+- Веб<span class="red">-</span>интерфейс
+- Мобильное приложение
+
+</v-clicks>
+
+::right::
+
+<v-clicks>
+
+- Прошивка
+- Программатор
+- Дашборд
+- И т<span class="red">.</span> д<span class="red">.</span>
 
 </v-clicks>
 
@@ -1786,7 +1934,7 @@ layout: two-cols
 <v-clicks>
 
 - Коннекторы
-- Флюс, припой и спирт
+- Флюс<span class="red">,</span> припой и спирт
 - Ацетатная лента
 - Термоусадки
 - Стяжки
@@ -1804,7 +1952,7 @@ layout: two-cols
 
 <v-clicks>
 
-- Зачем делать что-то своими руками
+- Зачем делать что<span class="red">-</span>то своими руками
 - Что такое микроконтроллеры
 - Как взаимодействуют компоненты
 - Как подружить устройства по сети
