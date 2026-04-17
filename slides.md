@@ -55,12 +55,6 @@ layout: cover
 layout: cover
 ---
 
-# Анекдот
-
----
-layout: cover
----
-
 # Этот доклад для тебя<span class="red">,</span> если ты знаешь<span class="red">,</span> что такое JavaScript
 
 ---
@@ -490,51 +484,6 @@ const mic = record.record({
 ```
 
 ```js
-const SERVER = "http://0.0.0.0:3000"
-
-const handleLampToggle = async () => {
-    await fetch(SERVER + "/lamp/toggle")
-}
-
-const handleLightState = async (data) => {
-    await fetch(SERVER + "/led/state", {
-        method: "post", body: JSON.stringify(data),
-    })
-}
-```
-
-```js
-function run(cmd) {
-    return new Promise((resolve, reject) => {
-        exec(cmd, {shell: true}, (err, stdout, stderr) => {
-            if (err) return reject({err, stderr})
-            resolve(stdout)
-        })
-    })
-}
-
-const handlePause = () => run("mpc pause")
-const handlePlay = () => run("mpc play")
-const handlePrev = () => run("mpc prev")
-const handleNext = () => run("mpc next")
-```
-
-```js
-const ALIAS = "жаба"
-
-const commands = {
-    "пауза": handlePause,
-    "играй": handlePlay,
-    "дальше": handleNext,
-    "назад": handlePrev,
-    "свет": handleLampToggle,
-    "зелёный свет": () => handleLightState({
-        on: true, r: 0, g: 255, b: 0,
-    }),
-}
-```
-
-```js
 const micStream = mic.stream()
 
 micStream.on("error", console.error)
@@ -579,6 +528,51 @@ micStream.on("data", (data) => {
 })
 ```
 
+```js
+const ALIAS = "жаба"
+
+const commands = {
+    "пауза": handlePause,
+    "играй": handlePlay,
+    "дальше": handleNext,
+    "назад": handlePrev,
+    "свет": handleLampToggle,
+    "зелёный свет": () => handleLightState({
+        on: true, r: 0, g: 255, b: 0,
+    }),
+}
+```
+
+```js
+function run(cmd) {
+    return new Promise((resolve, reject) => {
+        exec(cmd, {shell: true}, (err, stdout, stderr) => {
+            if (err) return reject({err, stderr})
+            resolve(stdout)
+        })
+    })
+}
+
+const handlePause = () => run("mpc pause")
+const handlePlay = () => run("mpc play")
+const handlePrev = () => run("mpc prev")
+const handleNext = () => run("mpc next")
+```
+
+```js
+const SERVER = "http://0.0.0.0:3000"
+
+const handleLampToggle = async () => {
+    await fetch(SERVER + "/lamp/toggle")
+}
+
+const handleLightState = async (data) => {
+    await fetch(SERVER + "/led/state", {
+        method: "post", body: JSON.stringify(data),
+    })
+}
+```
+
 ````
 
 ---
@@ -612,6 +606,73 @@ image: /any-padme.jpg
 <Source value="х/ф Звёздные войны: Эпизод 2 — Атака клонов" />
 
 ---
+layout: image
+image: /shenzhen.png
+---
+
+<Source value="Shenzhen I/O"></Source>
+
+---
+layout: image
+image: /shenzhen-docs.png
+---
+
+<Source value="Shenzhen I/O"></Source>
+
+---
+layout: cover
+class: text-center
+---
+
+# Везенье<span class="red">,</span> если <span class="green">есть</span> data sheet
+
+---
+layout: cover
+class: text-center
+---
+
+# Веселье<span class="red">,</span> если его <span class="red">нет</span>
+
+---
+layout: image
+image: /pad/e-ink.webp
+---
+
+---
+layout: image
+image: /pad/e-ink-pins.webp
+---
+
+---
+layout: image
+image: /reverse-clean.webp
+---
+
+<div style="display: flex; gap: 6rem;">
+
+<div class="bg-blur" style="font-size: 2rem; flex: 1;">
+Дорогой<span class="red">,</span> хватит ломать технику<span class="red">,</span>
+ты не реверс<span class="red">-</span>инженер<span class="red">...</span>
+</div>
+
+<div style="font-size: 2rem; flex: 1;">Нужно снять трансформатор с микроволновки<span class="red">...</span></div>
+
+</div>
+
+---
+layout: image
+image: /ron.jpg
+---
+
+<Source value="х/с «Парки и зоны отдыха»" />
+
+---
+layout: cover
+---
+
+# Код <span class="red">—</span> абстракция над электричеством
+
+---
 layout: cover
 ---
 
@@ -630,18 +691,20 @@ layout: image-left
 image: /acdc/lamp-8.webp
 ---
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<div style="display: flex; align-items: center; justify-content: center;">
+<LedElement :value="255" />
+</div>
+
 <br>
 <br>
 <br>
 <br>
 
+<v-click>
+
 # Для протекания тока нужен замкнутый контур
+
+</v-click>
 
 ---
 layout: image
@@ -815,6 +878,14 @@ transition: slide-left
 - <span class="orange">~</span> Сифон
 
 </v-clicks>
+
+
+---
+layout: cover
+transition: slide-left
+---
+
+# Не трогайте конденсаторы руками<span class="red">!</span>
 
 ---
 layout: image-left
@@ -1044,6 +1115,40 @@ image: /pad/esp.webp
 layout: cover
 ---
 
+# А Doom оно запустит<span class="red">?</span>
+
+---
+layout: image
+image: /esp-pc-1.png
+---
+
+<Source value="https://youtu.be/HaO_yZFYG1Q" />
+
+---
+layout: image
+image: /esp-pc-2.png
+---
+
+<Source value="https://youtu.be/HaO_yZFYG1Q" />
+
+---
+layout: cover
+---
+
+# Для большинства проектов ESP32 <span class="red">слишком</span> мощный
+
+---
+layout: cover
+---
+
+# В массовом производстве выбирают самый дешёвый контроллер<span class="red">,</span> который удовлетворяет требованиям
+
+
+
+---
+layout: cover
+---
+
 # Как мы можем это использовать
 
 ---
@@ -1059,23 +1164,6 @@ layout: cover
 
 ---
 layout: image
-image: /led-with-btn.webp
----
-
-# Светодиод с кнопкой
-
-<Arrow x1="240" x2="600" y1="280" y2="280" width="6" color="orange" v-click />
-
-<Arrow x1="390" x2="390" y1="350" y2="220" width="6" color="orange" v-click />
-
----
-preload: false
----
-
-<HLExample />
-
----
-layout: image
 image: /led-with-esp.webp
 ---
 
@@ -1087,17 +1175,17 @@ image: /led-with-esp.webp
 layout: code
 ---
 
-```js{all|2,4|6-11|7-10|8|9}
+```js{all|2,4|8-11|6,10|9}
 // DEVICE
 var LED_PIN = 33;
 
 pinMode(LED_PIN, "output");
 
+var on = false;
+
 setInterval(function () {
-    digitalWrite(
-        LED_PIN,
-        digitalRead(LED_PIN) ^ 1,
-    );
+    digitalWrite( LED_PIN, on);
+    on = !on;
 }, 1000);
 ```
 
@@ -1177,6 +1265,27 @@ layout: cover
 # Мы превышаем номинальную силу тока в <span class="red">~</span>250 раз<span class="red">!</span>
 
 ---
+layout: two-cols
+---
+
+# Закон Ома
+
+<div style="font-size: 5rem; height: 81%; display: flex; align-items: center">
+R <span class="red">=</span> U <span class="red">/</span> I
+</div>
+
+::right::
+
+<v-clicks>
+
+- U <span class="red">=</span> 5V
+- I <span class="red">=</span> 20 mA
+- R <span class="red">=</span> 5 <span class="red">/</span> 0.020
+- R <span class="red">=</span> 250 Ω
+
+</v-clicks>
+
+---
 layout: image-right
 image: /resistors.png
 backgroundSize: 37rem
@@ -1195,15 +1304,6 @@ backgroundSize: 37rem
 </v-clicks>
 
 <Source value="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg" />
-
----
-layout: image
-image: /led-with-btn.webp
----
-
-# Диод с кнопкой (и резистор)
-
-<Arrow x1="550" x2="550" y1="350" y2="220" width="6" color="orange" v-click />
 
 ---
 layout: image-right
@@ -1371,99 +1471,6 @@ backgroundSize: 75rem
 # I<sup class="red">2</sup>C
 
 <Source value="https://quanser-update.azurewebsites.net/quarc/documentation/i2c_protocol.html" />
-
----
-layout: cover
----
-
-# А Doom оно запустит<span class="red">?</span>
-
----
-layout: image
-image: /esp-pc-1.png
----
-
-<Source value="https://youtu.be/HaO_yZFYG1Q" />
-
----
-layout: image
-image: /esp-pc-2.png
----
-
-<Source value="https://youtu.be/HaO_yZFYG1Q" />
-
----
-layout: cover
----
-
-# Для большинства проектов ESP32 <span class="red">слишком</span> мощный
-
----
-layout: cover
----
-
-# В массовом производстве выбирают самый дешёвый контроллер<span class="red">,</span> который удовлетворяет требованиям
-
----
-layout: image
-image: /shenzhen.png
----
-
-<Source value="Shenzhen I/O"></Source>
-
----
-layout: image
-image: /shenzhen-docs.png
----
-
-<Source value="Shenzhen I/O"></Source>
-
----
-layout: cover
-class: text-center
----
-
-# Везенье<span class="red">,</span> если <span class="green">есть</span> data sheet
-
----
-layout: cover
-class: text-center
----
-
-# Веселье<span class="red">,</span> если его <span class="red">нет</span>
-
----
-layout: image
-image: /pad/e-ink.webp
----
-
----
-layout: image
-image: /pad/e-ink-pins.webp
----
-
----
-layout: image
-image: /reverse-clean.webp
----
-
-<div style="display: flex; gap: 6rem;">
-
-<div class="bg-blur" style="font-size: 2rem; flex: 1;">
-Дорогой<span class="red">,</span> хватит ломать технику<span class="red">,</span>
-ты не реверс-инженер<span class="red">...</span>
-</div>
-
-<div style="font-size: 2rem; flex: 1;">Сниму трансформатор с микроволновки</div>
-
-</div>
-
----
-layout: image
-image: /ron.jpg
----
-
-<Source value="х/с «Парки и зоны отдыха»" />
 
 ---
 layout: cover
@@ -1671,12 +1678,8 @@ layout: two-cols
 
 <v-clicks>
 
-- Wi<span class="red">-</span>Fi
-- Bluetooth
-- Zigbee
-- ESP now
-- Ethernet
-- Проводочки
+- Проводные
+- Беспроводные
 
 </v-clicks>
 
@@ -1870,7 +1873,7 @@ layout: two-cols
 class: small-table
 ---
 
-# Бюджет<span class="red">:</span> Минимум
+# Бюджет<span class="red">:</span> Лампа
 
 <br>
 
@@ -1890,7 +1893,7 @@ class: small-table
 class: small-table
 ---
 
-# Бюджет<span class="red">:</span> Шикуем
+# Бюджет<span class="red">:</span> Колонка
 
 <br>
 
@@ -1898,14 +1901,11 @@ class: small-table
 
 | Компонент | Стоимость <span class="red">(</span>Рубли<span class="red">)</span> |
 |-|-----------|
-| ESP32 | 235 |
 | Raspberry Pi | 3 000 |
 | Усилитель | 319 |
 | Блок питания | 121 |
-| Модуль реле | 112 |
 | Звуковая карта | 167 |
-| Лампа | 91 |
-| __Итого__ | 4 245 |
+| __Итого__ | 3 607 |
 
 </v-clicks>
 
@@ -1975,6 +1975,20 @@ layout: two-cols
 - Не всегда есть CTRL<span class="red">+</span>Z
 - Есть риск смерти
 - Нужно прятать обновки от жены
+
+</v-clicks>
+
+---
+
+# Перспективы<span class="red">:</span>
+
+<br>
+
+<v-clicks>
+
+- Автономность
+- Панк и DIY
+- Смерть в нищите
 
 </v-clicks>
 
