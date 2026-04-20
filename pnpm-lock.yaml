@@ -15,8 +15,8 @@ importers:
         specifier: latest
         version: 0.25.0
       current-chart:
-        specifier: ^1.0.1
-        version: 1.0.1
+        specifier: ^1.2.1
+        version: 1.2.1
       slidev-addon-qrcode:
         specifier: ^1.0.2
         version: 1.0.2
@@ -1177,8 +1177,8 @@ packages:
   csstype@3.2.3:
     resolution: {integrity: sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ==}
 
-  current-chart@1.0.1:
-    resolution: {integrity: sha512-gRtOikxxIOfZrM25XltkKNl8MG96c7iqt/uC1gxjcKm3JL50u0l8yAsImeiskhgkhJ3mHLi46OgV0ZrOG/W6zg==}
+  current-chart@1.2.1:
+    resolution: {integrity: sha512-8xiQDIznYmtEa2VYbWl6q/Iy9D7M7sQppqfnryx2ShKAaJRAXRn3wMSJZZ0tPjDrOAY9mBKS4UUURXi86oPYTA==}
 
   cytoscape-cose-bilkent@4.1.0:
     resolution: {integrity: sha512-wgQlVIUJF13Quxiv5e1gstZ08rnZj2XaLHGoFMYXz7SkNfCDOOteKBE6SYRfA9WxxI/iBc3ajfDoc6hb/MRAHQ==}
@@ -4120,7 +4120,7 @@ snapshots:
 
   csstype@3.2.3: {}
 
-  current-chart@1.0.1: {}
+  current-chart@1.2.1: {}
 
   cytoscape-cose-bilkent@4.1.0(cytoscape@3.33.1):
     dependencies:

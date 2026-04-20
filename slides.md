@@ -65,19 +65,6 @@ class: text-center
 # Фокус на идеях
 
 ---
-
-# Основное внимание идеям
-
-<br>
-
-<v-clicks>
-
-- Слишком много информации
-- Эта информация новая и непривычная
-
-</v-clicks>
-
----
 layout: two-cols
 ---
 
@@ -1184,7 +1171,7 @@ pinMode(LED_PIN, "output");
 var on = false;
 
 setInterval(function () {
-    digitalWrite( LED_PIN, on);
+    digitalWrite(LED_PIN, on);
     on = !on;
 }, 1000);
 ```
@@ -1245,8 +1232,8 @@ I <span class="red">=</span> U <span class="red">/</span> R
 
 <v-clicks>
 
-- R <span class="red">=</span> 1 Ω
 - U <span class="red">=</span> 5 V
+- R <span class="red">=</span> 1 Ω
 - I <span class="red">=</span> 5 <span class="red">/</span> 1
 - I <span class="red">=</span> 5 A
 
@@ -1823,10 +1810,10 @@ pinMode(RELAY_PIN, "output");
 const server = http.createServer(function (req, res) {
     if (req.url === "/1") {
         digitalWrite(RELAY_PIN, 1);
-        res.end("OK: ON");
+        res.end("ACK: ON");
     } else if (req.url === "/0") {
         digitalWrite(RELAY_PIN, 0);
-        res.end("OK: OFF");
+        res.end("ACK: OFF");
     }
 });
 ```
