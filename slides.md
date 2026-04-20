@@ -59,48 +59,6 @@ layout: cover
 
 ---
 layout: cover
-class: text-center
----
-
-# Фокус на идеях
-
----
-layout: two-cols
----
-
-# Что будет<span class="red">:</span>
-
-<br>
-
-<v-clicks>
-
-- Псевдокод
-- Схемы
-- База
-
-</v-clicks>
-
-::right::
-
-# Чего не будет<span class="red">:</span>
-
-<br>
-
-<v-clicks>
-
-- Пошаговых инструкций
-- Трассировок
-- Лишних абстракций
-
-</v-clicks>
-
----
-layout: image
-image: /pad/duck.webp
----
-
----
-layout: cover
 ---
 
 # Что такое <span class="red">«</span>послушный дом<span class="red">»?</span>
@@ -115,163 +73,32 @@ layout: cover
 layout: cover
 ---
 
-# Послушный дом почти как умный<span class="red">,</span> но тупой
+# Послушный дом почти как умный<span class="red">,</span> но тупой
 
 <Source value="© Фонд золотых цитат" />
 
 ---
-
-# Мы сделаем<span class="red">:</span>
-
-<br>
-
-<v-clicks>
-
-- Умную лампочку<span class="red">/</span>розетку
-- Голосового ассистента
-
-</v-clicks>
-
----
-layout: cover
----
-
-# Зачем<span class="red">?</span>
-
----
-layout: cover
----
-
-# Зачем делать это самому<span class="red">?</span>
-
----
-layout: image-right
-image: /subaru-ad.webp
-backgroundSize: 38rem
----
-
-# Вендоры <span class="red">—</span> злые
-
-TODO: картинки на каждый пункт
-
-<br>
-
-<v-clicks>
-
-- Смартфоны не чинятся
-- Холодильники шпионят
-- Принтеры не печают сторонними чернилами
-- Лицензии меняются
-- Автомобили отвлекают рекламой
-
-</v-clicks>
-
-<Source value="https://www.reddit.com/r/subaru/comments/1p57ohp/these_ads_should_not_be_happening_while_we_are" />
-
----
-layout: cover
----
-
-# Если я купил железку<span class="red">,</span><br>то это моя железка<span class="red">!</span>
-
----
-layout: image
-image: /pad/radio.webp
----
-
----
-
-<div><SlidevVideo
-src="/pad/mic1.webm" :autoplay="true" :controls="false" :muted="true"
-autoreset="slide"
-style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0; right: 0;" ></SlidevVideo>
-</div>
-
----
-layout: image
-image: /pad/acc.webp
----
-
----
-layout: image
-image: /pad/speaker.webp
----
-
----
-layout: image
-image: /pad/speaker-lay.webp
----
-
----
-layout: cover
----
-
-# Полиция предупредила об опасности умных колонок<span class="red">:</span> могут шпионить
-
-## МВД уличило умные колонки в подслушивании и подглядывании
-
-<Source value="https://www.mk.ru/social/2026/03/23/policiya-predupredila-ob-opasnosti-umnykh-kolonok-mogut-shpionit.html" />
-
----
-layout: image
-image: /home-assistant.png
----
-
-<Source value="https://www.home-assistant.io" />
-
----
-layout: image-right
-image: /rupert.jpg
-backgroundSize: 35rem
----
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-# Не стоит недеяться на чужую инфраструктуру
-
-<div class="bg-blur" style="position: absolute; right: 13rem; top: 3rem; font-size: 2rem;">Интернет</div>
-
-<Source value="х/ф Гарри Поттер и Философский камень" />
-
----
-layout: image
-image: /zigbee.webp
-backgroundSize: 37rem
-class: bg-black
----
-
----
-layout: cover
----
-
-# Это не под силу ИИ<span class="red">*</span>
-
-
-<div style="position: fixed; bottom: 2rem; font-size: 2rem;"><span class="red">*</span> пока что</div>
-
----
 layout: image-left
-image: /ololoshka.webp
+image: /iceberg.svg
+backgroundSize: 20rem
 ---
 
-# Мечта детства <span color="red">№</span>2026
+# Айсберг
 
 <br>
-<br>
-<br>
-<br>
-<br>
 
-<div style="font-size: 2.8rem;">Застать крах ИИ и многомиллиардные убытки ИТ<span class="red">-</span>гигантов</div>
+<v-clicks>
+
+- Информация поделена на уровни
+- Чем дальше<span class="red">,</span> тем сложнее
+
+</v-clicks>
+
+---
+layout: cover
+---
+
+# Уровень 0<span class="red">:</span> Дисклеймер
 
 ---
 layout: image
@@ -303,12 +130,6 @@ class: text-center
 </div>
 
 ---
-layout: cover
----
-
-# Это не шутка<span class="red">!</span> Будьте осторожны при работе с электричеством<span class="red">.</span> Особенно<span class="red">,</span> если просите советы у нейросетей
-
----
 layout: image
 image: /plug-wiring-risk.png
 backgroundSize: 78rem
@@ -317,28 +138,83 @@ backgroundSize: 78rem
 <Source value="ChatGPT" />
 
 ---
-layout: cover
+layout: image-left
+image: /ololoshka.webp
 ---
 
-# Зачем делать это на JS<span class="red">?</span>
+# Мечта детства <span color="red">№</span>2026
 
----
-layout: cover
----
+<br>
+<br>
+<br>
+<br>
+<br>
 
-# <span class="red">1.</span> Потому что мы можем
-
----
-layout: cover
----
-
-# <span class="red">2.</span> Всё<span class="red">,</span> что может быть написано на JS<span class="red">,</span> будет написано на JS
+<div style="font-size: 2.8rem;">Застать крах ИИ и многомиллиардные убытки ИТ<span class="red">-</span>гигантов</div>
 
 ---
 layout: cover
 ---
 
-# Голосовой ассистент
+# Соблюдайте технику безопасности при работе с электричеством<span class="red">.</span> Не доверяёте LLM
+
+---
+layout: cover
+---
+
+# Уровень 1<span class="red">:</span> На всё готовенькое
+
+---
+layout: image
+image: /sharikov.webp
+---
+
+<div class="bg-blur tiny-title text-center position-absolute bottom-20" style="font-size: 3rem">
+Скачаю Home assistant<span class="red">,</span> настрою Zigbee</div>
+
+<Source value="х/ф Собачье сердце" />
+
+---
+layout: cover
+---
+
+# Вендоры <span class="red">—</span> злые
+
+---
+layout: image-right
+image: /rupert.jpg
+backgroundSize: 35rem
+---
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Не стоит недеяться на чужую инфраструктуру<span class="red">,</span> вендоров или интернет
+
+<div class="bg-blur" style="position: absolute; right: 13rem; top: 3rem; font-size: 2rem;">Интернет</div>
+
+<Source value="х/ф Гарри Поттер и Философский камень" />
+
+---
+layout: image
+image: /zigbee.webp
+backgroundSize: 37rem
+class: bg-black
+---
+
+---
+layout: cover
+---
+
+# Уровень 2<span class="red">:</span> Голосовой ассистент
 
 ---
 layout: image-right
@@ -368,7 +244,7 @@ backgroundSize: 40rem
 layout: cover
 ---
 
-# Есть Mini HDMI<span class="red">,</span> но нельзя использовать браузер для визуала <span class="red">—</span> слишком мало оперативки
+# Есть Mini HDMI<span class="red">,</span> но нельзя использовать браузер <span class="red">—</span> слишком мало оперативки
 
 ---
 layout: image
@@ -377,6 +253,11 @@ backgroundSize: 70rem
 ---
 
 <Source value="https://larana.tech" />
+
+---
+layout: image
+image: /pad/duck.webp
+---
 
 ---
 layout: image
@@ -392,6 +273,26 @@ image: /pad/sound-module.webp
 layout: image
 image: /pad/pi-sound.webp
 ---
+
+---
+layout: cover
+---
+
+# Если я купил железку<span class="red">,</span><br>то это моя железка<span class="red">!</span>
+
+---
+layout: image
+image: /pad/radio.webp
+---
+
+---
+
+<div><SlidevVideo
+src="/pad/mic1.webm" :autoplay="true" :controls="false" :muted="true"
+autoreset="slide"
+style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0; right: 0;" ></SlidevVideo>
+</div>
+
 
 ---
 
@@ -569,42 +470,398 @@ layout: center
 <div class="big-title">DEMO</div>
 
 ---
-layout: image-right
-image: /any-padme.jpg
+layout: cover
 ---
 
+# Уровень 3<span class="red">:</span> Мигаем светодиодом
+
+---
+layout: image
+image: /nanomachines.jpg
+---
+
+<div class="tiny-title text-center bg-blur">Микроконтроллеры</div>
+
+---
+layout: cover
+---
+
+# Микроконтроллер <span class="red">—</span> программируемое устройство<span class="red">,</span> которое может принимать и отправлять электрические сигналы
+
+---
+layout: image
+image: /c-esp32.webp
+backgroundSize: 60rem
+transition: slide-left
+---
+
+<Arrow x1="800" x2="600" y1="400" y2="380" width="6" color="red" v-click />
+
+---
+layout: image-left
+image: /c-esp32.webp
+backgroundSize: 40rem
+---
+
+# ESP32
+
 <br>
-<br>
-<br>
-<br>
+
+<v-clicks>
+
+- 2 ядра 32<span class="red">-</span>bit 240 MHz
+- 520 KB SRAM
+- 4 MB Flash<span class="red">-</span>память
+- Wi<span class="red">-</span>Fi <span class="red">&</span> Bluetooth
+- До 32 пинов GPIO
+
+</v-clicks>
+
+---
+layout: cover
+---
+
+# General Purpose Input<span class="red">/</span>Output
+
 <br>
 <br>
 
-# С умной лампой всё будет так же просто<span class="red">.</span>
+# Ввод<span class="red">/</span>вывод общего назначения
+
+---
+layout: image
+image: /esp32.png
+backgroundSize: 30rem
+transition: slide-left
+---
+
+---
+layout: image-left
+image: /esp32.png
+backgroundSize: 30rem
+---
+
+# ESP32 DevKit
 
 <br>
-<br>
-<br>
-<br>
+
+<v-clicks>
+
+- Плата для разработки
+- USB<span class="red">-</span>порт для питания и прошивки
+- Вывод пинов для удобной работы на макетной плате
+
+</v-clicks>
+
+---
+layout: image
+image: /pad/duck.webp
+---
+
+---
+layout: image
+image: /pad/esp.webp
+---
+
+---
+layout: cover
+---
+
+# Зачем делать это на JS<span class="red">?</span>
+
+---
+layout: cover
+---
+
+# <span class="red">1.</span> Потому что мы можем
+
+---
+layout: cover
+---
+
+# <span class="red">2.</span> Всё<span class="red">,</span> что может быть написано на JS<span class="red">,</span> будет написано на JS
+
+---
+layout: cover
+---
+
+# Как написать прошивку на JS
+
+---
+
+# Есть два способа запустить код на контроллере<span class="red">:</span>
+
 <br>
 
-# Будет же<span class="red">,</span> да<span class="red">?</span>
+<v-clicks>
 
-<Source value="х/ф Звёздные войны: Эпизод 2 — Атака клонов" />
+1. Компиляция прошивки
+2. Загрузить среду исполнения на контроллер
+
+</v-clicks>
+
+---
+layout: image
+image: /pico-2s.png
+backgroundSize: 60rem
+---
+
+<Source value="https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html" />
+
+---
+layout: cover
+---
+
+# Мы не на конфе для питонистов
+
+
+
+---
+layout: image-left
+image: /espruino.png
+backgroundSize: 5rem
+---
+
+# Espruino
+
+<br>
+
+<v-clicks>
+
+- Среда выполнения JS для микроконтроллеров
+- Веб<span class="red">-</span>IDE с настройкой в один клик
+- Прошивки для популярных плат
+- Готовые устройства
+
+</v-clicks>
+
+<Source value="https://www.espruino.com" />
+
+---
+layout: image
+image: /espruino-ide-1.png
+---
+
+<Source value="https://www.espruino.com" />
+
+---
+layout: image
+image: /espruino-ide-2.png
+---
+
+<Source value="https://www.espruino.com" />
+
+---
+layout: code
+---
+
+```js{all|2,4|8-11|6,10|9|all}
+// DEVICE
+var LED_PIN = 2;
+
+pinMode(LED_PIN, "output");
+
+var on = false;
+
+setInterval(function () {
+    digitalWrite(LED_PIN, on);
+    on = !on;
+}, 500);
+```
+
+<img
+    class="position-absolute top-2 right-2"
+    src="/esp32.png"
+    width="400"
+    v-click
+/>
+
+<!-- TODO: led animation -->
+
+---
+layout: cover
+---
+
+# Уровень 4<span class="red">:</span><br>Мигаем светодиодом по сети
+
+---
+layout: two-cols
+---
+
+# Способы связи
+
+<br>
+
+<v-clicks>
+
+- Проводные
+- Беспроводные
+
+</v-clicks>
+
+::right::
+
+# Протоколы
+
+<br>
+
+<v-clicks>
+
+- TCP
+- UDP
+- HTTP
+- MQTT
+- I<sup class="red">2</sup>C
+- USB
+
+</v-clicks>
+
+---
+layout: cover
+---
+
+# 1 Сервер <span class="red">&</span> Много клиентов
+
+---
+layout: center
+---
+
+```mermaid {scale: 1.5}
+flowchart TD
+  subgraph "NETWORK__"
+    direction TB
+    Host["SERVER_"]
+    NodeA["Device"] --> Host
+    NodeB["Device"] --> Host
+    NodeC["Device"] --> Host
+  end
+
+```
+
+---
+layout: code
+---
+
+````md magic-move
+```js
+// SERVER
+let state = false
+
+const server = http.createServer(async (req, res) => {
+    switch (req.url) {
+        case "/lamp/state":
+            reply(res, 200, state ? "1" : "0")
+            break
+        case·"/lamp/toggle":
+            state = !state
+            reply(res, 200, state ? "1" : "0")
+    }
+})
+```
+
+```js
+// DEVICE
+pinMode(RELAY_PIN, "output");
+
+function update() {
+    httpGet(BASE_URL, "/lamp", function (_, _, body) {
+        if (body === "1") {
+            digitalWrite(RELAY_PIN, 1);
+        } else {
+            digitalWrite(RELAY_PIN, 0);
+        }
+    });
+    setTimeout(function() { update(); }, 400);
+}
+```
+
+````
+
+---
+layout: cover
+---
+
+# RPS <span class="red">=</span> N <span class="red">×</span> 2
+
+
+---
+layout: cover
+---
+
+# Лучше один раз отправить обновление на устройство<span class="red">,</span> чем всё время дудосить сервер
+
+---
+layout: cover
+---
+
+# Каждое устройство <span class="red">—</span> сервер
+
+---
+layout: center
+---
+
+```mermaid {scale: 1.5}
+flowchart TD
+  subgraph "NETWORK__"
+    direction TB
+    Host["BROKER_"]
+    Host --> NodeA["Device"]
+    Host --> NodeB["Device"]
+    Host --> NodeC["Device"]
+  end
+```
+
+---
+layout: code
+---
+
+````md magic-move
+
+```js
+// BROKER
+let state = false
+
+const server = http.createServer(async (req, res) => {
+    switch (req.url) {
+        case·"/lamp/toggle":
+            state = !state
+            const endpoint = state ? "1" : "0"
+            await fetch(`${DEVICE_IP}/${endpoint}`)
+            res.end(body)
+    }
+})
+```
+
+```js
+// DEVICE
+pinMode(RELAY_PIN, "output");
+
+const server = http.createServer(function (req, res) {
+    if (req.url === "/1") {
+        digitalWrite(RELAY_PIN, 1);
+        res.end("ACK: ON");
+    } else if (req.url === "/0") {
+        digitalWrite(RELAY_PIN, 0);
+        res.end("ACK: OFF");
+    }
+});
+```
+
+````
 
 ---
 layout: image
 image: /shenzhen.png
 ---
 
-<Source value="Shenzhen I/O"></Source>
+<Source value="Shenzhen I/O" />
 
 ---
 layout: image
 image: /shenzhen-docs.png
 ---
 
-<Source value="Shenzhen I/O"></Source>
+<Source value="Shenzhen I/O" />
 
 ---
 layout: cover
@@ -651,13 +908,53 @@ layout: image
 image: /ron.jpg
 ---
 
-<Source value="х/с «Парки и зоны отдыха»" />
+<Source value="х/с Парки и зоны отдыха" />
 
 ---
 layout: cover
 ---
 
 # Код <span class="red">—</span> абстракция над электричеством
+
+---
+layout: cover
+---
+
+# Уровень 5<span class="red">:</span> Послушная розетка
+
+---
+layout: cover
+---
+
+# Концептуально всё просто<span class="red">:</span>
+
+<br>
+
+# Делаем всё то же самое<span class="red">,</span> но вместо светодиода <span class="red">—</span> лампа
+
+---
+layout: image-right
+image: /any-padme.jpg
+---
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Всё будет так же просто<span class="red">.</span>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Будет же<span class="red">,</span> да<span class="red">?</span>
+
+<Source value="х/ф Звёздные войны: Эпизод 2 — Атака клонов" />
 
 ---
 layout: cover
@@ -703,12 +1000,6 @@ image: /acdc/lamp-with-button.webp
 ---
 
 <HLExample />
-
----
-layout: cover
----
-
-# До этого электросеть решала<span class="red">,</span> будет ли у тебя гореть свет<span class="red">,</span> а теперь ты сам<span class="red">.</span><br><br>Дом уже послушный
 
 ---
 layout: image
@@ -915,9 +1206,16 @@ backgroundSize: 35rem
 
 - Ж<span class="red">-</span>ж<span class="red">-</span>ж<span class="red">-</span>ж<span class="red">-</span>ж<span class="red">-</span>ж
 - Трансформатор понижает <span class="red">(</span>или повышает<span class="red">)</span> напряжение за счёт электромагнитной индукции
-- У нас нет времени на более подробное объяснение
+- <span class="orange">~</span> Без понятия<span class="red">,</span> с чем сравнить
 
 </v-clicks>
+
+---
+preload: false
+clicks: 7
+---
+
+<TransformerDemo />
 
 ---
 layout: image
@@ -948,6 +1246,7 @@ image: /c-transistor.webp
 
 - Три ножки<span class="red">:</span> исток<span class="red">,</span> сток и затвор
 - Ток протекает от истока к стоку<span class="red">,</span> если есть напряжение на затворе
+- <span class="orange">~</span> Кран
 
 </v-clicks>
 
@@ -1008,146 +1307,116 @@ image: /ps.webp
 layout: cover
 ---
 
-# Что дальше<span class="red">?</span>
+# Мы знаем почти достаточно<span class="red">,</span> чтобы собрать лампочку
 
 ---
-layout: image
-image: /nanomachines.jpg
----
-
-<div class="tiny-title text-center bg-blur">Микроконтроллеры</div>
-
----
-layout: cover
----
-
-# Микроконтроллер <span class="red">—</span> программируемое устройство<span class="red">,</span> которое может принимать и отправлять электрические сигналы
-
----
-layout: image
-image: /c-esp32.webp
-backgroundSize: 60rem
+layout: image-right
+image: /relay.webp
+backgroundSize: 24rem
 transition: slide-left
 ---
 
-<Arrow x1="800" x2="600" y1="400" y2="380" width="6" color="red" v-click />
-
----
-layout: image-left
-image: /c-esp32.webp
-backgroundSize: 40rem
----
-
-# ESP32
+# Что такое реле<span class="red">:</span>
 
 <br>
 
 <v-clicks>
 
-- 2 ядра 32<span class="red">-</span>bit 240 MHz
-- 520 KB SRAM
-- 4 MB Flash<span class="red">-</span>память
-- Wi<span class="red">-</span>Fi <span class="red">&</span> Bluetooth
-- До 32 пинов GPIO
+1. Электромагнитная катушка
+2. Металлическая пластина
+3. Контакты
 
 </v-clicks>
 
----
-layout: cover
----
 
-# General Purpose Input<span class="red">/</span>Output
-
-<br>
-<br>
-
-# Ввод<span class="red">/</span>вывод общего назначения
-
----
-layout: image
-image: /esp32.png
-backgroundSize: 30rem
-transition: slide-left
----
+<Source value="https://en.wikipedia.org/wiki/File:Relay_principle_vertical.jpg" />
 
 ---
 layout: image-left
-image: /esp32.png
-backgroundSize: 30rem
+image: /relay.webp
+backgroundSize: 24rem
 ---
 
-# ESP32 DevKit
+# Как работает реле<span class="red">:</span>
 
 <br>
 
 <v-clicks>
 
-- Плата для разработки
-- USB<span class="red">-</span>порт для питания и прошивки
-- Вывод пинов для удобной работы на макетной плате
+1. Если подать напряжение на катушку<span class="red">,</span> она примагнитит пластину
+2. Металлическая пластина переключает контакты
+3. Чтобы пластина возвращалась в исходное положение<span class="red">,</span> к ней прикреплена пружина
 
 </v-clicks>
 
+TODO: demo
+
+
+<Source value="https://en.wikipedia.org/wiki/File:Relay_principle_vertical.jpg" />
+
+---
+layout: code
+---
+
+```js
+// Relay peuso-code
+
+function getActivePin(voltageOnCoil) {
+    if (voltageOnCoil === 0) {
+        return PIN_1;
+    } else {
+        return PIN_2;
+    }
+}
+
+getActivePin(0); // PIN_1
+
+getActivePin(1); // PIN_2
+```
+
 ---
 layout: image
-image: /pad/duck.webp
+image: /esp-lamp.webp
 ---
 
 ---
-layout: image
-image: /pad/esp.webp
+transition: slide-left
 ---
 
----
-layout: cover
----
-
-# А Doom оно запустит<span class="red">?</span>
-
----
-layout: image
-image: /esp-pc-1.png
----
-
-<Source value="https://youtu.be/HaO_yZFYG1Q" />
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; width: 100%; height: 100%;">
+<img src="/esp-lamp-8-9.webp" style="flex: 1; width: 50%; height: 100%;" />
+<img src="/pad/lamp.webp" style="flex: 1; width: 50%; height: 100%;" />
+</div>
 
 ---
-layout: image
-image: /esp-pc-2.png
+layout: image-left
+image: /pad/lamp.webp
 ---
 
-<Source value="https://youtu.be/HaO_yZFYG1Q" />
+<div class="tiny-title" style="font-size: 2.5rem">
+Атеисты такие типа<span class="red">:</span>
+<br><br>
+Это устройство работает благодаря высокому качеству сборки и хорошему коду</div>
 
 ---
-layout: cover
+layout: center
 ---
 
-# Для большинства проектов ESP32 <span class="red">слишком</span> мощный
+<div class="big-title">DEMO</div>
 
 ---
 layout: cover
 ---
 
-# В массовом производстве выбирают самый дешёвый контроллер<span class="red">,</span> который удовлетворяет требованиям
+# Мы покрыли 95<span class="red">%</span> кейсов послушного дома<span class="red">*</span>
 
-
-
----
-layout: cover
----
-
-# Как мы можем это использовать
+<div class="position-absolute bottom-5" style="font-size: 3rem"><span class="red">*</span> Я взял этот процент от балды</div>
 
 ---
 layout: cover
 ---
 
-# HIGH <span class="red">/</span> LOW
-
-<br>
-<br>
-
-# ВКЛ <span class="red">/</span> ВЫКЛ
+# Уровень 6<span class="red">:</span> Дисплей
 
 ---
 layout: image
@@ -1287,6 +1556,7 @@ backgroundSize: 37rem
 - Все проводники обладают сопротивлением
 - Чем выше сопротивление<span class="red">,</span> тем ниже сила тока при равном напряжении
 - Чем выше сопротивление<span class="red">,</span> тем сильнее нагревается проводник
+- <span class="orange">~</span> Редуктор
 
 </v-clicks>
 
@@ -1335,6 +1605,12 @@ layout: center
 </div>
 
 ---
+preload: false
+---
+
+<PwmExample />
+
+---
 layout: code
 ---
 
@@ -1355,12 +1631,6 @@ setInterval(function () {
 ```
 
 ---
-preload: false
----
-
-<PwmExample />
-
----
 layout: cover
 ---
 
@@ -1375,7 +1645,7 @@ layout: two-cols
 
 <br>
 
-<CurrentChart type="PWM" max="10", voltage="5" freq="10" len="0.5" />
+<CurrentChart type="PWM" :max="10" :voltage="5" :freq="2" :len="0.5" />
 
 ::right::
 
@@ -1383,7 +1653,7 @@ layout: two-cols
 
 <br>
 
-<CurrentChart type="PWM" max="10", voltage="5" freq="10" len="0.5" speed="0.05" />
+<CurrentChart type="PWM" :max="10" :voltage="5" :freq="10" :len="0.5" />
 
 ---
 layout: cover
@@ -1460,401 +1730,62 @@ backgroundSize: 75rem
 <Source value="https://quanser-update.azurewebsites.net/quarc/documentation/i2c_protocol.html" />
 
 ---
-layout: cover
----
-
-# Мы знаем почти достаточно<span class="red">,</span> чтобы собрать лампочку
-
----
-layout: image-right
-image: /relay.webp
-backgroundSize: 24rem
-transition: slide-left
----
-
-# Что такое реле<span class="red">:</span>
-
-<br>
-
-<v-clicks>
-
-1. Электромагнитная катушка
-2. Металлическая пластина
-3. Контакты
-
-</v-clicks>
-
-
-<Source value="https://en.wikipedia.org/wiki/File:Relay_principle_vertical.jpg" />
-
----
-layout: image-left
-image: /relay.webp
-backgroundSize: 24rem
----
-
-# Как работает реле<span class="red">:</span>
-
-<br>
-
-<v-clicks>
-
-1. Если подать напряжение на катушку<span class="red">,</span> она примагнитит пластину
-2. Металлическая пластина переключает контакты
-3. Чтобы пластина возвращалась в исходное положение<span class="red">,</span> к ней прикреплена пружина
-
-</v-clicks>
-
-
-<Source value="https://en.wikipedia.org/wiki/File:Relay_principle_vertical.jpg" />
-
----
 layout: code
 ---
-
-```js
-// Relay peuso-code
-
-function getActivePin(voltageOnCoil) {
-    if (voltageOnCoil === 0) {
-        return PIN_1;
-    } else {
-        return PIN_2;
-    }
-}
-
-getActivePin(0); // PIN_1
-
-getActivePin(1); // PIN_2
-```
-
----
-layout: image
-image: /esp-lamp.webp
----
-
----
-transition: slide-left
----
-
-<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; width: 100%; height: 100%;">
-<img src="/esp-lamp-8-9.webp" style="flex: 1; width: 50%; height: 100%;" />
-<img src="/pad/lamp.webp" style="flex: 1; width: 50%; height: 100%;" />
-</div>
-
----
-layout: image-left
-image: /pad/lamp.webp
----
-
-<div class="tiny-title" style="font-size: 2.5rem">
-Атеисты такие типа<span class="red">:</span>
-<br><br>
-Это устройство работает благодаря высокому качеству сборки и хорошему коду</div>
-
----
-layout: center
----
-
-<div class="big-title">DEMO</div>
-
----
-layout: cover
----
-
-# Как написать прошивку на JS
-
----
-
-# Есть два способа запустить код на контроллере<span class="red">:</span>
-
-<br>
-
-<v-clicks>
-
-1. Компиляция прошивки
-2. Загрузить среду исполнения на контроллер
-
-</v-clicks>
-
----
-layout: image
-image: /pico-2s.png
-backgroundSize: 60rem
----
-
-<Source value="https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html" />
-
----
-layout: cover
----
-
-# Мы не на конфе для питонистов
-
----
-layout: image
-image: /iskra-js.1.webp
-backgroundSize: 40rem
----
-
-<Source value="https://amperka.ru/product/iskra-js" />
-
----
-layout: image-right
-image: /iskra-js.1.webp
-backgroundSize: 40rem
-transition: slide-left
----
-
-# Почему я не выбрал Iskra JS
-
-<br>
-
-<v-clicks>
-
-- Нет Wi<span>-</span>Fi <span class="red">&</span> Bluetooth
-- Такой доклад уже был 10 лет назад
-- У нас есть Iskra дома
-
-</v-clicks>
-
-<Source value="https://amperka.ru/product/iskra-js" />
-
----
-layout: image-left
-image: /espruino.png
-backgroundSize: 5rem
----
-
-# Espruino
-
-<br>
-
-<v-clicks>
-
-- Среда выполнения JS для микроконтроллеров
-- Веб<span class="red">-</span>IDE с настройкой в один клик
-- Прошивки для популярных плат
-- Готовые устройства
-
-</v-clicks>
-
-<Source value="https://www.espruino.com" />
-
----
-layout: image
-image: /espruino-ide-1.png
----
-
-<Source value="https://www.espruino.com" />
-
----
-layout: image
-image: /espruino-ide-2.png
----
-
-<Source value="https://www.espruino.com" />
-
----
-layout: two-cols
----
-
-# Способы связи
-
-<br>
-
-<v-clicks>
-
-- Проводные
-- Беспроводные
-
-</v-clicks>
-
-::right::
-
-# Протоколы
-
-<br>
-
-<v-clicks>
-
-- TCP
-- UDP
-- HTTP
-- MQTT
-- I<sup class="red">2</sup>C
-- USB
-
-</v-clicks>
-
----
-layout: cover
----
-
-# 1 Сервер <span class="red">&</span> Много клиентов
-
----
-layout: center
----
-
-```mermaid {scale: 1.5}
-flowchart TD
-  subgraph "NETWORK__"
-    direction TB
-    Host["SERVER_"]
-    NodeA["Device"] --> Host
-    NodeB["Device"] --> Host
-    NodeC["Device"] --> Host
-  end
-
-```
-
----
-layout: code
----
-
-````md magic-move
-```js
-// SERVER
-let state = false
-
-const server = http.createServer(async (req, res) => {
-    switch (req.url) {
-        case "/lamp/state":
-            reply(res, 200, state ? "1" : "0")
-            break
-        case·"/lamp/toggle":
-            state = !state
-            reply(res, 200, state ? "1" : "0")
-    }
-})
-```
 
 ```js
 // DEVICE
-pinMode(RELAY_PIN, "output");
+I2C1.setup({sda: A4, scl: A5});
 
-function update() {
-    httpGet(BASE_URL, "/lamp", function (_, _, body) {
-        if (body === "1") {
-            digitalWrite(RELAY_PIN, 1);
-        } else {
-            digitalWrite(RELAY_PIN, 0);
-        }
-    });
-    setTimeout(function() { update(); }, 400);
-}
-```
+var g = require("SSD1306").connect(I2C1, 0x3C, function() {
+    g.clear();
+    g.flip();
 
-````
+    g.drawRect(90, 0, 127, 31);
+    g.fillRect(90, 34, 127, 63);
 
----
-layout: cover
----
+    // Any code
 
-# RPS <span class="red">=</span> N <span class="red">×</span> 2
-
-
----
-layout: cover
----
-
-# Лучше один раз отправить обновление на устройство<span class="red">,</span> чем всё время дудосить сервер
-
----
-layout: cover
----
-
-# Каждое устройство <span class="red">—</span> сервер
-
----
-layout: center
----
-
-```mermaid {scale: 1.5}
-flowchart TD
-  subgraph "NETWORK__"
-    direction TB
-    Host["BROKER_"]
-    Host --> NodeA["Device"]
-    Host --> NodeB["Device"]
-    Host --> NodeC["Device"]
-  end
-```
-
----
-layout: code
----
-
-````md magic-move
-
-```js
-// BROKER
-let state = false
-
-const server = http.createServer(async (req, res) => {
-    switch (req.url) {
-        case·"/lamp/toggle":
-            state = !state
-            const endpoint = state ? "1" : "0"
-            await fetch(`${DEVICE_IP}/${endpoint}`)
-            res.end(body)
-    }
-})
-```
-
-```js
-// DEVICE
-pinMode(RELAY_PIN, "output");
-
-const server = http.createServer(function (req, res) {
-    if (req.url === "/1") {
-        digitalWrite(RELAY_PIN, 1);
-        res.end("ACK: ON");
-    } else if (req.url === "/0") {
-        digitalWrite(RELAY_PIN, 0);
-        res.end("ACK: OFF");
-    }
+    g.flip();
 });
 ```
 
-````
+---
+layout: image
+image: /larana-display.webp
+---
 
 ---
 layout: cover
 ---
 
-# Итоги
+# А Doom оно запустит<span class="red">?</span>
 
 ---
-layout: two-cols
+layout: image
+image: /esp-pc-1.png
 ---
 
-# На JS можно всё<span class="red">:</span>
+<Source value="https://youtu.be/HaO_yZFYG1Q" />
 
-<br>
+---
+layout: image
+image: /esp-pc-2.png
+---
 
-<v-clicks>
+<Source value="https://youtu.be/HaO_yZFYG1Q" />
 
-- Сервер<span class="red">/</span>брокер
-- Распознавания речи
-- Синтез речи
-- Управление устройством через WebSerial API
-- Веб<span class="red">-</span>интерфейс
-- Мобильное приложение
+---
+layout: cover
+---
 
-</v-clicks>
+# Для большинства проектов ESP32 <span class="red">слишком</span> мощный
 
-::right::
+---
+layout: cover
+---
 
-<v-clicks>
-
-- Прошивка
-- Программатор
-- Дашборд
-- И т<span class="red">.</span> д<span class="red">.</span>
-
-</v-clicks>
+# В массовом производстве выбирают самый дешёвый контроллер<span class="red">,</span> который удовлетворяет требованиям
 
 ---
 class: small-table
@@ -1932,58 +1863,49 @@ layout: two-cols
 </v-clicks>
 
 ---
+layout: cover
+---
 
-# Что мы узнали<span class="red">:</span>
-
-<br>
-
-<v-clicks>
-
-- Зачем делать что<span class="red">-</span>то своими руками
-- Что такое микроконтроллеры
-- Как взаимодействуют компоненты
-- Как подружить устройства по сети
-- В каких случаях можно использовать JS
-- В каких случаях это оправдано
-
-</v-clicks>
+# Итоги
 
 ---
 
-# Сложности<span class="red">:</span>
+# Итоги<span class="red">:</span>
 
 <br>
 
 <v-clicks>
 
-- Информации меньше
-- Нужно уметь работать руками
-- Запчасти не всегда под рукой
+- На JS можно сделать что угодно
+- Электроника <span class="red">—</span> опасное<span class="red">,</span> но интересное хобби
 - Не всегда есть CTRL<span class="red">+</span>Z
-- Есть риск смерти
-- Нужно прятать обновки от жены
+- ~~Смерть в нищете~~ Карьерные перспективы туманны
 
 </v-clicks>
 
 ---
-
-# Перспективы<span class="red">:</span>
-
-<br>
-
-<v-clicks>
-
-- Автономность
-- Панк и DIY
-- Смерть в нищите
-
-</v-clicks>
-
+layout: two-cols
 ---
 
-# Спасибо за внимание
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
-<Qr data="https://kucheriavyi.ru" label="kucheriavyi.ru" />
+# Обсудили много<span class="red">,</span> но мало
+
+::right::
+
+<br>
+<br>
+<br>
+
+<Qr data="https://kucheriavyi.ru/articles/holyjs26sp-summary" label="kucheriavyi.ru" v-click/>
 

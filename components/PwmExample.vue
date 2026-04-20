@@ -8,14 +8,8 @@
 		<div class="pwm-controls">
 			<h1>PWM <span class="red">/</span> ШИМ</h1>
 			<input type="range" v-model="v" min="0" max="1" step="0.01" />
-			<div style="font-size: 2rem;">{{ v }}</div>
-			<div class="pwm-chart">
-				<div
-					class="pwm-high"
-					:style="`flex: ${v}; border-right-width: ${v == 0 || v == 1 ? 0 : 16}px;`"
-				></div>
-				<div class="pwm-low" :style="`flex: ${1-v};`"></div>
-			</div>
+			<div style="font-size: 2rem;">{{ `${Number(v).toFixed(2)}` }}</div>
+			<CurrentChart type="PWM" :voltage="5" :max="10" :freq="5" :len="v" />
 		</div>
 		<div class="pwm-preview">
 			<LedElement :value="v*255"></LedElement>
@@ -33,22 +27,6 @@
 		left: 0;
 		right: 0;
 		display: flex;
-	}
-
-	.pwm-chart {
-		display: flex;
-		width: 80%;
-		aspect-ratio: 1;
-		border: 1px solid #fff;
-	}
-
-	.pwm-high {
-		border-top: 16px solid blue;
-		border-right: 0px solid blue;
-	}
-
-	.pwm-low {
-		border-bottom: 16px solid blue;
 	}
 
 	.pwm-controls input {
