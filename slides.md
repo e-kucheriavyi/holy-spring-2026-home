@@ -676,7 +676,7 @@ setInterval(function () {
     v-click
 />
 
-<!-- TODO: led animation -->
+<BlinkAnimation style="position: absolute; bottom: 20.5rem; right: 12.77rem" v-click/>
 
 ---
 layout: cover
@@ -1054,9 +1054,10 @@ preload: false
 <CurrentChart type="AC" :voltage="220" :freq="50" />
 
 ---
-layout: image
-image: /led-with-btn.webp
+layout: cover
 ---
+
+# Лампочке нужно 220 V AC<span class="red">,</span> а микроконтроллеру <span class="red">—</span> 5 V DC
 
 ---
 layout: cover
@@ -1310,69 +1311,13 @@ layout: cover
 # Мы знаем почти достаточно<span class="red">,</span> чтобы собрать лампочку
 
 ---
-layout: image-right
-image: /relay.webp
-backgroundSize: 24rem
-transition: slide-left
+preload: false
+clicks: 2
 ---
 
-# Что такое реле<span class="red">:</span>
+# Реле
 
-<br>
-
-<v-clicks>
-
-1. Электромагнитная катушка
-2. Металлическая пластина
-3. Контакты
-
-</v-clicks>
-
-
-<Source value="https://en.wikipedia.org/wiki/File:Relay_principle_vertical.jpg" />
-
----
-layout: image-left
-image: /relay.webp
-backgroundSize: 24rem
----
-
-# Как работает реле<span class="red">:</span>
-
-<br>
-
-<v-clicks>
-
-1. Если подать напряжение на катушку<span class="red">,</span> она примагнитит пластину
-2. Металлическая пластина переключает контакты
-3. Чтобы пластина возвращалась в исходное положение<span class="red">,</span> к ней прикреплена пружина
-
-</v-clicks>
-
-TODO: demo
-
-
-<Source value="https://en.wikipedia.org/wiki/File:Relay_principle_vertical.jpg" />
-
----
-layout: code
----
-
-```js
-// Relay peuso-code
-
-function getActivePin(voltageOnCoil) {
-    if (voltageOnCoil === 0) {
-        return PIN_1;
-    } else {
-        return PIN_2;
-    }
-}
-
-getActivePin(0); // PIN_1
-
-getActivePin(1); // PIN_2
-```
+<RelayDemo />
 
 ---
 layout: image
@@ -1419,19 +1364,26 @@ layout: cover
 # Уровень 6<span class="red">:</span> Дисплей
 
 ---
-layout: image
-image: /led-with-esp.webp
----
-
-<br>
-
-# Диод и ESP32
-
----
 layout: code
 ---
 
-```js{all|2,4|8-11|6,10|9}
+````md magic-move
+
+```js{all|2}
+// DEVICE
+var LED_PIN = 2;
+
+pinMode(LED_PIN, "output");
+
+var on = false;
+
+setInterval(function () {
+    digitalWrite(LED_PIN, on);
+    on = !on;
+}, 1000);
+```
+
+```js{2|all}
 // DEVICE
 var LED_PIN = 33;
 
@@ -1445,14 +1397,18 @@ setInterval(function () {
 }, 1000);
 ```
 
+````
+
 ---
 layout: image
-image: /led-with-btn.webp
+image: /led-with-esp.webp
 ---
 
-# Диод с кнопкой <span class="red">(</span>и резистор<span class="red">)</span>
+<br>
 
-<Arrow x1="550" x2="550" y1="350" y2="220" width="6" color="orange" v-click />
+# Диод и ESP32
+
+<Arrow x1="600" x2="600" y1="250" y2="130" width="6" color="orange" v-click />
 
 ---
 layout: center
@@ -1484,7 +1440,7 @@ transition: slide-left
 ::right::
 
 <div style="font-size: 5rem; height: 100%; display: flex; align-items: center" v-click>
-I <span class="red">=</span> U <span class="red">/</span> R
+I <span class="red">=</span> U <span class="red">÷</span> R
 </div>
 
 ---
@@ -1494,7 +1450,7 @@ layout: two-cols
 # Закон Ома
 
 <div style="font-size: 5rem; height: 81%; display: flex; align-items: center">
-I <span class="red">=</span> U <span class="red">/</span> R
+I <span class="red">=</span> U <span class="red">÷</span> R
 </div>
 
 ::right::
@@ -1503,7 +1459,7 @@ I <span class="red">=</span> U <span class="red">/</span> R
 
 - U <span class="red">=</span> 5 V
 - R <span class="red">=</span> 1 Ω
-- I <span class="red">=</span> 5 <span class="red">/</span> 1
+- I <span class="red">=</span> 5 <span class="red">÷</span> 1
 - I <span class="red">=</span> 5 A
 
 </v-clicks>
@@ -1527,7 +1483,7 @@ layout: two-cols
 # Закон Ома
 
 <div style="font-size: 5rem; height: 81%; display: flex; align-items: center">
-R <span class="red">=</span> U <span class="red">/</span> I
+R <span class="red">=</span> U <span class="red">÷</span> I
 </div>
 
 ::right::
@@ -1536,7 +1492,7 @@ R <span class="red">=</span> U <span class="red">/</span> I
 
 - U <span class="red">=</span> 5V
 - I <span class="red">=</span> 20 mA
-- R <span class="red">=</span> 5 <span class="red">/</span> 0.020
+- R <span class="red">=</span> 5 <span class="red">÷</span> 0.020
 - R <span class="red">=</span> 250 Ω
 
 </v-clicks>
@@ -1614,7 +1570,7 @@ preload: false
 layout: code
 ---
 
-```js{all|2,4|6|8-13|9-12|10|11}
+```js{all|9|6,11}
 // DEVICE
 var LED_PIN = 16;
 

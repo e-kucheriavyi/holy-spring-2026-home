@@ -141,6 +141,10 @@ html.dark {
 	border-radius: 0.5rem;
 }
 
+.btn-red {
+	background: red;
+}
+
 table {
 	font-size: 2.5rem;
 }

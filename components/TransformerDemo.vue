@@ -1,6 +1,6 @@
 <script setup>
 	import { onMounted, ref } from "vue"
-	import { initTransfromerDemo } from "current-chart"
+	import { initTransformerDemo } from "current-chart"
 
 	const { type, voltage, freq, speed, len, max } = defineProps({
 		type: {
@@ -31,7 +31,7 @@
 		if (el === null) {
 			return
 		}
-		initTransfromerDemo(el.value)
+		initTransformerDemo(el.value)
 	})
 </script>
 
