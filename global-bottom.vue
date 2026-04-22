@@ -4,7 +4,7 @@
 		class="footer absolute bottom-0 left-0 right-0 p-2 text-right"
 	>
 		<div class="block">
-			{{ $nav.currentPage < 10 ? '0' : '' }}{{ $nav.currentPage }} / {{ $nav.total < 10 ? '0' : '' }}{{ $nav.total }}
+			{{ String($nav.currentPage).padStart(2, "0") }} <span class="red">/</span> {{ String($nav.total).padStart(2, "0") }}
 		</div>
 	</footer>
 </template>
@@ -16,5 +16,7 @@
 
 	.block {
 		display: inline-flex;
+		font-size: 1rem;
+		font-family: "Press Start 2P" !important;
 	}
 </style>

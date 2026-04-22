@@ -13,7 +13,7 @@
 				:height="300"
 				type="svg"
 				:data
-				:dotsOptions="{ type: 'rounded', color: 'black' }"
+				:dotsOptions="{ type: 'square', color: 'black' }"
 			/>
 			<h2>{{ label || data }}</h2>
 		</div>

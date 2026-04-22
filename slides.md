@@ -8,6 +8,15 @@ transition: fade-out
 mdc: true
 highlighter: shiki
 lineNumbers: true
+background: /display.png
+fonts:
+  sans: "Press Start 2P"
+  serif: "Press Start 2P"
+  mono: "JetBrains Mono"
+layout: terminal
+preload: false
+text: Послушный дом и JS<br><br>Женя Кучерявый
+size: 3.8rem
 ---
 
 # Послушный дом и JS
@@ -15,9 +24,60 @@ lineNumbers: true
 ## Женя Кучерявый
 
 ---
-layout: image-right
-image: /bazil.webp
+layout: two-cols
 ---
+
+<div style="font-size: 1rem; line-height: 1rem;">
+                                                                                     
+                                                                                     
+                                                                                     
+                                                                                     
+                                  ░  ░ ░░░░░░░░░░░                                   
+                                ░         ░░░▓▒░▒░░░▒░                               
+                            ░           ░░▒▒▒▒░░ ░░░░░                               
+                           ░        ░░░░ ░░▒▓░░░▒▒  ▒▒░░                             
+                         ░░                ░░░▒▒▓█▓░  ░                              
+                        ░░              ░░░▒▓████████░░  ░                           
+                        ░          ░░░▒▒▒▒▓████████████░                             
+                        ░         ░ ░▒▒▒▓▓█████████████ ░                            
+                       ░           ░░▒▓▓▓▓██████████████                             
+                      ░           ░▒▒▒▓▓▓▓██████████████                             
+                      ░░         ░▒▒▒▒▓▓▓██▓▓▒░░░▓███▓░░▒                            
+                    ░░░  ░░░░   ░░▒▒▒▒▒▓▒▒▒▒░  ░▒▒▒▒▒  ▒                             
+                    ░ ░  ░░▒░▒░░░░▒▒▒▓▓▓▓▒▒▒▒▒░░▒▓██░▒██                             
+                   ░      ▒░░░▒░▒▒▒▓▒▓▓▓████████████████                             
+                  ░ ░░    ░░▒▒▒▒▒▒▒▒▒▒▒▒▓▓██████▓▓██████                             
+                     ░   ░ ░▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓████▒▓▓▓▒████                             
+                     ░   ░░░ ░░░▒▒▒▒▒▒▒▒▒▒▒▒▒██▒░░░░▓█▓                              
+                     ░   ░░░░ ░▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▓██▒▒▒███                              
+                      ░  ░  ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▓██▒▓▒▒▒███                               
+                    ░ ░░ ░ ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓████████                                
+                       ░ ░░ ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓████████                                
+                       ░ ░ ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▒▓                                 
+                             ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░                                    
+                            ░▒▒▒▒▒▒▒▒▒▒▒▒░░░░░  ░░░                                  
+                             ░░▒▒▒▓▒▒▒▒▒▒▒░░   ░░░░░░░░░                             
+                       ░       ░░▒▒▒▒▒▒░░░    ░░░░░░░░░░░░░░░░░                      
+                   ░            ░░░▒░░░░      ░░░░░░░░░░░░░░░░░░░░░░░                
+               ░░                  ░░         ░░░░░░░░░░░░░░░░░░░░░░░░░░             
+           ░                                  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░           
+                                           ░░░░░░░░░░░░░░░░░░░░░░░░ ░ ░░░░░          
+                                   ░        ░  ░░░░░░░░░░░░░░░░░░░░░ ░░░░░░░░        
+                                          ░░░░░░░░░░░░░░░░░░░░░░ ░░  ░░░░ ░░░░       
+                                         ░░░░░░░░░░░░░░░░░░░░░░░  ░    ░░░ ░ ░       
+                                       ░░░░░░░░░░░░░░░░░░░░░░░░░░    ░ ░░  ░░ ░      
+                                       ░░░░░░░░░░░░░░░░░░░░░░░░░░░░  ░     ░░  ░     
+                                        ░ ░░░░░░░░░░░░░░░░░░░░░░░░░░        ░░  ░    
+                                              ░░░░░░░░░░░░░░░░░░░ ░░        ░░  ░    
+                        ░                     ░░░░ ░░  ░░░░░░░░░   ░         ░░  ░   
+                         ░ ░░                              ░   ░             ░░  ░   
+                         ░                                      ░░                ░  
+                                                                 ░             ░░░░░ 
+                                                                              ░░░░░░ 
+
+</div>
+
+::right::
 
 # Женя Кучерявый
 
@@ -31,10 +91,10 @@ image: /bazil.webp
 </v-clicks>
 
 ---
-layout: cover
+layout: terminal
+text: Электроника на HolyJS?
+preload: false
 ---
-
-# Электроника на HolyJS<span class="red">?</span>
 
 ---
 
@@ -53,21 +113,30 @@ layout: cover
 
 ---
 layout: cover
+class: text-center
 ---
 
-# Этот доклад для тебя<span class="red">,</span> если ты знаешь<span class="red">,</span> что такое JavaScript
+# Знания JS будет достаточно
+
+---
+layout: terminal
+text: Что такое послушный дом?
+preload: false
+---
+
+<RenderWhen context="main">
+<TermPrinter text="Что такое послушный дом?" />
+</RenderWhen>
 
 ---
 layout: cover
+background: /lain-cables.jpg
+preload: false
 ---
 
-# Что такое <span class="red">«</span>послушный дом<span class="red">»?</span>
-
----
-layout: cover
----
-
-# Это система управления домашней сетью электрических устройств<span class="red">,</span> которая слушается владельца<span class="red">,</span> а не додумывает
+<RenderWhen context="main">
+<TermPrinter size="3rem" text="Это система управления домашней сетью электрических устройств, которая слушается владельца, а не додумывает" />
+</RenderWhen>
 
 ---
 layout: cover
@@ -77,10 +146,25 @@ layout: cover
 
 <Source value="© Фонд золотых цитат" />
 
+
 ---
-layout: image-left
-image: /iceberg.svg
-backgroundSize: 20rem
+layout: video-side
+side: left
+loop: false
+autoplay: false
+video: /iceberg-glow-1.mp4
+preload: false
+---
+
+# Айсберг
+
+---
+layout: video-side
+side: left
+loop: false
+autoplay: true
+video: /iceberg-glow-1.mp4
+preload: false
 ---
 
 # Айсберг
@@ -95,10 +179,11 @@ backgroundSize: 20rem
 </v-clicks>
 
 ---
-layout: cover
+layout: layer
+layer: 0
 ---
 
-# Уровень 0<span class="red">:</span> Дисклеймер
+# Дисклеймер
 
 ---
 layout: image
@@ -139,7 +224,8 @@ backgroundSize: 78rem
 
 ---
 layout: image-left
-image: /ololoshka.webp
+image: /ololoshka.svg
+backgroundSize: 30rem
 ---
 
 # Мечта детства <span color="red">№</span>2026
@@ -150,23 +236,24 @@ image: /ololoshka.webp
 <br>
 <br>
 
-<div style="font-size: 2.8rem;">Застать крах ИИ и многомиллиардные убытки ИТ<span class="red">-</span>гигантов</div>
+<div style="font-size: 2.8rem;">Застать крах ИИ и убытки ИТ<span class="red">-</span>гигантов</div>
 
 ---
-layout: cover
+layout: terminal
+text: Соблюдайте технику безопасности
+preload: false
 ---
 
-# Соблюдайте технику безопасности при работе с электричеством<span class="red">.</span> Не доверяёте LLM
-
 ---
-layout: cover
+layout: layer
+layer: 1
 ---
 
-# Уровень 1<span class="red">:</span> На всё готовенькое
+# На всё<br>готовое
 
 ---
 layout: image
-image: /sharikov.webp
+image: /sharikov-bw.webp
 ---
 
 <div class="bg-blur tiny-title text-center position-absolute bottom-20" style="font-size: 3rem">
@@ -193,11 +280,8 @@ backgroundSize: 35rem
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
 
-# Не стоит недеяться на чужую инфраструктуру<span class="red">,</span> вендоров или интернет
+# Не стоит недеяться на чужую инфру<span class="red">,</span> вендоров или интернет
 
 <div class="bg-blur" style="position: absolute; right: 13rem; top: 3rem; font-size: 2rem;">Интернет</div>
 
@@ -211,10 +295,11 @@ class: bg-black
 ---
 
 ---
-layout: cover
+layout: layer
+layer: 2
 ---
 
-# Уровень 2<span class="red">:</span> Голосовой ассистент
+# Голосовой ассистент
 
 ---
 layout: image-right
@@ -230,9 +315,9 @@ backgroundSize: 40rem
 
 - 4 ядра 64<span class="red">-</span>bit 1 GHz
 - 512MB SDRAM
-- Wi<span class="red">-</span>Fi <span class="red">&</span> Bluetooth
-- Mini HDMI <span class="red">&</span> microSD
-- CSI<span class="red">-</span>2 camera connector
+- Wireless
+- Mini HDMI
+- CSI<span class="red">-</span>2
 - 40 пинов GPIO
 
 </v-clicks>
@@ -248,7 +333,7 @@ layout: cover
 
 ---
 layout: image
-image: /larana.png
+image: /larana-pix.jpg
 backgroundSize: 70rem
 ---
 
@@ -276,9 +361,12 @@ image: /pad/pi-sound.webp
 
 ---
 layout: cover
+background: /lain-cables.jpg
 ---
 
-# Если я купил железку<span class="red">,</span><br>то это моя железка<span class="red">!</span>
+<RenderWhen context="main">
+<TermPrinter text="Если я купил железку,то это моя железка!" />
+</RenderWhen>
 
 ---
 layout: image
@@ -330,10 +418,17 @@ style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0
 TODO: device photo
 
 ---
-layout: cover
+layout: terminal
+text: Распознавание речи
+preload: false
 ---
 
-# Распознавание речи
+---
+layout: cover
+class: text-center
+---
+
+# Vosk
 
 ---
 layout: code
@@ -341,28 +436,18 @@ layout: code
 
 ````md magic-move
 
-```js
-import fs from "fs"
+```js{all|7-8|10-17}
 import vosk from "vosk"
 import record from "node-record-lpcm16"
-import { exec } from "child_process"
 
 const modelPath = "./model"
 const sampleRate = 16000
 
-if (!fs.existsSync(modelPath)) {
-    console.error("Model not found at", MODEL_PATH)
-    process.exit(1)
-}
-```
-
-```js
-vosk.setLogLevel(0)
 const model = new vosk.Model(modelPath)
 const rec = new vosk.Recognizer({ model, sampleRate })
 
 const mic = record.record({
-    sampleRateHertz: SAMPLE_RATE,
+    sampleRateHertz: sampleRate,
     threshold: 0,
     verbose: false,
     recordProgram: "rec",
@@ -400,18 +485,19 @@ micStream.on("data", (data) => {
 })
 ```
 
-```js{all|2-12|3|4|7|9-10}
+```js{all|2-13|3|4|9|11-12}
 micStream.on("data", (data) => {
     if (rec.acceptWaveform(data)) {
         const res = rec.result()
-        if (res && res.text) {
-            console.log("\nResult:", res.text)
-
-            const text = res.text.replace(`${ALIAS} `, "")
-
-            const c = commands[text]
-            c && c()
+        if (!res || !res.text) {
+            return
         }
+        console.log("\nResult:", res.text)
+
+        const text = res.text.replace(`${ALIAS} `, "")
+
+        const c = commands[text]
+        c && c()
     } else {/* Partial */}
 })
 ```
@@ -470,27 +556,32 @@ layout: center
 <div class="big-title">DEMO</div>
 
 ---
-layout: cover
+layout: layer
+layer: 3
 ---
 
-# Уровень 3<span class="red">:</span> Мигаем светодиодом
+# Мигаем светодиодом
+
+---
+layout: terminal
+text: Микроконтроллеры
+size: 4rem
+preload: false
+---
+
+---
+layout: cover
+background: /lain-cables.jpg
+preload: false
+---
+
+<RenderWhen context="main">
+<TermPrinter size="2.8rem" text="Микроконтроллер — программируемое устройство, которое может принимать и отправлять электрические сигналы" />
+</RenderWhen>
 
 ---
 layout: image
-image: /nanomachines.jpg
----
-
-<div class="tiny-title text-center bg-blur">Микроконтроллеры</div>
-
----
-layout: cover
----
-
-# Микроконтроллер <span class="red">—</span> программируемое устройство<span class="red">,</span> которое может принимать и отправлять электрические сигналы
-
----
-layout: image
-image: /c-esp32.webp
+image: /esp32-o.webp
 backgroundSize: 60rem
 transition: slide-left
 ---
@@ -499,7 +590,7 @@ transition: slide-left
 
 ---
 layout: image-left
-image: /c-esp32.webp
+image: /esp32-o.webp
 backgroundSize: 40rem
 ---
 
@@ -564,22 +655,30 @@ image: /pad/esp.webp
 ---
 
 ---
-layout: cover
+layout: terminal
+text: Зачем делать это на JS?
+preload: false
 ---
-
-# Зачем делать это на JS<span class="red">?</span>
-
----
-layout: cover
----
-
-# <span class="red">1.</span> Потому что мы можем
 
 ---
 layout: cover
+background: /lain-cables.jpg
+preload: false
 ---
 
-# <span class="red">2.</span> Всё<span class="red">,</span> что может быть написано на JS<span class="red">,</span> будет написано на JS
+<RenderWhen context="main">
+<TermPrinter text="1. Потому что мы можем" />
+</RenderWhen>
+
+---
+layout: cover
+background: /lain-cables.jpg
+preload: false
+---
+
+<RenderWhen context="main">
+<TermPrinter size="3rem" text="2. Всё, что может быть написано на JS, будет написано на JS" />
+</RenderWhen>
 
 ---
 layout: cover
@@ -589,7 +688,7 @@ layout: cover
 
 ---
 
-# Есть два способа запустить код на контроллере<span class="red">:</span>
+# 2 способа запустить JS на контроллере<span class="red">:</span>
 
 <br>
 
@@ -609,12 +708,10 @@ backgroundSize: 60rem
 <Source value="https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html" />
 
 ---
-layout: cover
+layout: terminal
+text: Мы не на конфе для питонистов
+preload: false
 ---
-
-# Мы не на конфе для питонистов
-
-
 
 ---
 layout: image-left
@@ -679,10 +776,11 @@ setInterval(function () {
 <BlinkAnimation style="position: absolute; bottom: 20.5rem; right: 12.77rem" v-click/>
 
 ---
-layout: cover
+layout: layer
+layer: 4
 ---
 
-# Уровень 4<span class="red">:</span><br>Мигаем светодиодом по сети
+# Сеть
 
 ---
 layout: two-cols
@@ -859,23 +957,39 @@ image: /shenzhen.png
 ---
 layout: image
 image: /shenzhen-docs.png
+transition: slide-left
 ---
 
 <Source value="Shenzhen I/O" />
 
 ---
-layout: cover
-class: text-center
+layout: image-left
+image: /psyche.jpg
 ---
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 # Везенье<span class="red">,</span> если <span class="green">есть</span> data sheet
 
----
-layout: cover
-class: text-center
----
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<v-click>
 
 # Веселье<span class="red">,</span> если его <span class="red">нет</span>
+
+</v-click>
+
+<Source value="а/с Эксперименты Лэйн"/>
 
 ---
 layout: image
@@ -888,20 +1002,17 @@ image: /pad/e-ink-pins.webp
 ---
 
 ---
-layout: image
-image: /reverse-clean.webp
+layout: image-right
+image: /lain-repair.jpg
 ---
-
-<div style="display: flex; gap: 6rem;">
-
 <div class="bg-blur" style="font-size: 2rem; flex: 1;">
 Дорогой<span class="red">,</span> хватит ломать технику<span class="red">,</span>
 ты не реверс<span class="red">-</span>инженер<span class="red">...</span>
 </div>
 
-<div style="font-size: 2rem; flex: 1;">Нужно снять трансформатор с микроволновки<span class="red">...</span></div>
+<img src="/cry.webp" />
 
-</div>
+<Source value="а/с Эксперименты Лэйн"/>
 
 ---
 layout: image
@@ -911,16 +1022,11 @@ image: /ron.jpg
 <Source value="х/с Парки и зоны отдыха" />
 
 ---
-layout: cover
+layout: layer
+layer: 5
 ---
 
-# Код <span class="red">—</span> абстракция над электричеством
-
----
-layout: cover
----
-
-# Уровень 5<span class="red">:</span> Послушная розетка
+# Послушная розетка
 
 ---
 layout: cover
@@ -955,6 +1061,62 @@ image: /any-padme.jpg
 # Будет же<span class="red">,</span> да<span class="red">?</span>
 
 <Source value="х/ф Звёздные войны: Эпизод 2 — Атака клонов" />
+
+---
+layout: cover
+background: /wires-lain.jpg
+preload: false
+---
+
+<TermPrinter text="Код — абстракция над электричеством" />
+
+---
+layout: cover
+---
+
+# Электрический ток <span class="red">—</span> упорядоченное движение заряженных частиц
+
+---
+layout: cover
+---
+
+# Фронтендер <span class="red">—</span> интернет<span class="red">-</span>сантехник
+
+---
+layout: cover
+---
+
+# С некоторыми допущениями<span class="red">,</span> электрический ток <span class="red">—</span> вода
+
+---
+layout: cover
+---
+
+# С некоторыми допущениями<span class="red">,</span> любая еда <span class="red">—</span> чизбургер
+
+<Source value="© Тихон Шёпотов" />
+
+---
+layout: cover
+---
+
+# Напряжение <span class="red">(</span>Вольт<span class="red">)</span> <span class="red">—</span> давление
+
+<br>
+
+# Сила тока <span class="red">(</span>Ампер<span class="red">)</span> <span class="red">—</span> поток воды <span class="red">(</span>объём в единицу времени<span class="red">)</span>
+
+---
+preload: false
+clicks: 1
+---
+
+# Электрический ток
+
+
+<RenderWhen context="main">
+<TransformerDemo />
+</RenderWhen>
 
 ---
 layout: cover
@@ -1006,20 +1168,6 @@ layout: image
 image: /acdc/base.webp
 transition: slide-left
 ---
-
----
-layout: cover
----
-
-# С некоторыми допущениями<span class="red">,</span> электрический ток можно сравнить с течением воды
-
----
-layout: cover
----
-
-# С некоторыми допущениями<span class="red">,</span> любая еда <span class="red">—</span> чизбургер
-
-<Source value="© Тихон Шёпотов" />
 
 ---
 layout: image-left
@@ -1090,9 +1238,8 @@ preload: false
 <CurrentChart type="AC" :voltage="220" :freq="50" />
 
 ---
-layout: image-right
-image: /c-diode.webp
-backgroundSize: 35rem
+layout: video-side
+video: /diode-glow-1.mp4
 ---
 
 # Диод
@@ -1140,9 +1287,8 @@ preload: false
 <CurrentChart type="DC" :voltage="220" :freq="50" />
 
 ---
-layout: image-right
-image: /c-capacitor.webp
-backgroundSize: 35rem
+layout: video-side
+video: /capacitor-glow-1.mp4
 transition: slide-left
 ---
 
@@ -1167,9 +1313,9 @@ transition: slide-left
 # Не трогайте конденсаторы руками<span class="red">!</span>
 
 ---
-layout: image-left
-image: /c-capacitor.webp
-backgroundSize: 35rem
+layout: video-side
+video: /capacitor-glow-1.mp4
+side: left
 preload: false
 ---
 
@@ -1216,7 +1362,9 @@ preload: false
 clicks: 7
 ---
 
+<RenderWhen context="main">
 <TransformerDemo />
+</RenderWhen>
 
 ---
 layout: image
@@ -1235,8 +1383,9 @@ preload: false
 <CurrentChart type="DC" :voltage="46" :max="220" :freq="0" />
 
 ---
-layout: image-right
-image: /c-transistor.webp
+layout: video-side
+side: right
+video: /transistor-glow-1.mp4
 ---
 
 # Транзистор
@@ -1250,8 +1399,6 @@ image: /c-transistor.webp
 - <span class="orange">~</span> Кран
 
 </v-clicks>
-
-<br>
 
 ---
 layout: image
@@ -1317,7 +1464,10 @@ clicks: 2
 
 # Реле
 
+
+<RenderWhen context="main">
 <RelayDemo />
+</RenderWhen>
 
 ---
 layout: image
@@ -1341,7 +1491,7 @@ image: /pad/lamp.webp
 <div class="tiny-title" style="font-size: 2.5rem">
 Атеисты такие типа<span class="red">:</span>
 <br><br>
-Это устройство работает благодаря высокому качеству сборки и хорошему коду</div>
+Оно работает благодаря высокому качеству сборки и хорошему коду</div>
 
 ---
 layout: center
@@ -1358,10 +1508,11 @@ layout: cover
 <div class="position-absolute bottom-5" style="font-size: 3rem"><span class="red">*</span> Я взял этот процент от балды</div>
 
 ---
-layout: cover
+layout: layer
+layer: 6
 ---
 
-# Уровень 6<span class="red">:</span> Дисплей
+# Дисплей
 
 ---
 layout: code
@@ -1439,7 +1590,7 @@ transition: slide-left
 
 ::right::
 
-<div style="font-size: 5rem; height: 100%; display: flex; align-items: center" v-click>
+<div style="font-size: 4rem; height: 100%; display: flex; align-items: center" v-click>
 I <span class="red">=</span> U <span class="red">÷</span> R
 </div>
 
@@ -1449,7 +1600,7 @@ layout: two-cols
 
 # Закон Ома
 
-<div style="font-size: 5rem; height: 81%; display: flex; align-items: center">
+<div style="font-size: 4rem; height: 81%; display: flex; align-items: center">
 I <span class="red">=</span> U <span class="red">÷</span> R
 </div>
 
@@ -1468,7 +1619,7 @@ I <span class="red">=</span> U <span class="red">÷</span> R
 layout: cover
 ---
 
-# Стандартный светодиод <span class="red">(</span>5 mm<span class="red">)</span> расчитан на прямой ток<br>10<span class="red">-</span>20 мА
+# Стандартный светодиод <span class="red">(</span>5 mm<span class="red">)</span> расчитан на прямой ток 10<span class="red">-</span>20 мА
 
 ---
 layout: cover
@@ -1482,7 +1633,7 @@ layout: two-cols
 
 # Закон Ома
 
-<div style="font-size: 5rem; height: 81%; display: flex; align-items: center">
+<div style="font-size: 4rem; height: 81%; display: flex; align-items: center">
 R <span class="red">=</span> U <span class="red">÷</span> I
 </div>
 
@@ -1498,9 +1649,8 @@ R <span class="red">=</span> U <span class="red">÷</span> I
 </v-clicks>
 
 ---
-layout: image-right
-image: /resistors.png
-backgroundSize: 37rem
+layout: video-side
+video: /resistor-glow-1.mp4
 ---
 
 # Резистор
@@ -1510,17 +1660,15 @@ backgroundSize: 37rem
 <v-clicks>
 
 - Все проводники обладают сопротивлением
-- Чем выше сопротивление<span class="red">,</span> тем ниже сила тока при равном напряжении
-- Чем выше сопротивление<span class="red">,</span> тем сильнее нагревается проводник
+- Чем выше сопротивление<span class="red">,</span> тем ниже сила тока
+- Чем выше сопротивление<span class="red">,</span> тем сильнее нагрев
 - <span class="orange">~</span> Редуктор
 
 </v-clicks>
 
-<Source value="https://commons.wikimedia.org/wiki/File:Electronic-Axial-Lead-Resistors-Array.jpg" />
-
 ---
-layout: image-right
-image: /c-potentiometer.webp
+layout: video-side
+video: /potentiometer-glow-1.mp4
 ---
 
 # Потенциометр
@@ -1693,14 +1841,13 @@ layout: code
 // DEVICE
 I2C1.setup({sda: A4, scl: A5});
 
-var g = require("SSD1306").connect(I2C1, 0x3C, function() {
+var g = require("SSD1306").connect(I2C1, 0x3C, function()
+{
     g.clear();
     g.flip();
 
     g.drawRect(90, 0, 127, 31);
     g.fillRect(90, 34, 127, 63);
-
-    // Any code
 
     g.flip();
 });
@@ -1713,9 +1860,13 @@ image: /larana-display.webp
 
 ---
 layout: cover
+background: /wires-lain-2.jpg
+preload: false
 ---
 
-# А Doom оно запустит<span class="red">?</span>
+<RenderWhen context="main">
+<TermPrinter text="А Doom оно запустит?" />
+</RenderWhen>
 
 ---
 layout: image
@@ -1759,7 +1910,7 @@ class: small-table
 | Блок питания | 121 |
 | Модуль реле | 112 |
 | Лампа | 91 |
-| __Итого__ | 559 |
+| Итого | 559 |
 
 </v-clicks>
 
@@ -1779,7 +1930,7 @@ class: small-table
 | Усилитель | 319 |
 | Блок питания | 121 |
 | Звуковая карта | 167 |
-| __Итого__ | 3 607 |
+| Итого | 3 607 |
 
 </v-clicks>
 
@@ -1819,7 +1970,8 @@ layout: two-cols
 </v-clicks>
 
 ---
-layout: cover
+layout: layer
+layer: 99
 ---
 
 # Итоги
@@ -1834,7 +1986,7 @@ layout: cover
 
 - На JS можно сделать что угодно
 - Электроника <span class="red">—</span> опасное<span class="red">,</span> но интересное хобби
-- Не всегда есть CTRL<span class="red">+</span>Z
+- Не всегда есть <kbd style="font-size: 2rem">CTRL</kbd><span class="red">+</span><kbd style="font-size: 2rem">Z</kbd>
 - ~~Смерть в нищете~~ Карьерные перспективы туманны
 
 </v-clicks>
