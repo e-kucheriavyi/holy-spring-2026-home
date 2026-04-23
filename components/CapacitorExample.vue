@@ -61,7 +61,7 @@
 	}
 
 	.bar-level {
-		background: blue;
+		background: var(--orange);
 		transition: 32ms;
 	}
 </style>

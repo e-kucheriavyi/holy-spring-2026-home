@@ -151,7 +151,7 @@ layout: video-side
 side: left
 loop: false
 autoplay: true
-video: /iceberg-glow-1.mp4
+video: /iceberg-glow-orange.mp4
 preload: false
 ---
 
@@ -179,7 +179,7 @@ image: /chat-gpt-wiring.webp
 backgroundSize: 39rem
 ---
 
-<Arrow x1="50" x2="340" y1="300" y2="330" color="red" width="5" v-click />
+<Arrow x1="50" x2="340" y1="300" y2="330" color="orange" width="5" v-click />
 
 <Source value="ChatGPT" />
 
@@ -281,6 +281,8 @@ image: /zigbee.webp
 backgroundSize: 37rem
 class: bg-black
 ---
+
+<div style="position: absolute; top: 2rem; left: 29rem; font-size: 2rem; background: #000;">Zigbee<span class="orange">?</span></div>
 
 ---
 layout: layer
@@ -579,7 +581,7 @@ backgroundSize: 60rem
 transition: slide-left
 ---
 
-<Arrow x1="800" x2="600" y1="400" y2="380" width="6" color="red" v-click />
+<Arrow x1="800" x2="600" y1="400" y2="380" width="6" color="orange" v-click />
 
 ---
 layout: image-left
@@ -1088,7 +1090,7 @@ layout: cover
 
 # Электрический ток <span class="orange">—</span> вода<span class="orange">*</span>
 
-<div style="position: absolute; bottom: 2rem; font-size: 2rem">
+<div v-click style="position: absolute; bottom: 2rem; font-size: 2rem">
 <span class="orange">*</span> С некоторыми допущениями
 </div>
 
@@ -1239,7 +1241,7 @@ preload: false
 
 ---
 layout: video-side
-video: /diode-glow-1.mp4
+video: /diode-glow-orange.mp4
 ---
 
 # Диод
@@ -1292,7 +1294,7 @@ preload: false
 
 ---
 layout: video-side
-video: /capacitor-glow-1.mp4
+video: /capacitor-glow-orange.mp4
 transition: slide-left
 ---
 
@@ -1317,7 +1319,7 @@ preload: false
 
 ---
 layout: video-side
-video: /capacitor-glow-1.mp4
+video: /capacitor-glow-orange.mp4
 side: left
 preload: false
 ---
@@ -1392,7 +1394,7 @@ preload: false
 ---
 layout: video-side
 side: right
-video: /transistor-glow-1.mp4
+video: /transistor-glow-orange.mp4
 ---
 
 # Транзистор
@@ -1656,7 +1658,7 @@ R <span class="orange">=</span> U <span class="orange">÷</span> I
 
 ---
 layout: video-side
-video: /resistor-glow-1.mp4
+video: /resistor-glow-orange.mp4
 ---
 
 # Резистор
@@ -1674,7 +1676,7 @@ video: /resistor-glow-1.mp4
 
 ---
 layout: video-side
-video: /potentiometer-glow-1.mp4
+video: /potentiometer-glow-orange.mp4
 ---
 
 # Потенциометр

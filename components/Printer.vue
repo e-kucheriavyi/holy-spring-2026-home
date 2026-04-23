@@ -6,7 +6,7 @@
 		noRed: { type: Boolean, default: false },
 	})
 
-	const delay = 60
+	const delay = 30
 	const freeticks = 4
 
 	const t = ref(0)
