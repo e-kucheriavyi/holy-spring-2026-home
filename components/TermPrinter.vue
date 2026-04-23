@@ -11,7 +11,9 @@
 	<div class="term">
 		<div class="term-body" :style="`font-size: ${size}`">
 			<span class="term-input" style="padding-right: 1rem;">></span>
-			<Printer :text="text" class="term-text" style="padding-right: 1rem;" />
+			<RenderWhen context="slide">
+				<Printer :text="text" class="term-text" style="padding-right: 1rem;" />
+			</RenderWhen>
 			<span class="term-carret"></span>
 		</div>
 	</div>

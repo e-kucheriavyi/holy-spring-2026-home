@@ -6,7 +6,7 @@
 </script>
 
 <template>
-	<RenderWhen context="main">
+	<RenderWhen context="slide">
 		<div class="slidev-layout terminal fisheye" :style="`font-size: ${size};`">
 			<span style="padding-right: 1rem;">></span>
 			<Printer :text="text" class="txt"/>
@@ -23,6 +23,10 @@
 		font-family: "Press Start 2P" !important;
 		color: #ffbe30;
 		text-shadow: 0 0 1px #ffbe30, 0 0 2px #ffbe30, 0 0 3px #ffbe30;
+	}
+
+	.terminal :deep(.red) {
+		text-shadow: 0 0 1px red, 0 0 2px red, 0 0 3px red;
 	}
 
 	.txt {

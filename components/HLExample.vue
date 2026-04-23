@@ -6,7 +6,7 @@
 <template>
 	<div class="hl">
 		<div class="hl-controls">
-			<h1>HIGH <span class="red">/</span> LOW</h1>
+			<h1>HIGH <span class="orange">/</span> LOW</h1>
 			<div class="hl-chart" @click="on = !on">
 				<div
 					class="hl-high"

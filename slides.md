@@ -98,15 +98,15 @@ preload: false
 
 ---
 
-# Почему фротендеры идеально справятся с электроникой<span class="red">:</span>
+# Идеально для фронтендеров<span class="orange">:</span>
 
 <br>
 
 <v-clicks>
 
 - Любят называть себя инженерами
-- Красили кнопки<span class="red">,</span> а будут красить светодиоды
-- Электронику невозможно понять до конца <span class="red">(</span>и не нужно<span class="red">)</span>
+- Красили кнопки<span class="orange">,</span> а будут красить светодиоды
+- Электронику невозможно понять до конца <span class="orange">(</span>и не нужно<span class="orange">)</span>
 - Фронтендер даже не попытается
 
 </v-clicks>
@@ -124,7 +124,7 @@ text: Что такое послушный дом?
 preload: false
 ---
 
-<RenderWhen context="main">
+<RenderWhen context="slide">
 <TermPrinter text="Что такое послушный дом?" />
 </RenderWhen>
 
@@ -134,7 +134,7 @@ background: /lain-cables.jpg
 preload: false
 ---
 
-<RenderWhen context="main">
+<RenderWhen context="slide">
 <TermPrinter size="3rem" text="Это система управления домашней сетью электрических устройств, которая слушается владельца, а не додумывает" />
 </RenderWhen>
 
@@ -142,21 +142,9 @@ preload: false
 layout: cover
 ---
 
-# Послушный дом почти как умный<span class="red">,</span> но тупой
+# Послушный дом почти как умный<span class="orange">,</span> но тупой
 
 <Source value="© Фонд золотых цитат" />
-
-
----
-layout: video-side
-side: left
-loop: false
-autoplay: false
-video: /iceberg-glow-1.mp4
-preload: false
----
-
-# Айсберг
 
 ---
 layout: video-side
@@ -174,7 +162,7 @@ preload: false
 <v-clicks>
 
 - Информация поделена на уровни
-- Чем дальше<span class="red">,</span> тем сложнее
+- Чем дальше<span class="orange">,</span> тем сложнее
 
 </v-clicks>
 
@@ -211,7 +199,7 @@ class: text-center
 ---
 
 <div class="tiny-title bg-blur" style="font-size: 3rem">
-Бро<span class="red">,</span> ты умрёшь и т<span class="red">.</span> д<span class="red">.</span>
+Бро<span class="orange">,</span> ты умрёшь и т<span class="orange">.</span> д<span class="orange">.</span>
 </div>
 
 ---
@@ -228,7 +216,7 @@ image: /ololoshka.svg
 backgroundSize: 30rem
 ---
 
-# Мечта детства <span color="red">№</span>2026
+# Мечта детства <span color="orange">№</span>2026
 
 <br>
 <br>
@@ -236,11 +224,11 @@ backgroundSize: 30rem
 <br>
 <br>
 
-<div style="font-size: 2.8rem;">Застать крах ИИ и убытки ИТ<span class="red">-</span>гигантов</div>
+<div style="font-size: 2.8rem;">Застать крах ИИ и убытки ИТ<span class="orange">-</span>гигантов</div>
 
 ---
 layout: terminal
-text: Соблюдайте технику безопасности
+text: Соблюдайте технику безопасности!
 preload: false
 ---
 
@@ -257,7 +245,7 @@ image: /sharikov-bw.webp
 ---
 
 <div class="bg-blur tiny-title text-center position-absolute bottom-20" style="font-size: 3rem">
-Скачаю Home assistant<span class="red">,</span> настрою Zigbee</div>
+Скачаю Home assistant<span class="orange">,</span> настрою Zigbee</div>
 
 <Source value="х/ф Собачье сердце" />
 
@@ -265,7 +253,7 @@ image: /sharikov-bw.webp
 layout: cover
 ---
 
-# Вендоры <span class="red">—</span> злые
+# Вендоры <span class="orange">—</span> злые
 
 ---
 layout: image-right
@@ -281,7 +269,7 @@ backgroundSize: 35rem
 <br>
 <br>
 
-# Не стоит недеяться на чужую инфру<span class="red">,</span> вендоров или интернет
+# Не стоит недеяться на чужую инфру<span class="orange">,</span> вендоров или интернет
 
 <div class="bg-blur" style="position: absolute; right: 13rem; top: 3rem; font-size: 2rem;">Интернет</div>
 
@@ -313,11 +301,11 @@ backgroundSize: 40rem
 
 <v-clicks>
 
-- 4 ядра 64<span class="red">-</span>bit 1 GHz
+- 4 ядра 64<span class="orange">-</span>bit 1 GHz
 - 512MB SDRAM
 - Wireless
 - Mini HDMI
-- CSI<span class="red">-</span>2
+- CSI<span class="orange">-</span>2
 - 40 пинов GPIO
 
 </v-clicks>
@@ -327,9 +315,13 @@ backgroundSize: 40rem
 
 ---
 layout: cover
+background: /lain-cables.jpg
+preload: false
 ---
 
-# Есть Mini HDMI<span class="red">,</span> но нельзя использовать браузер <span class="red">—</span> слишком мало оперативки
+<RenderWhen context="slide">
+<TermPrinter size="3rem" text="Есть Mini HDMI, но нельзя использовать браузер — слишком мало оперативки"/>
+</RenderWhen>
 
 ---
 layout: image
@@ -362,9 +354,10 @@ image: /pad/pi-sound.webp
 ---
 layout: cover
 background: /lain-cables.jpg
+preload: false
 ---
 
-<RenderWhen context="main">
+<RenderWhen context="slide">
 <TermPrinter text="Если я купил железку,то это моя железка!" />
 </RenderWhen>
 
@@ -575,7 +568,7 @@ background: /lain-cables.jpg
 preload: false
 ---
 
-<RenderWhen context="main">
+<RenderWhen context="slide">
 <TermPrinter size="2.8rem" text="Микроконтроллер — программируемое устройство, которое может принимать и отправлять электрические сигналы" />
 </RenderWhen>
 
@@ -600,10 +593,10 @@ backgroundSize: 40rem
 
 <v-clicks>
 
-- 2 ядра 32<span class="red">-</span>bit 240 MHz
+- 2 ядра 32<span class="orange">-</span>bit 240 MHz
 - 520 KB SRAM
-- 4 MB Flash<span class="red">-</span>память
-- Wi<span class="red">-</span>Fi <span class="red">&</span> Bluetooth
+- 4 MB Flash<span class="orange">-</span>память
+- Wi<span class="orange">-</span>Fi <span class="orange">&</span> Bluetooth
 - До 32 пинов GPIO
 
 </v-clicks>
@@ -612,12 +605,12 @@ backgroundSize: 40rem
 layout: cover
 ---
 
-# General Purpose Input<span class="red">/</span>Output
+# General Purpose Input<span class="orange">/</span>Output
 
 <br>
 <br>
 
-# Ввод<span class="red">/</span>вывод общего назначения
+# Ввод<span class="orange">/</span>вывод общего назначения
 
 ---
 layout: image
@@ -639,7 +632,7 @@ backgroundSize: 30rem
 <v-clicks>
 
 - Плата для разработки
-- USB<span class="red">-</span>порт для питания и прошивки
+- USB<span class="orange">-</span>порт для питания и прошивки
 - Вывод пинов для удобной работы на макетной плате
 
 </v-clicks>
@@ -666,7 +659,7 @@ background: /lain-cables.jpg
 preload: false
 ---
 
-<RenderWhen context="main">
+<RenderWhen context="slide">
 <TermPrinter text="1. Потому что мы можем" />
 </RenderWhen>
 
@@ -676,7 +669,7 @@ background: /lain-cables.jpg
 preload: false
 ---
 
-<RenderWhen context="main">
+<RenderWhen context="slide">
 <TermPrinter size="3rem" text="2. Всё, что может быть написано на JS, будет написано на JS" />
 </RenderWhen>
 
@@ -688,7 +681,7 @@ layout: cover
 
 ---
 
-# 2 способа запустить JS на контроллере<span class="red">:</span>
+# 2 способа запустить JS на контроллере<span class="orange">:</span>
 
 <br>
 
@@ -726,7 +719,7 @@ backgroundSize: 5rem
 <v-clicks>
 
 - Среда выполнения JS для микроконтроллеров
-- Веб<span class="red">-</span>IDE с настройкой в один клик
+- Веб<span class="orange">-</span>IDE с настройкой в один клик
 - Прошивки для популярных плат
 - Готовые устройства
 
@@ -809,7 +802,7 @@ layout: two-cols
 - UDP
 - HTTP
 - MQTT
-- I<sup class="red">2</sup>C
+- I<sup class="orange">2</sup>C
 - USB
 
 </v-clicks>
@@ -818,7 +811,7 @@ layout: two-cols
 layout: cover
 ---
 
-# 1 Сервер <span class="red">&</span> Много клиентов
+# 1 Сервер <span class="orange">&</span> Много клиентов
 
 ---
 layout: center
@@ -876,23 +869,26 @@ function update() {
 ````
 
 ---
-layout: cover
+layout: terminal
+preload: false
+text: RPS = N × 2
 ---
-
-# RPS <span class="red">=</span> N <span class="red">×</span> 2
-
-
----
-layout: cover
----
-
-# Лучше один раз отправить обновление на устройство<span class="red">,</span> чем всё время дудосить сервер
 
 ---
 layout: cover
+background: /lain-cables.jpg
+preload: false
 ---
 
-# Каждое устройство <span class="red">—</span> сервер
+<RenderWhen context="slide">
+<TermPrinter size="3rem" text="Лучше один раз отправить обновление на устройство, чем всё время дудосить сервер" />
+</RenderWhen>
+
+---
+layout: cover
+---
+
+# Каждое устройство <span class="orange">—</span> сервер
 
 ---
 layout: center
@@ -974,7 +970,7 @@ image: /psyche.jpg
 <br>
 <br>
 
-# Везенье<span class="red">,</span> если <span class="green">есть</span> data sheet
+# Везенье<span class="orange">,</span> если <span class="green">есть</span> data sheet
 
 <br>
 <br>
@@ -985,7 +981,7 @@ image: /psyche.jpg
 
 <v-click>
 
-# Веселье<span class="red">,</span> если его <span class="red">нет</span>
+# Веселье<span class="orange">,</span> если его <span class="red">нет</span>
 
 </v-click>
 
@@ -1006,8 +1002,8 @@ layout: image-right
 image: /lain-repair.jpg
 ---
 <div class="bg-blur" style="font-size: 2rem; flex: 1;">
-Дорогой<span class="red">,</span> хватит ломать технику<span class="red">,</span>
-ты не реверс<span class="red">-</span>инженер<span class="red">...</span>
+Дорогой<span class="orange">,</span> хватит ломать технику<span class="orange">,</span>
+ты не реверс<span class="orange">-</span>инженер<span class="orange">...</span>
 </div>
 
 <img src="/cry.webp" />
@@ -1030,13 +1026,15 @@ layer: 5
 
 ---
 layout: cover
+background: /lain-cables.jpg
+preload: false
 ---
 
-# Концептуально всё просто<span class="red">:</span>
+<RenderWhen context="slide">
 
-<br>
+<TermPrinter size="3rem" text="Всё то же самое, но вместо светодиода — лампа" />
 
-# Делаем всё то же самое<span class="red">,</span> но вместо светодиода <span class="red">—</span> лампа
+</RenderWhen>
 
 ---
 layout: image-right
@@ -1050,7 +1048,7 @@ image: /any-padme.jpg
 <br>
 <br>
 
-# Всё будет так же просто<span class="red">.</span>
+# Всё будет так же просто<span class="orange">.</span>
 
 <br>
 <br>
@@ -1058,9 +1056,15 @@ image: /any-padme.jpg
 <br>
 <br>
 
-# Будет же<span class="red">,</span> да<span class="red">?</span>
+# Будет же<span class="orange">,</span> да<span class="orange">?</span>
 
 <Source value="х/ф Звёздные войны: Эпизод 2 — Атака клонов" />
+
+---
+layout: terminal
+preload: false
+text: Код — абстракция над электричеством
+---
 
 ---
 layout: cover
@@ -1068,43 +1072,39 @@ background: /wires-lain.jpg
 preload: false
 ---
 
-<TermPrinter text="Код — абстракция над электричеством" />
+<RenderWhen context="slide">
+<TermPrinter size="3rem" text="Электрический ток — упорядоченное движение заряженных частиц" />
+</RenderWhen>
 
 ---
 layout: cover
 ---
 
-# Электрический ток <span class="red">—</span> упорядоченное движение заряженных частиц
+# Фронтендер <span class="orange">—</span> интернет<span class="orange">-</span>сантехник
 
 ---
 layout: cover
 ---
 
-# Фронтендер <span class="red">—</span> интернет<span class="red">-</span>сантехник
+# Электрический ток <span class="orange">—</span> вода<span class="orange">*</span>
+
+<div style="position: absolute; bottom: 2rem; font-size: 2rem">
+<span class="orange">*</span> С некоторыми допущениями
+</div>
 
 ---
-layout: cover
----
 
-# С некоторыми допущениями<span class="red">,</span> электрический ток <span class="red">—</span> вода
-
----
-layout: cover
----
-
-# С некоторыми допущениями<span class="red">,</span> любая еда <span class="red">—</span> чизбургер
-
-<Source value="© Тихон Шёпотов" />
-
----
-layout: cover
----
-
-# Напряжение <span class="red">(</span>Вольт<span class="red">)</span> <span class="red">—</span> давление
+# Сравнение тока с водой<span class="orange">:</span>
 
 <br>
 
-# Сила тока <span class="red">(</span>Ампер<span class="red">)</span> <span class="red">—</span> поток воды <span class="red">(</span>объём в единицу времени<span class="red">)</span>
+<v-clicks>
+
+- Напряжение <span class="orange">(</span>Вольт<span class="orange">)</span> <span class="orange">—</span> давление
+- Сила тока <span class="orange">(</span>Ампер<span class="orange">)</span> <span class="orange">—</span> поток воды <span class="orange">(</span>объём в единицу времени<span class="orange">)</span>
+- Сопротивление <span class="orange">(</span>Ом<span class="orange">)</span> <span class="orange">—</span> сопротивление
+
+</v-clicks>
 
 ---
 preload: false
@@ -1114,15 +1114,9 @@ clicks: 1
 # Электрический ток
 
 
-<RenderWhen context="main">
+<RenderWhen context="slide">
 <TransformerDemo />
 </RenderWhen>
-
----
-layout: cover
----
-
-# Почему светится лампа накаливания<span class="red">?</span>
 
 ---
 layout: image
@@ -1177,21 +1171,23 @@ preload: false
 
 <br>
 
+<RenderWhen context="slide">
 <CurrentChart type="AC" :voltage="220" :freq="50" />
+</RenderWhen>
 
 ---
 layout: two-cols
 preload: false
 ---
 
-# В российских розетках<span class="red">:</span>
+# В российских розетках<span class="orange">:</span>
 
 <br>
 
 <v-clicks>
 
-- Переменный ток <span class="red">(</span>AC<span class="red">),</span> который меняет полярность<br>50 раз в секунду <span class="red">(</span>Гц<span class="red">)</span>
-- Примерно <span class="red">~</span>220<span class="red">-</span>230 V
+- Переменный ток <span class="orange">(</span>AC<span class="orange">),</span> который меняет полярность<br>50 раз в секунду <span class="orange">(</span>Гц<span class="orange">)</span>
+- Напряжение <span class="orange">~</span>230 V
 
 </v-clicks>
 
@@ -1199,31 +1195,33 @@ preload: false
 
 <br>
 
+<RenderWhen context="slide">
 <CurrentChart type="AC" :voltage="220" :freq="50" />
+</RenderWhen>
 
 ---
 layout: cover
 ---
 
-# Лампочке нужно 220 V AC<span class="red">,</span> а микроконтроллеру <span class="red">—</span> 5 V DC
+# Лампочке нужно 220 V AC<span class="orange">,</span> а контроллеру <span class="orange">—</span> 5 V DC
 
 ---
-layout: cover
+layout: terminal
+text: Вижу цель, не вижу препятствий
+preload: false
 ---
 
-# Вижу цель<span class="red">,</span> не вижу препятствий
-
 ---
 
-# Что нужно сделать<span class="red">:</span>
+# Что нужно сделать<span class="orange">:</span>
 
 <br>
 
 <v-clicks>
 
-- AC <span class="red" style="font-size: 4rem">→</span> DC
-- Синусоида <span class="red" style="font-size: 4rem">→</span> Прямая
-- 220 V <span class="red" style="font-size: 4rem">→</span> 5 V
+- AC <span class="orange" style="font-size: 4rem">→</span> DC
+- Синусоида <span class="orange" style="font-size: 4rem">→</span> Прямая
+- 220 V <span class="orange" style="font-size: 4rem">→</span> 5 V
 
 </v-clicks>
 
@@ -1235,7 +1233,9 @@ preload: false
 
 <br>
 
+<RenderWhen context="slide">
 <CurrentChart type="AC" :voltage="220" :freq="50" />
+</RenderWhen>
 
 ---
 layout: video-side
@@ -1268,7 +1268,9 @@ preload: false
 
 <br>
 
+<RenderWhen context="slide">
 <CurrentChart type="PREDC" :voltage="220" :freq="50" />
+</RenderWhen>
 
 ---
 layout: image
@@ -1284,7 +1286,9 @@ preload: false
 
 <br>
 
+<RenderWhen context="slide">
 <CurrentChart type="DC" :voltage="220" :freq="50" />
+</RenderWhen>
 
 ---
 layout: video-side
@@ -1299,18 +1303,17 @@ transition: slide-left
 <v-clicks>
 
 - Конденсатор накапливает электрический заряд
-- Когда ёмкость конденсатора заполняется<span class="red">,</span> он разряжается<span class="red">,</span> если есть нагрузка
+- Когда ёмкость конденсатора заполняется<span class="orange">,</span> он разряжается<span class="orange">,</span> если есть нагрузка
 - <span class="orange">~</span> Сифон
 
 </v-clicks>
 
-
 ---
-layout: cover
+layout: terminal
 transition: slide-left
+text: Не трогайте конденсаторы руками!
+preload: false
 ---
-
-# Не трогайте конденсаторы руками<span class="red">!</span>
 
 ---
 layout: video-side
@@ -1337,7 +1340,9 @@ preload: false
 
 <br>
 
+<RenderWhen context="slide">
 <CurrentChart type="DC" :voltage="300" :max="500" :freq="0" />
+</RenderWhen>
 
 ---
 layout: image-right
@@ -1351,9 +1356,9 @@ backgroundSize: 35rem
 
 <v-clicks>
 
-- Ж<span class="red">-</span>ж<span class="red">-</span>ж<span class="red">-</span>ж<span class="red">-</span>ж<span class="red">-</span>ж
-- Трансформатор понижает <span class="red">(</span>или повышает<span class="red">)</span> напряжение за счёт электромагнитной индукции
-- <span class="orange">~</span> Без понятия<span class="red">,</span> с чем сравнить
+- Ж<span class="orange">-</span>ж<span class="orange">-</span>ж<span class="orange">-</span>ж<span class="orange">-</span>ж<span class="orange">-</span>ж
+- Трансформатор понижает <span class="orange">(</span>или повышает<span class="orange">)</span> напряжение за счёт электромагнитной индукции
+- <span class="orange">~</span> Без понятия<span class="orange">,</span> с чем сравнить
 
 </v-clicks>
 
@@ -1362,7 +1367,7 @@ preload: false
 clicks: 7
 ---
 
-<RenderWhen context="main">
+<RenderWhen context="slide">
 <TransformerDemo />
 </RenderWhen>
 
@@ -1380,7 +1385,9 @@ preload: false
 
 <br>
 
+<RenderWhen context="slide">
 <CurrentChart type="DC" :voltage="46" :max="220" :freq="0" />
+</RenderWhen>
 
 ---
 layout: video-side
@@ -1394,8 +1401,8 @@ video: /transistor-glow-1.mp4
 
 <v-clicks>
 
-- Три ножки<span class="red">:</span> исток<span class="red">,</span> сток и затвор
-- Ток протекает от истока к стоку<span class="red">,</span> если есть напряжение на затворе
+- Три ножки<span class="orange">:</span> исток<span class="orange">,</span> сток и затвор
+- Ток протекает от истока к стоку<span class="orange">,</span> если есть напряжение на затворе
 - <span class="orange">~</span> Кран
 
 </v-clicks>
@@ -1414,23 +1421,25 @@ preload: false
 
 <br>
 
+<RenderWhen context="slide">
 <CurrentChart type="DC" :voltage="5" :max="20" :freq="0" />
+</RenderWhen>
 
 ---
 layout: cover
 ---
 
-# Мы придумали блок питания<span class="red">*</span>
+# Мы придумали блок питания<span class="orange">*</span>
 
 <div class="position-absolute bottom-5" style="font-size: 2rem">
-<span class="red">*</span> Это очень упрощённая схема</div>
+<span class="orange">*</span> С некоторыми допущениями</div>
 
 ---
 layout: cover
 transition: slide-left
 ---
 
-# И теперь придётся паять блок питания для каждого проекта<span class="red">?</span>
+# И теперь придётся паять блок питания для каждого проекта<span class="orange">?</span>
 
 ---
 layout: image-right
@@ -1455,17 +1464,14 @@ image: /ps.webp
 layout: cover
 ---
 
-# Мы знаем почти достаточно<span class="red">,</span> чтобы собрать лампочку
+# Мы знаем почти достаточно<span class="orange">,</span> чтобы собрать лампочку
 
 ---
 preload: false
 clicks: 2
 ---
 
-# Реле
-
-
-<RenderWhen context="main">
+<RenderWhen context="slide">
 <RelayDemo />
 </RenderWhen>
 
@@ -1489,9 +1495,9 @@ image: /pad/lamp.webp
 ---
 
 <div class="tiny-title" style="font-size: 2.5rem">
-Атеисты такие типа<span class="red">:</span>
+Атеисты такие типа<span class="orange">:</span>
 <br><br>
-Оно работает благодаря высокому качеству сборки и хорошему коду</div>
+Оно работает благодаря высокому качеству сборки</div>
 
 ---
 layout: center
@@ -1503,9 +1509,9 @@ layout: center
 layout: cover
 ---
 
-# Мы покрыли 95<span class="red">%</span> кейсов послушного дома<span class="red">*</span>
+# Мы покрыли 95<span class="orange">%</span> кейсов послушного дома<span class="orange">*</span>
 
-<div class="position-absolute bottom-5" style="font-size: 3rem"><span class="red">*</span> Я взял этот процент от балды</div>
+<div v-click class="position-absolute bottom-5" style="font-size: 2rem"><span class="orange">*</span> С некоторыми допущениями</div>
 
 ---
 layout: layer
@@ -1582,16 +1588,16 @@ transition: slide-left
 
 <v-clicks>
 
-- U <span class="red">—</span> Напряжение
-- I <span class="red">—</span> Сила тока
-- R <span class="red">—</span> Сопротивление
+- U <span class="orange">—</span> Напряжение
+- I <span class="orange">—</span> Сила тока
+- R <span class="oragne">—</span> Сопротивление
 
 </v-clicks>
 
 ::right::
 
 <div style="font-size: 4rem; height: 100%; display: flex; align-items: center" v-click>
-I <span class="red">=</span> U <span class="red">÷</span> R
+I <span class="orange">=</span> U <span class="orange">÷</span> R
 </div>
 
 ---
@@ -1601,17 +1607,17 @@ layout: two-cols
 # Закон Ома
 
 <div style="font-size: 4rem; height: 81%; display: flex; align-items: center">
-I <span class="red">=</span> U <span class="red">÷</span> R
+I <span class="orange">=</span> U <span class="orange">÷</span> R
 </div>
 
 ::right::
 
 <v-clicks>
 
-- U <span class="red">=</span> 5 V
-- R <span class="red">=</span> 1 Ω
-- I <span class="red">=</span> 5 <span class="red">÷</span> 1
-- I <span class="red">=</span> 5 A
+- U <span class="orange">=</span> 5 V
+- R <span class="orange">=</span> 1 Ω
+- I <span class="orange">=</span> 5 <span class="orange">÷</span> 1
+- I <span class="orange">=</span> 5 A
 
 </v-clicks>
 
@@ -1619,13 +1625,13 @@ I <span class="red">=</span> U <span class="red">÷</span> R
 layout: cover
 ---
 
-# Стандартный светодиод <span class="red">(</span>5 mm<span class="red">)</span> расчитан на прямой ток 10<span class="red">-</span>20 мА
+# Стандартный светодиод <span class="orange">(</span>5 mm<span class="orange">)</span> расчитан на прямой ток 10<span class="orange">-</span>20 мА
 
 ---
 layout: cover
 ---
 
-# Мы превышаем номинальную силу тока в <span class="red">~</span>250 раз<span class="red">!</span>
+# Мы превышаем номинальную силу тока в <span class="orange">~</span>250 раз<span class="orange">!</span>
 
 ---
 layout: two-cols
@@ -1634,17 +1640,17 @@ layout: two-cols
 # Закон Ома
 
 <div style="font-size: 4rem; height: 81%; display: flex; align-items: center">
-R <span class="red">=</span> U <span class="red">÷</span> I
+R <span class="orange">=</span> U <span class="orange">÷</span> I
 </div>
 
 ::right::
 
 <v-clicks>
 
-- U <span class="red">=</span> 5V
-- I <span class="red">=</span> 20 mA
-- R <span class="red">=</span> 5 <span class="red">÷</span> 0.020
-- R <span class="red">=</span> 250 Ω
+- U <span class="orange">=</span> 5V
+- I <span class="orange">=</span> 20 mA
+- R <span class="orange">=</span> 5 <span class="orange">÷</span> 0.020
+- R <span class="orange">=</span> 250 Ω
 
 </v-clicks>
 
@@ -1660,8 +1666,8 @@ video: /resistor-glow-1.mp4
 <v-clicks>
 
 - Все проводники обладают сопротивлением
-- Чем выше сопротивление<span class="red">,</span> тем ниже сила тока
-- Чем выше сопротивление<span class="red">,</span> тем сильнее нагрев
+- Выше сопротивление <span class="orange">—</span> ниже сила тока
+- Выше сопротивление <span class="orange">—</span> сильнее нагрев
 - <span class="orange">~</span> Редуктор
 
 </v-clicks>
@@ -1692,21 +1698,11 @@ image: /lamp-with-potentiometer.webp
 layout: cover
 ---
 
-# Pulse<span class="red">-</span>width modulation
+# Pulse<span class="orange">-</span>width modulation
 
 <br><br>
 
-# Широтно<span class="red">-</span>импульсная модуляция
-
----
-layout: center
----
-
-<div style="font-size: 3rem;">
-Микроконтроллер может выдавать на пинах либо 0 В<span class="red">,</span> либо 5 В<span class="red">.</span> <span v-click>Но если очень
-быстро переключать напряжение<span class="red">,</span></span> <span v-click>то можно добиться эффекта<span class="red">,</span> как будто мы подаём
-среднее арифметическое напряжение</span>
-</div>
+# Широтно<span class="orange">-</span>импульсная модуляция
 
 ---
 preload: false
@@ -1738,7 +1734,11 @@ setInterval(function () {
 layout: cover
 ---
 
-# Любой пин можно использовать для ШИМ<span class="red">,</span> если захотеть
+# Любой пин можно использовать для ШИМ<span class="orange">*</span>
+
+<div v-click style="position: absolute; bottom: 2rem; font-size: 2rem;">
+<span class="orange">*</span> С некоторыми допущениями
+</div>
 
 ---
 preload: false
@@ -1749,7 +1749,9 @@ layout: two-cols
 
 <br>
 
+<RenderWhen context="slide">
 <CurrentChart type="PWM" :max="10" :voltage="5" :freq="2" :len="0.5" />
+</RenderWhen>
 
 ::right::
 
@@ -1757,25 +1759,29 @@ layout: two-cols
 
 <br>
 
+<RenderWhen context="slide">
 <CurrentChart type="PWM" :max="10" :voltage="5" :freq="10" :len="0.5" />
+</RenderWhen>
 
 ---
-layout: cover
+layout: terminal
+text: Много лампочек
+preload: false
 ---
 
-# Много лампочек
-
----
-layout: cover
 ---
 
-# 8 <span class="red">×</span> 8 <span class="red">=</span> 64
+# Много лампочек<span class="orange">:</span>
 
----
-layout: cover
----
+<br>
 
-# 1920 <span class="red">×</span> 1080 <span class="red">=</span> 2 073 600
+<v-clicks>
+
+- 8 <span class="orange">×</span> 8 <span class="orange">=</span> 64
+- 1920 <span class="orange">×</span> 1080 <span class="orange">=</span> 2 073 600
+- 2 073 600 <span class="orange">×</span> 3 <span class="orange">=</span> 6 220 800
+
+</v-clicks>
 
 ---
 layout: image
@@ -1788,7 +1794,7 @@ image: /8x8-matrix-black.png
 layout: cover
 ---
 
-# 8 <span class="red">+</span> 8 <span class="red">=</span> 16
+# 8 <span class="orange">+</span> 8 <span class="orange">=</span> 16
 
 ---
 layout: cover
@@ -1800,20 +1806,22 @@ layout: cover
 preload: false
 ---
 
+<RenderWhen context="slide">
 <DisplayExample />
+</RenderWhen>
 
 ---
 layout: cover
 ---
 
-# 1920 <span class="red">+</span> 1080 <span class="red">=</span> 3 000
+# 1920 <span class="orange">+</span> 1080 <span class="orange">=</span> 3 000
 
 ---
 layout: image
 image: /led-matrix-chip-black.webp
 ---
 
-<Arrow x1="700" x2="300" y1="350" y2="350" color="red" width="6" v-click />
+<Arrow x1="700" x2="300" y1="350" y2="350" color="orange" width="6" v-click />
 
 <Source value="https://circuitdigest.com/microcontroller-projects/arduino-8x8-led-matrix" />
 
@@ -1821,7 +1829,7 @@ image: /led-matrix-chip-black.webp
 layout: cover
 ---
 
-# I<sup class="red">2</sup>C | I<span class="red">2</span>C | IIC
+# I<sup class="orange">2</sup>C | I<span class="orange">2</span>C | IIC
 
 ---
 layout: image
@@ -1829,7 +1837,7 @@ image: /i2c-protocol.webp
 backgroundSize: 75rem
 ---
 
-# I<sup class="red">2</sup>C
+# I<sup class="orange">2</sup>C
 
 <Source value="https://quanser-update.azurewebsites.net/quarc/documentation/i2c_protocol.html" />
 
@@ -1864,7 +1872,7 @@ background: /wires-lain-2.jpg
 preload: false
 ---
 
-<RenderWhen context="main">
+<RenderWhen context="slide">
 <TermPrinter text="А Doom оно запустит?" />
 </RenderWhen>
 
@@ -1890,21 +1898,25 @@ layout: cover
 
 ---
 layout: cover
+background: /lain-cables.jpg
+preload: false
 ---
 
-# В массовом производстве выбирают самый дешёвый контроллер<span class="red">,</span> который удовлетворяет требованиям
+<RenderWhen context="slide">
+<TermPrinter size="3rem" text="В массовом производстве выбирают самый дешёвый контроллер из подходящих"/>
+</RenderWhen>
 
 ---
 class: small-table
 ---
 
-# Бюджет<span class="red">:</span> Лампа
+# Бюджет<span class="orange">:</span> Лампа
 
 <br>
 
 <v-clicks>
 
-| Компонент | Стоимость <span class="red">(</span>Рубли<span class="red">)</span> |
+| Компонент | Стоимость <span class="orange">(</span>Рубли<span class="orange">)</span> |
 |-|-----------|
 | ESP32 | 235 |
 | Блок питания | 121 |
@@ -1918,13 +1930,13 @@ class: small-table
 class: small-table
 ---
 
-# Бюджет<span class="red">:</span> Колонка
+# Бюджет<span class="orange">:</span> Колонка
 
 <br>
 
 <v-clicks>
 
-| Компонент | Стоимость <span class="red">(</span>Рубли<span class="red">)</span> |
+| Компонент | Стоимость <span class="orange">(</span>Рубли<span class="orange">)</span> |
 |-|-----------|
 | Raspberry Pi | 3 000 |
 | Усилитель | 319 |
@@ -1938,7 +1950,7 @@ class: small-table
 layout: two-cols
 ---
 
-# Что не посчитано<span class="red">:</span>
+# Не посчитано<span class="orange">:</span>
 
 <br>
 
@@ -1959,7 +1971,7 @@ layout: two-cols
 <v-clicks>
 
 - Коннекторы
-- Флюс<span class="red">,</span> припой и спирт
+- Флюс<span class="orange">,</span> припой и спирт
 - Ацетатная лента
 - Термоусадки
 - Стяжки
@@ -1972,21 +1984,22 @@ layout: two-cols
 ---
 layout: layer
 layer: 99
+preload: false
 ---
 
 # Итоги
 
 ---
 
-# Итоги<span class="red">:</span>
+# Итоги<span class="orange">:</span>
 
 <br>
 
 <v-clicks>
 
 - На JS можно сделать что угодно
-- Электроника <span class="red">—</span> опасное<span class="red">,</span> но интересное хобби
-- Не всегда есть <kbd style="font-size: 2rem">CTRL</kbd><span class="red">+</span><kbd style="font-size: 2rem">Z</kbd>
+- Электроника <span class="orange">—</span> опасное<span class="orange">,</span> но интересное хобби
+- Не всегда есть <kbd style="font-size: 2rem">CTRL</kbd><span class="orange">+</span><kbd style="font-size: 2rem">Z</kbd>
 - ~~Смерть в нищете~~ Карьерные перспективы туманны
 
 </v-clicks>
@@ -2007,7 +2020,7 @@ layout: two-cols
 <br>
 <br>
 
-# Обсудили много<span class="red">,</span> но мало
+# Обсудили много<span class="orange">,</span> но мало
 
 ::right::
 

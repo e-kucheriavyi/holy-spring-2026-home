@@ -4,7 +4,7 @@
 	const RES = 8
 	const PAD = 8
 	const D = 32
-	const FILL_STYLE = "red"
+	const FILL_STYLE = "#ffbe30"
 	const STROKE_STYLE = "#fff"
 
 	const el = ref(null)

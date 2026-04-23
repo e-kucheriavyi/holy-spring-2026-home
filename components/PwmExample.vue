@@ -6,10 +6,12 @@
 <template>
 	<div class="pwm">
 		<div class="pwm-controls">
-			<h1>PWM <span class="red">/</span> ШИМ</h1>
+			<h1>PWM <span class="orange">/</span> ШИМ</h1>
 			<input type="range" v-model="v" min="0" max="1" step="0.01" />
 			<div style="font-size: 2rem;">{{ `${Number(v).toFixed(2)}` }}</div>
-			<CurrentChart type="PWM" :voltage="5" :max="10" :freq="5" :len="v" />
+			<RenderWhen context="slide">
+				<CurrentChart type="PWM" :voltage="5" :max="10" :freq="5" :len="v" />
+			</RenderWhen>
 		</div>
 		<div class="pwm-preview">
 			<LedElement :value="v*255"></LedElement>

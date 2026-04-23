@@ -4,7 +4,7 @@
 		class="footer absolute bottom-0 left-0 right-0 p-2 text-right"
 	>
 		<div class="block">
-			{{ String($nav.currentPage).padStart(2, "0") }} <span class="red">/</span> {{ String($nav.total).padStart(2, "0") }}
+			{{ String($nav.currentPage).padStart(2, "0") }} <span class="orange">/</span> {{ String($nav.total).padStart(2, "0") }}
 		</div>
 	</footer>
 </template>
