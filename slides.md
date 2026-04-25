@@ -4,7 +4,6 @@ title: Holy spring 2026 home
 class: text-center
 drawings:
   persist: false
-transition: fade-out
 mdc: true
 highlighter: shiki
 lineNumbers: true
@@ -15,16 +14,28 @@ fonts:
   mono: "JetBrains Mono"
 layout: terminal
 preload: false
-text: Послушный дом и JS<br><br>Женя Кучерявый
+text: Наше время...<br><br><br><br>Наши дни...
 size: 3.8rem
 ---
 
+---
+layout: wire
+transition: slide-down
+---
+
+<br>
+<br>
+
 # Послушный дом и JS
+
+<br>
+<br>
 
 ## Женя Кучерявый
 
 ---
 layout: two-cols
+transition: slide-left
 ---
 
 <div style="font-size: 1rem; line-height: 1rem;">
@@ -94,8 +105,11 @@ layout: two-cols
 layout: terminal
 text: Электроника на HolyJS?
 preload: false
+transition: slide-left
 ---
 
+---
+transition: slide-down
 ---
 
 # Идеально для фронтендеров<span class="orange">:</span>
@@ -112,9 +126,15 @@ preload: false
 </v-clicks>
 
 ---
-layout: cover
-class: text-center
+layout: wire
+transition: slide-down
 ---
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 # Знания JS будет достаточно
 
@@ -122,16 +142,14 @@ class: text-center
 layout: terminal
 text: Что такое послушный дом?
 preload: false
+transition: slide-left
 ---
-
-<RenderWhen context="slide">
-<TermPrinter text="Что такое послушный дом?" />
-</RenderWhen>
 
 ---
 layout: cover
 background: /lain-cables.jpg
 preload: false
+transition: slide-left
 ---
 
 <RenderWhen context="slide">
@@ -140,6 +158,7 @@ preload: false
 
 ---
 layout: cover
+transition: slide-up
 ---
 
 # Послушный дом почти как умный<span class="orange">,</span> но тупой
@@ -150,9 +169,8 @@ layout: cover
 layout: video-side
 side: left
 loop: false
-autoplay: true
 video: /iceberg-glow-orange.mp4
-preload: false
+transition: slide-up
 ---
 
 # Айсберг
@@ -214,6 +232,7 @@ backgroundSize: 78rem
 layout: image-left
 image: /ololoshka.svg
 backgroundSize: 30rem
+transition: slide-left
 ---
 
 # Мечта детства <span color="orange">№</span>2026
@@ -230,6 +249,7 @@ backgroundSize: 30rem
 layout: terminal
 text: Соблюдайте технику безопасности!
 preload: false
+transition: slide-left
 ---
 
 ---
@@ -251,6 +271,7 @@ image: /sharikov-bw.webp
 
 ---
 layout: cover
+class: text-center
 ---
 
 # Вендоры <span class="orange">—</span> злые
@@ -285,6 +306,16 @@ class: bg-black
 <div style="position: absolute; top: 2rem; left: 29rem; font-size: 2rem; background: #000;">Zigbee<span class="orange">?</span></div>
 
 ---
+layout: image
+image: /hottabych.jpg
+---
+
+<div class="bg-blur tiny-title text-center position-absolute bottom-20" style="font-size: 3rem">
+Сделаю всё сам</div>
+
+<Source value="х/ф Хоттабыч" />
+
+---
 layout: layer
 layer: 2
 ---
@@ -295,6 +326,7 @@ layer: 2
 layout: image-right
 image: /zero2-hero.webp
 backgroundSize: 40rem
+transition: slide-left
 ---
 
 # Raspberry Pi Zero 2 W
@@ -319,6 +351,7 @@ backgroundSize: 40rem
 layout: cover
 background: /lain-cables.jpg
 preload: false
+transition: slide-left
 ---
 
 <RenderWhen context="slide">
@@ -351,12 +384,14 @@ image: /pad/sound-module.webp
 ---
 layout: image
 image: /pad/pi-sound.webp
+transition: slide-left
 ---
 
 ---
 layout: cover
 background: /lain-cables.jpg
 preload: false
+transition: slide-left
 ---
 
 <RenderWhen context="slide">
@@ -409,6 +444,8 @@ style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0
 </div>
 
 ---
+transition: slide-left
+---
 
 TODO: device photo
 
@@ -416,12 +453,19 @@ TODO: device photo
 layout: terminal
 text: Распознавание речи
 preload: false
+transition: slide-down
 ---
 
 ---
-layout: cover
-class: text-center
+layout: wire
+transition: slide-down
 ---
+
+<br>
+<br>
+<br>
+<br>
+<br>
 
 # Vosk
 
@@ -553,6 +597,7 @@ layout: center
 ---
 layout: layer
 layer: 3
+transition: slide-left
 ---
 
 # Мигаем светодиодом
@@ -562,6 +607,7 @@ layout: terminal
 text: Микроконтроллеры
 size: 4rem
 preload: false
+transition: slide-left
 ---
 
 ---
@@ -605,6 +651,7 @@ backgroundSize: 40rem
 
 ---
 layout: cover
+class: text-center
 ---
 
 # General Purpose Input<span class="orange">/</span>Output
@@ -612,7 +659,11 @@ layout: cover
 <br>
 <br>
 
+<v-click>
+
 # Ввод<span class="orange">/</span>вывод общего назначения
+
+</v-click>
 
 ---
 layout: image
@@ -647,18 +698,21 @@ image: /pad/duck.webp
 ---
 layout: image
 image: /pad/esp.webp
+transition: slide-left
 ---
 
 ---
 layout: terminal
 text: Зачем делать это на JS?
 preload: false
+transition: slide-left
 ---
 
 ---
 layout: cover
 background: /lain-cables.jpg
 preload: false
+transition: fade-out
 ---
 
 <RenderWhen context="slide">
@@ -669,6 +723,7 @@ preload: false
 layout: cover
 background: /lain-cables.jpg
 preload: false
+transition: slide-down
 ---
 
 <RenderWhen context="slide">
@@ -676,8 +731,13 @@ preload: false
 </RenderWhen>
 
 ---
-layout: cover
+layout: wire
+transition: slide-down
 ---
+
+<br>
+<br>
+<br>
 
 # Как написать прошивку на JS
 
@@ -698,6 +758,7 @@ layout: cover
 layout: image
 image: /pico-2s.png
 backgroundSize: 60rem
+transition: slide-left
 ---
 
 <Source value="https://www.raspberrypi.com/documentation/microcontrollers/pico-series.html" />
@@ -706,6 +767,7 @@ backgroundSize: 60rem
 layout: terminal
 text: Мы не на конфе для питонистов
 preload: false
+transition: slide-left
 ---
 
 ---
@@ -811,6 +873,7 @@ layout: two-cols
 
 ---
 layout: cover
+class: text-center
 ---
 
 # 1 Сервер <span class="orange">&</span> Много клиентов
@@ -821,18 +884,16 @@ layout: center
 
 ```mermaid {scale: 1.5}
 flowchart TD
-  subgraph "NETWORK__"
-    direction TB
     Host["SERVER_"]
     NodeA["Device"] --> Host
     NodeB["Device"] --> Host
     NodeC["Device"] --> Host
-  end
 
 ```
 
 ---
 layout: code
+transition: slide-left
 ---
 
 ````md magic-move
@@ -874,12 +935,14 @@ function update() {
 layout: terminal
 preload: false
 text: RPS = N × 2
+transition: slide-left
 ---
 
 ---
 layout: cover
 background: /lain-cables.jpg
 preload: false
+transition: slide-left
 ---
 
 <RenderWhen context="slide">
@@ -888,9 +951,10 @@ preload: false
 
 ---
 layout: cover
+class: text-center
 ---
 
-# Каждое устройство <span class="orange">—</span> сервер
+# Всё <span class="orange">—</span> сервер
 
 ---
 layout: center
@@ -898,13 +962,9 @@ layout: center
 
 ```mermaid {scale: 1.5}
 flowchart TD
-  subgraph "NETWORK__"
-    direction TB
-    Host["BROKER_"]
-    Host --> NodeA["Device"]
+    Host["BROKER_"] --> NodeA["Device"]
     Host --> NodeB["Device"]
     Host --> NodeC["Device"]
-  end
 ```
 
 ---
@@ -1022,6 +1082,7 @@ image: /ron.jpg
 ---
 layout: layer
 layer: 5
+transition: slide-left
 ---
 
 # Послушная розетка
@@ -1030,17 +1091,17 @@ layer: 5
 layout: cover
 background: /lain-cables.jpg
 preload: false
+transition: slide-left
 ---
 
 <RenderWhen context="slide">
-
 <TermPrinter size="3rem" text="Всё то же самое, но вместо светодиода — лампа" />
-
 </RenderWhen>
 
 ---
 layout: image-right
 image: /any-padme.jpg
+transition: slide-left
 ---
 
 <br>
@@ -1066,12 +1127,14 @@ image: /any-padme.jpg
 layout: terminal
 preload: false
 text: Код — абстракция над электричеством
+transition: slide-left
 ---
 
 ---
 layout: cover
 background: /wires-lain.jpg
 preload: false
+transition: slide-left
 ---
 
 <RenderWhen context="slide">
@@ -1080,12 +1143,14 @@ preload: false
 
 ---
 layout: cover
+class: text-center
 ---
 
 # Фронтендер <span class="orange">—</span> интернет<span class="orange">-</span>сантехник
 
 ---
 layout: cover
+class: text-center
 ---
 
 # Электрический ток <span class="orange">—</span> вода<span class="orange">*</span>
@@ -1203,6 +1268,8 @@ preload: false
 
 ---
 layout: cover
+class: text-center
+transition: slide-left
 ---
 
 # Лампочке нужно 220 V AC<span class="orange">,</span> а контроллеру <span class="orange">—</span> 5 V DC
@@ -1211,6 +1278,7 @@ layout: cover
 layout: terminal
 text: Вижу цель, не вижу препятствий
 preload: false
+transition: slide-left
 ---
 
 ---
@@ -1326,7 +1394,9 @@ preload: false
 
 <br>
 
+<RenderWhen context="slide">
 <CapacitorExample />
+</RenderWhen>
 
 ---
 layout: image
@@ -1347,9 +1417,8 @@ preload: false
 </RenderWhen>
 
 ---
-layout: image-right
-image: /coil.svg
-backgroundSize: 35rem
+layout: video-side
+video: /transformer-glow-orange.mp4
 ---
 
 # Трансформатор
@@ -1429,16 +1498,18 @@ preload: false
 
 ---
 layout: cover
+class: text-center
 ---
 
 # Мы придумали блок питания<span class="orange">*</span>
 
-<div class="position-absolute bottom-5" style="font-size: 2rem">
+<div v-click class="position-absolute bottom-5" style="font-size: 2rem">
 <span class="orange">*</span> С некоторыми допущениями</div>
 
 ---
 layout: cover
 transition: slide-left
+class: text-center
 ---
 
 # И теперь придётся паять блок питания для каждого проекта<span class="orange">?</span>
@@ -1464,6 +1535,7 @@ image: /ps.webp
 
 ---
 layout: cover
+class: text-center
 ---
 
 # Мы знаем почти достаточно<span class="orange">,</span> чтобы собрать лампочку
@@ -1483,13 +1555,12 @@ image: /esp-lamp.webp
 ---
 
 ---
+layout: two-images
+image-left: /esp-lamp-8-9.webp
+image-right: /pad/lamp.webp
 transition: slide-left
 ---
 
-<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; width: 100%; height: 100%;">
-<img src="/esp-lamp-8-9.webp" style="flex: 1; width: 50%; height: 100%;" />
-<img src="/pad/lamp.webp" style="flex: 1; width: 50%; height: 100%;" />
-</div>
 
 ---
 layout: image-left
@@ -1509,6 +1580,7 @@ layout: center
 
 ---
 layout: cover
+class: text-center
 ---
 
 # Мы покрыли 95<span class="orange">%</span> кейсов послушного дома<span class="orange">*</span>
@@ -1573,14 +1645,11 @@ image: /led-with-esp.webp
 layout: center
 ---
 
-# Закон Ома
-
 <img src="/ohm.svg" style="width: 100rem" />
 
 <Source value="https://commons.wikimedia.org/wiki/File:Ohm's-law-triangle.svg" />
 
 ---
-layout: two-cols
 transition: slide-left
 ---
 
@@ -1596,23 +1665,18 @@ transition: slide-left
 
 </v-clicks>
 
-::right::
 
-<div style="font-size: 4rem; height: 100%; display: flex; align-items: center" v-click>
+<div v-click style="font-size: 4rem; padding-top: 10rem;display: flex; align-items: center">
 I <span class="orange">=</span> U <span class="orange">÷</span> R
 </div>
 
 ---
-layout: two-cols
+transition: slide-left
 ---
 
 # Закон Ома
 
-<div style="font-size: 4rem; height: 81%; display: flex; align-items: center">
-I <span class="orange">=</span> U <span class="orange">÷</span> R
-</div>
-
-::right::
+<br>
 
 <v-clicks>
 
@@ -1625,27 +1689,34 @@ I <span class="orange">=</span> U <span class="orange">÷</span> R
 
 ---
 layout: cover
+class: text-center
+transition: slide-left
 ---
 
 # Стандартный светодиод <span class="orange">(</span>5 mm<span class="orange">)</span> расчитан на прямой ток 10<span class="orange">-</span>20 мА
 
 ---
 layout: cover
+class: text-center
+transition: slide-left
 ---
 
 # Мы превышаем номинальную силу тока в <span class="orange">~</span>250 раз<span class="orange">!</span>
 
 ---
-layout: two-cols
+layout: center
+transition: slide-left
 ---
-
-# Закон Ома
 
 <div style="font-size: 4rem; height: 81%; display: flex; align-items: center">
 R <span class="orange">=</span> U <span class="orange">÷</span> I
 </div>
 
-::right::
+---
+
+# Закон Ома
+
+<br>
 
 <v-clicks>
 
@@ -1698,19 +1769,26 @@ image: /lamp-with-potentiometer.webp
 
 ---
 layout: cover
+class: text-center
 ---
 
 # Pulse<span class="orange">-</span>width modulation
 
 <br><br>
 
+<v-click>
+
 # Широтно<span class="orange">-</span>импульсная модуляция
+
+</v-click>
 
 ---
 preload: false
 ---
 
+<RenderWhen context="slide">
 <PwmExample />
+</RenderWhen>
 
 ---
 layout: code
@@ -1734,6 +1812,7 @@ setInterval(function () {
 
 ---
 layout: cover
+class: text-center
 ---
 
 # Любой пин можно использовать для ШИМ<span class="orange">*</span>
@@ -1745,6 +1824,7 @@ layout: cover
 ---
 preload: false
 layout: two-cols
+transition: slide-down
 ---
 
 # Медленный ШИМ
@@ -1766,10 +1846,17 @@ layout: two-cols
 </RenderWhen>
 
 ---
-layout: terminal
-text: Много лампочек
-preload: false
+layout: wire
+transition: slide-down
 ---
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Много лампочек
 
 ---
 
@@ -1800,6 +1887,7 @@ layout: cover
 
 ---
 layout: cover
+class: text-center
 ---
 
 # Последовательное переключение
@@ -1821,6 +1909,7 @@ layout: cover
 ---
 layout: image
 image: /led-matrix-chip-black.webp
+transition: slide-down
 ---
 
 <Arrow x1="700" x2="300" y1="350" y2="350" color="orange" width="6" v-click />
@@ -1828,10 +1917,18 @@ image: /led-matrix-chip-black.webp
 <Source value="https://circuitdigest.com/microcontroller-projects/arduino-8x8-led-matrix" />
 
 ---
-layout: cover
+layout: wire
+transition: slide-down
 ---
 
-# I<sup class="orange">2</sup>C | I<span class="orange">2</span>C | IIC
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# I<sup class="red">2</sup>C | I<span class="red">2</span>C | IIC
 
 ---
 layout: image
@@ -1866,12 +1963,14 @@ var g = require("SSD1306").connect(I2C1, 0x3C, function()
 ---
 layout: image
 image: /larana-display.webp
+transition: slide-left
 ---
 
 ---
 layout: cover
 background: /wires-lain-2.jpg
 preload: false
+transition: slide-left
 ---
 
 <RenderWhen context="slide">
@@ -1894,13 +1993,16 @@ image: /esp-pc-2.png
 
 ---
 layout: cover
+class: text-center
+transition: slide-left
 ---
 
 # Для большинства проектов ESP32 <span class="red">слишком</span> мощный
 
 ---
 layout: cover
-background: /lain-cables.jpg
+background: /wires-lain-1.jpg
+transition: slide-left
 preload: false
 ---
 

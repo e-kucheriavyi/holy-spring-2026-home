@@ -13,7 +13,7 @@
 			<span class="carret"></span>
 		</div>
 	</RenderWhen>
-	<RenderWhen context="visible">
+	<RenderWhen context="overview">
 		<div :style="`font-size: ${size};`">{{ text }}</div>
 	</RenderWhen>
 </template>
@@ -21,8 +21,8 @@
 <style scoped>
 	.terminal * {
 		font-family: "Press Start 2P" !important;
-		color: #ffbe30;
-		text-shadow: 0 0 1px #ffbe30, 0 0 2px #ffbe30, 0 0 3px #ffbe30;
+		color: var(--orange);
+		text-shadow: 0 0 1px var(--orange), 0 0 2px var(--orange), 0 0 3px var(--orange);
 	}
 
 	.terminal :deep(.red) {
@@ -30,7 +30,7 @@
 	}
 
 	.txt {
-		color: #ffbe30;
+		color: var(--orange);
 		padding-right: 1rem;
 	}
 
@@ -45,8 +45,8 @@
 	}
 
 	@keyframes blink {
-		0% { background: #ffbe30; }
+		0% { background: var(--orange); }
 		50% { background: transparent; }
-		100% { background: #ffbe30; }
+		100% { background: var(--orange); }
 	}
 </style>

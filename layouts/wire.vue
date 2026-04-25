@@ -4,24 +4,53 @@
 
 <template>
 	<div>
-		<div class="grid grid-cols-2 w-full h-full auto-rows-fr wire">
-			<div class="slidev-layout cover">
+		<div class="slidev-layout wire text-center">
 			<slot />
-			</div>
 		</div>
-		<WireRoad />
+		<SlidevVideo
+			class="wire-video"
+			ref="el"
+			src="/road-glow-orange.mp4"
+			:loop="true"
+			:autoplay="true"
+			:controls="false"
+			:muted="true"
+			autoreset="slide"
+		></SlidevVideo>
 	</div>
 </template>
 
 <style scoped>
-	.wire {
+	.wire, .wire-video {
 		position: absolute;
-		z-index: 0;
 		width: 100%;
 		height: 100%;
 		top: 0;
 		bottom: 0;
 		left: 0;
 		right: 0;
+	}
+
+	.wire-video {
+		z-index: 0;
+	}
+
+	.wire {
+		z-index: 1;
+		color: var(--orange);
+		text-shadow: 0 0 1px var(--orange), 0 0 2px var(--orange), 0 0 3px var(--orange);
+	}
+
+	.wire :deep(h1) {
+		font-size: 4rem;
+		line-height: 4rem;
+	}
+
+	.wire :deep(.red) {
+		text-shadow: 0 0 1px red, 0 0 2px red, 0 0 3px red;
+	}
+
+	.wire :deep(h2) {
+		font-size: 3rem;
 	}
 </style>

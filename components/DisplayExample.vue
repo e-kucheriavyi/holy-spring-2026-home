@@ -1,5 +1,5 @@
 <script setup>
-	import { ref, computed, onMounted } from "vue"
+	import { ref, computed, onMounted, onUnmounted } from "vue"
 
 	const RES = 8
 	const PAD = 8
@@ -29,6 +29,8 @@
 			index = 0
 		}
 	}
+
+	let mounted = false
 
 	const draw = () => {
 		if (el.value === null) {
@@ -72,20 +74,23 @@
 			}
 		}
 
+		if (!mounted) {
+		return
+		}
+
 		if (el.value !== null) {
 			requestAnimationFrame(() => { draw() })
 		}
 	}
 
 	onMounted(() => {
-		// update()
-
+		mounted = true
 		draw()
 	})
 
-	// onUnmounted(() => {
-	//	done.value = true
-	//})
+	onUnmounted(() => {
+		mounted = false
+	})
 </script>
 
 <template>

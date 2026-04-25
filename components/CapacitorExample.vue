@@ -1,5 +1,5 @@
 <script setup>
-	import { ref, onMounted } from "vue"
+	import { ref, onMounted, onUnmounted } from "vue"
 
 	const MAX_CAPACITY = 100
 	const DRAIN_SPEED = 10
@@ -9,6 +9,8 @@
 	const c = ref(0)
 	const v = ref(0)
 	const m = ref(true)
+
+	let mounted = false
 
 	const update = () => {
 		if (m.value) {
@@ -26,12 +28,19 @@
 				m.value = true
 			}
 		}
-
+		if (!mounted) {
+			return
+		}
 		setTimeout(() => { update() }, t)
 	}
 
 	onMounted(() => {
+		mounted = true
 		update()
+	})
+
+	onUnmounted(() => {
+		mounted = false
 	})
 </script>
 

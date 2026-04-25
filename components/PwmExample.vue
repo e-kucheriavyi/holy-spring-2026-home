@@ -47,8 +47,7 @@
 		justify-content: center;
 	}
 
-	.pwm-preview {
-		align-items: center;
-		justify-content: center;
+	.pwm-controls {
+		padding-top: 10rem;
 	}
 </style>

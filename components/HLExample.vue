@@ -49,11 +49,11 @@
 	}
 
 	.hl-high {
-		border-top: 16px solid blue;
+		border-top: 16px solid var(--orange);
 	}
 
 	.hl-low {
-		border-bottom: 16px solid blue;
+		border-bottom: 16px solid var(--orange);
 	}
 
 	.hl-controls input {

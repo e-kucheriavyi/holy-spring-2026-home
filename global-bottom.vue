@@ -1,7 +1,33 @@
+<script setup>
+	import { onMounted, computed } from "vue"
+
+	const delay = 1000
+
+	const update = async () => {
+		// $nav.value.next()
+
+		setTimeout(() => {
+			update()
+		}, delay)
+	}
+
+	const pos = computed(() => {
+		if (["default", "cover", "center"].includes($nav.value.currentLayout)) {
+			return "top-0"
+		}
+		return "bottom-0"
+	})
+
+	onMounted(() => {
+		update()
+	})
+</script>
+
 <template>
 	<footer
 		v-if="$nav.currentPage != 1"
-		class="footer absolute bottom-0 left-0 right-0 p-2 text-right"
+		class="footer absolute left-0 right-0 p-2 text-right"
+		:class="pos"
 	>
 		<div class="block">
 			{{ String($nav.currentPage).padStart(2, "0") }} <span class="orange">/</span> {{ String($nav.total).padStart(2, "0") }}

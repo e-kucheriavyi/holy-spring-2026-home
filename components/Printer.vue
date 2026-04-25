@@ -14,9 +14,10 @@
 	const update = () => {
 		t.value = Math.min(Math.max(0, t.value + 1), props.text.length + freeticks)
 
-		if (t.value > props.text.length + freeticks) {
+		if (t.value >= props.text.length + freeticks) {
 			return
 		}
+
 		setTimeout(() => {
 			update()
 		}, delay)

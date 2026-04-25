@@ -128,6 +128,12 @@ html.dark {
 	color: #fff;
 }
 
+.default, .cover, .center {
+	background: url(/corners.png);
+	background-size: cover;
+	padding: 4rem;
+}
+
 .default, .cover {
 	/* background-color: #000; */
 }
@@ -186,7 +192,7 @@ tr td:first-child, tr th:first-child {
 }
 
 tr:nth-child(even) {
-	background-color: #222;
+	background-color: #111;
 }
 
 .flex-center {
@@ -240,7 +246,15 @@ ul li::marker {
 	content: "> ";
 }
 
+ol li {
+	margin-left: 6rem !important;
+}
+
 .text-outline {
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+input[type="range"] {
+	accent-color: var(--orange);
 }
 
