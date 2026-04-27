@@ -2,20 +2,21 @@
 	const props = defineProps({
 		text: { type: String },
 		size: { type: String, default: "5rem" },
+		frontmatter: { type: Object },
 	})
 </script>
 
 <template>
-	<RenderWhen context="slide">
-		<div class="slidev-layout terminal fisheye" :style="`font-size: ${size};`">
-			<span style="padding-right: 1rem;">></span>
-			<Printer :text="text" class="txt"/>
-			<span class="carret"></span>
+		<div class="slidev-layout terminal" :style="`font-size: ${size};`">
+			<RenderWhen context="slide">
+				<span style="padding-right: 1rem;">></span>
+				<Printer :text="text" class="txt"/>
+				<span class="carret"></span>
+			</RenderWhen>
+			<RenderWhen context="overview">
+				<div :style="`font-size: ${size};`">{{ text }}</div>
+			</RenderWhen>
 		</div>
-	</RenderWhen>
-	<RenderWhen context="overview">
-		<div :style="`font-size: ${size};`">{{ text }}</div>
-	</RenderWhen>
 </template>
 
 <style scoped>
@@ -27,6 +28,10 @@
 
 	.terminal :deep(.red) {
 		text-shadow: 0 0 1px red, 0 0 2px red, 0 0 3px red;
+	}
+
+	.terminal :deep(.white) {
+		text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff;
 	}
 
 	.txt {

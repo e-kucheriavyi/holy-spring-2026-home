@@ -1,5 +1,5 @@
 <script setup>
-	import { onMounted, ref } from "vue"
+	import { onMounted, ref, onUnmounted } from "vue"
 	import { initRelayDemo } from "current-chart"
 
 	const el = ref(null)
@@ -9,7 +9,11 @@
 		if (el === null) {
 			return
 		}
-		initRelayDemo(el.value)
+		const kill = initRelayDemo(el.value)
+
+		onUnmounted(() => {
+			kill()
+		})
 	})
 </script>
 

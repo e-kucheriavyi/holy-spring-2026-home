@@ -1,5 +1,5 @@
 <script setup>
-	import { onMounted, ref } from "vue"
+	import { onMounted, onUnmounted, ref } from "vue"
 	import { initTransformerDemo } from "current-chart"
 
 	const { type, voltage, freq, speed, len, max } = defineProps({
@@ -26,12 +26,15 @@
 
 	const el = ref(null)
 
-
 	onMounted(() => {
 		if (el === null) {
 			return
 		}
-		initTransformerDemo(el.value)
+		const kill = initTransformerDemo(el.value)
+
+		onUnmounted(() => {
+			kill()
+		})
 	})
 </script>
 

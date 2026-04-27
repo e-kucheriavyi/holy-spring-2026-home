@@ -9,7 +9,7 @@
 
 	const el = ref(null)
 
-	const speed = ref(16)
+	const speed = ref(0.2)
 	const done = ref(false)
 
 	let index = 0
@@ -18,7 +18,7 @@
 	const update = () => {
 		t += 1
 
-		if (t < speed.value) {
+		if (t < (1-speed.value) * 16) {
 			return
 		}
 
@@ -75,7 +75,7 @@
 		}
 
 		if (!mounted) {
-		return
+			return
 		}
 
 		if (el.value !== null) {
@@ -97,7 +97,7 @@
 	<div class="pwm">
 		<div class="pwm-controls">
 			<h1>Display</h1>
-			<input type="range" v-model="speed" min="1" max="16" />
+			<SpeedRange v-model="speed" />
 		</div>
 		<div class="pwm-preview">
 			<canvas ref="el" class="canvas"></canvas>

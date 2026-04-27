@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Press+Start+2P&family=Rubik+Glitch&display=swap');
 
 .green {
 	color: var(--accent) !important;
+}
+
+.white {
+	color: #fff !important;
 }
 
 .bg-green {
@@ -33,7 +37,7 @@
 	--slidev-code-line-height: 2.6rem;
 	--slidev-code-font-size: 2.2rem;
 	font-family: "Press Start 2P";
-	--accent: #0f0;
+	--accent: #3caa3c;
 	--orange: #ffbe30;
 	background-color: #000;
 }
@@ -256,5 +260,10 @@ ol li {
 
 input[type="range"] {
 	accent-color: var(--orange);
+}
+
+s {
+	text-decoration-color: var(--orange) !important;
+	text-decoration-thickness: 3px;
 }
 

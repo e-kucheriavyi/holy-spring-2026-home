@@ -1,5 +1,5 @@
 <script setup>
-	import { onMounted, ref } from "vue"
+	import { onMounted, ref, onUnmounted } from "vue"
 	import { initCurrentChart } from "current-chart"
 
 	const { type, voltage, freq, speed, len, max } = defineProps({
@@ -31,7 +31,10 @@
 		if (el === null) {
 			return
 		}
-		initCurrentChart(el.value)
+		const kill = initCurrentChart(el.value, { lineColor: "#ffbe30" })
+		onUnmounted(() => {
+			kill()
+		})
 	})
 </script>
 

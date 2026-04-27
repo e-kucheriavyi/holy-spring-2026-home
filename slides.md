@@ -1,13 +1,11 @@
 ---
 theme: default
 title: Holy spring 2026 home
-class: text-center
 drawings:
   persist: false
 mdc: true
 highlighter: shiki
 lineNumbers: true
-background: /display.png
 fonts:
   sans: "Press Start 2P"
   serif: "Press Start 2P"
@@ -23,6 +21,8 @@ layout: wire
 transition: slide-down
 ---
 
+<br>
+<br>
 <br>
 <br>
 
@@ -147,7 +147,7 @@ transition: slide-left
 
 ---
 layout: cover
-background: /lain-cables.jpg
+background: /lain/wires-1.png
 preload: false
 transition: slide-left
 ---
@@ -162,8 +162,6 @@ transition: slide-up
 ---
 
 # Послушный дом почти как умный<span class="orange">,</span> но тупой
-
-<Source value="© Фонд золотых цитат" />
 
 ---
 layout: video-side
@@ -190,6 +188,25 @@ layer: 0
 ---
 
 # Дисклеймер
+
+---
+layout: image-left
+image: /ololoshka.svg
+backgroundSize: 30rem
+transition: slide-left
+---
+
+# Мечта детства <span color="orange">№</span>2026
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div style="font-size: 2.8rem;">Застать крах ИИ и убытки ИТ<span class="orange">-</span>гигантов</div>
+
+
 
 ---
 layout: image
@@ -229,23 +246,6 @@ backgroundSize: 78rem
 <Source value="ChatGPT" />
 
 ---
-layout: image-left
-image: /ololoshka.svg
-backgroundSize: 30rem
-transition: slide-left
----
-
-# Мечта детства <span color="orange">№</span>2026
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div style="font-size: 2.8rem;">Застать крах ИИ и убытки ИТ<span class="orange">-</span>гигантов</div>
-
----
 layout: terminal
 text: Соблюдайте технику безопасности!
 preload: false
@@ -261,59 +261,14 @@ layer: 1
 
 ---
 layout: image
-image: /sharikov-bw.webp
----
-
-<div class="bg-blur tiny-title text-center position-absolute bottom-20" style="font-size: 3rem">
-Скачаю Home assistant<span class="orange">,</span> настрою Zigbee</div>
-
-<Source value="х/ф Собачье сердце" />
-
----
-layout: cover
-class: text-center
----
-
-# Вендоры <span class="orange">—</span> злые
-
----
-layout: image-right
-image: /rupert.jpg
-backgroundSize: 35rem
----
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-# Не стоит недеяться на чужую инфру<span class="orange">,</span> вендоров или интернет
-
-<div class="bg-blur" style="position: absolute; right: 13rem; top: 3rem; font-size: 2rem;">Интернет</div>
-
-<Source value="х/ф Гарри Поттер и Философский камень" />
-
----
-layout: image
 image: /zigbee.webp
 backgroundSize: 37rem
 class: bg-black
 ---
 
-<div style="position: absolute; top: 2rem; left: 29rem; font-size: 2rem; background: #000;">Zigbee<span class="orange">?</span></div>
-
----
-layout: image
-image: /hottabych.jpg
----
-
-<div class="bg-blur tiny-title text-center position-absolute bottom-20" style="font-size: 3rem">
-Сделаю всё сам</div>
-
-<Source value="х/ф Хоттабыч" />
+<div style="position: absolute; top: 2rem; left: 29rem; font-size: 2rem; background: #000;">
+Zigbee<span class="orange">?</span><br>
+</div>
 
 ---
 layout: layer
@@ -344,12 +299,11 @@ transition: slide-left
 
 </v-clicks>
 
-
 <Source value="https://www.raspberrypi.com/products/raspberry-pi-zero-2-w/" />
 
 ---
 layout: cover
-background: /lain-cables.jpg
+background: /lain/monitors.png
 preload: false
 transition: slide-left
 ---
@@ -389,7 +343,7 @@ transition: slide-left
 
 ---
 layout: cover
-background: /lain-cables.jpg
+background: /lain/pcbs.png
 preload: false
 transition: slide-left
 ---
@@ -597,22 +551,27 @@ layout: center
 ---
 layout: layer
 layer: 3
-transition: slide-left
+transition: slide-down
 ---
 
 # Мигаем светодиодом
 
 ---
-layout: terminal
-text: Микроконтроллеры
-size: 4rem
-preload: false
-transition: slide-left
+layout: wire
+transition: slide-down
 ---
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# Микроконтроллеры
 
 ---
 layout: cover
-background: /lain-cables.jpg
+background: /lain/motherboard.png
 preload: false
 ---
 
@@ -710,7 +669,7 @@ transition: slide-left
 
 ---
 layout: cover
-background: /lain-cables.jpg
+background: /lain/wires-2.png
 preload: false
 transition: fade-out
 ---
@@ -721,7 +680,7 @@ transition: fade-out
 
 ---
 layout: cover
-background: /lain-cables.jpg
+background: /lain/fan.png
 preload: false
 transition: slide-down
 ---
@@ -782,7 +741,7 @@ backgroundSize: 5rem
 
 <v-clicks>
 
-- Среда выполнения JS для микроконтроллеров
+- Среда выполнения JS для контроллеров
 - Веб<span class="orange">-</span>IDE с настройкой в один клик
 - Прошивки для популярных плат
 - Готовые устройства
@@ -823,14 +782,17 @@ setInterval(function () {
 }, 500);
 ```
 
+<v-click>
+
 <img
     class="position-absolute top-2 right-2"
     src="/esp32.png"
     width="400"
-    v-click
 />
 
-<BlinkAnimation style="position: absolute; bottom: 20.5rem; right: 12.77rem" v-click/>
+<BlinkAnimation style="position: absolute; bottom: 20.5rem; right: 12.77rem" />
+
+</v-click>
 
 ---
 layout: layer
@@ -940,7 +902,7 @@ transition: slide-left
 
 ---
 layout: cover
-background: /lain-cables.jpg
+background: /lain/modems.png
 preload: false
 transition: slide-left
 ---
@@ -1022,7 +984,7 @@ transition: slide-left
 
 ---
 layout: image-left
-image: /psyche.jpg
+image: /lain/psyche.jpg
 ---
 
 <br>
@@ -1061,7 +1023,7 @@ image: /pad/e-ink-pins.webp
 
 ---
 layout: image-right
-image: /lain-repair.jpg
+image: /lain/static.jpg
 ---
 <div class="bg-blur" style="font-size: 2rem; flex: 1;">
 Дорогой<span class="orange">,</span> хватит ломать технику<span class="orange">,</span>
@@ -1073,13 +1035,6 @@ image: /lain-repair.jpg
 <Source value="а/с Эксперименты Лэйн"/>
 
 ---
-layout: image
-image: /ron.jpg
----
-
-<Source value="х/с Парки и зоны отдыха" />
-
----
 layout: layer
 layer: 5
 transition: slide-left
@@ -1089,7 +1044,7 @@ transition: slide-left
 
 ---
 layout: cover
-background: /lain-cables.jpg
+background: /lain/sketch.jpg
 preload: false
 transition: slide-left
 ---
@@ -1132,7 +1087,7 @@ transition: slide-left
 
 ---
 layout: cover
-background: /wires-lain.jpg
+background: /lain/wires-lain.jpg
 preload: false
 transition: slide-left
 ---
@@ -1289,9 +1244,9 @@ transition: slide-left
 
 <v-clicks>
 
-- AC <span class="orange" style="font-size: 4rem">→</span> DC
-- Синусоида <span class="orange" style="font-size: 4rem">→</span> Прямая
-- 220 V <span class="orange" style="font-size: 4rem">→</span> 5 V
+- AC <span class="orange">-></span> DC
+- Синусоида <span class="orange">-></span> Прямая
+- 220 V <span class="orange">-></span> 5 V
 
 </v-clicks>
 
@@ -1441,6 +1396,10 @@ clicks: 7
 <RenderWhen context="slide">
 <TransformerDemo />
 </RenderWhen>
+<RenderWhen context="overview">
+<div style="font-size: 4rem;">Transformer Demo</div>
+</RenderWhen>
+
 
 ---
 layout: image
@@ -1547,6 +1506,9 @@ clicks: 2
 
 <RenderWhen context="slide">
 <RelayDemo />
+</RenderWhen>
+<RenderWhen context="overview">
+<div style="font-size: 4rem;">Relay Demo</div>
 </RenderWhen>
 
 ---
@@ -1789,6 +1751,9 @@ preload: false
 <RenderWhen context="slide">
 <PwmExample />
 </RenderWhen>
+<RenderWhen context="overview">
+<div style="font-size: 4rem;">PWM Example</div>
+</RenderWhen>
 
 ---
 layout: code
@@ -1874,13 +1839,12 @@ transition: slide-down
 
 ---
 layout: image
-image: /8x8-matrix-black.png
+image: /8x8-matrix.webp
 ---
-
-<Source value="https://circuitstoday.com/interfacing-8x8-led-matrix-with-arduino" />
 
 ---
 layout: cover
+class: text-center
 ---
 
 # 8 <span class="orange">+</span> 8 <span class="orange">=</span> 16
@@ -1899,6 +1863,9 @@ preload: false
 <RenderWhen context="slide">
 <DisplayExample />
 </RenderWhen>
+<RenderWhen context="overview">
+<div style="font-size: 4rem;">Display Example</div>
+</RenderWhen>
 
 ---
 layout: cover
@@ -1908,13 +1875,9 @@ layout: cover
 
 ---
 layout: image
-image: /led-matrix-chip-black.webp
+image: /8x8-matrix-chip.webp
 transition: slide-down
 ---
-
-<Arrow x1="700" x2="300" y1="350" y2="350" color="orange" width="6" v-click />
-
-<Source value="https://circuitdigest.com/microcontroller-projects/arduino-8x8-led-matrix" />
 
 ---
 layout: wire
@@ -1928,7 +1891,7 @@ transition: slide-down
 <br>
 <br>
 
-# I<sup class="red">2</sup>C | I<span class="red">2</span>C | IIC
+# I<sup class="white">2</sup>C | I<span class="white">2</span>C | IIC
 
 ---
 layout: image
@@ -1968,7 +1931,7 @@ transition: slide-left
 
 ---
 layout: cover
-background: /wires-lain-2.jpg
+background: /lain/pc.png
 preload: false
 transition: slide-left
 ---
@@ -1997,11 +1960,11 @@ class: text-center
 transition: slide-left
 ---
 
-# Для большинства проектов ESP32 <span class="red">слишком</span> мощный
+# Для большинства проектов ESP32 <span class="orange">слишком</span> мощный
 
 ---
 layout: cover
-background: /wires-lain-1.jpg
+background: /lain/wires-lain-1.jpg
 transition: slide-left
 preload: false
 ---

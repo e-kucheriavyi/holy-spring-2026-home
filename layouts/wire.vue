@@ -50,6 +50,10 @@
 		text-shadow: 0 0 1px red, 0 0 2px red, 0 0 3px red;
 	}
 
+	.wire :deep(.white) {
+		text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff;
+	}
+
 	.wire :deep(h2) {
 		font-size: 3rem;
 	}

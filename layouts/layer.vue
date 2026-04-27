@@ -26,7 +26,7 @@
 			<slot />
 		</div>
 		<div :class="glitchClass">
-			<div class="layer-label">Layer: {{ String(layer).padStart(2, "0") }}</div>
+			<div class="layer-label">Layer<span class="white">:</span> {{ String(layer).padStart(2, "0") }}</div>
 		</div>
 	</div>
 </template>
@@ -48,7 +48,11 @@
 		line-height: 5.8rem;
 	}
 
-	.glitch :deep(h1), .glitch .layer-label {
+	.layer .white {
+		text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff;
+	}
+
+	.glitch :deep(h1), .glitch *, .glitch .layer-label {
 		font-family: "Rubik Glitch" !important;
 		font-size: 8rem;
 		animation: shake 0.1s linear infinite;
