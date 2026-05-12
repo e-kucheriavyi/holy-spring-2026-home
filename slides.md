@@ -2114,5 +2114,5 @@ layout: two-cols
 <br>
 <br>
 
-<Qr data="https://kucheriavyi.ru/articles/holyjs26sp-summary" label="kucheriavyi.ru" v-click/>
+<Qr data="https://kucheriavyi.ru/articles/hjs26sp-extra" label="kucheriavyi.ru" v-click/>
 
