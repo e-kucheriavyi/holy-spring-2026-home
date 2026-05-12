@@ -10,7 +10,7 @@
 		<SlidevVideo
 			class="wire-video"
 			ref="el"
-			src="/road-glow-orange.mp4"
+			src="/vids/road.mp4"
 			:loop="true"
 			:autoplay="true"
 			:controls="false"
@@ -42,8 +42,8 @@
 	}
 
 	.wire :deep(h1) {
-		font-size: 4rem;
-		line-height: 4rem;
+		font-size: 3.8rem;
+		line-height: 3.8rem;
 	}
 
 	.wire :deep(.red) {

@@ -16,6 +16,7 @@
 			<RenderWhen context="overview">
 				<div :style="`font-size: ${size};`">{{ text }}</div>
 			</RenderWhen>
+			<slot />
 		</div>
 </template>
 

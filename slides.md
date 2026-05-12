@@ -108,6 +108,11 @@ preload: false
 transition: slide-left
 ---
 
+<img
+src="/duck.png"
+style="position: fixed; z-index: 2; bottom: 8rem; right: 8rem; width: 200px; transform: scaleX(-1);"
+/>
+
 ---
 transition: slide-down
 ---
@@ -153,7 +158,7 @@ transition: slide-left
 ---
 
 <RenderWhen context="slide">
-<TermPrinter size="3rem" text="Это система управления домашней сетью электрических устройств, которая слушается владельца, а не додумывает" />
+<TermPrinter size="2.9rem" text="Это система управления домашней сетью электрических устройств, которая слушается владельца, а не додумывает" />
 </RenderWhen>
 
 ---
@@ -167,7 +172,7 @@ transition: slide-up
 layout: video-side
 side: left
 loop: false
-video: /iceberg-glow-orange.mp4
+video: /vids/iceberg.mp4
 transition: slide-up
 ---
 
@@ -247,7 +252,7 @@ backgroundSize: 78rem
 ---
 layout: image-left
 image: /tb.jpg
-backgroundSize: 39rem
+backgroundSize: 36rem
 ---
 
 # Техника безопасности
@@ -272,13 +277,10 @@ layer: 1
 ---
 layout: image
 image: /zigbee.webp
-backgroundSize: 37rem
+backgroundSize: 35rem
 class: bg-black
 ---
 
-<div style="position: absolute; top: 2rem; left: 29rem; font-size: 2rem; background: #000;">
-Zigbee<span class="orange">?</span><br>
-</div>
 
 ---
 layout: wire
@@ -313,7 +315,7 @@ transition: slide-left
 
 <v-clicks>
 
-- 4 ядра 64<span class="orange">-</span>bit 1 GHz
+- 4 ядра 1 GHz
 - 512MB SDRAM
 - Wireless
 - Mini HDMI
@@ -703,7 +705,7 @@ transition: slide-down
 ---
 
 <RenderWhen context="slide">
-<TermPrinter size="3rem" text="1. Потому что мы можем<br><br>2. Всё, что может быть написано на JS, будет написано на JS" />
+<TermPrinter size="2.7rem" text="1. Потому что мы можем<br><br>2. Всё, что может быть написано на JS, будет написано на JS" />
 </RenderWhen>
 
 ---
@@ -758,8 +760,8 @@ backgroundSize: 5rem
 
 <v-clicks>
 
-- Среда выполнения JS для контроллеров
-- Веб<span class="orange">-</span>IDE с настройкой в один клик
+- Среда исполнения JS
+- Веб<span class="orange">-</span>IDE
 - Прошивки для популярных плат
 - Готовые устройства
 
@@ -864,7 +866,7 @@ layout: center
 
 ```mermaid {scale: 1.5}
 flowchart TD
-    Host["SERVER_"]
+    Host["SERVER<span style='opacity: 0;'>_</span>"]
     NodeA["Device"] --> Host
     NodeB["Device"] --> Host
     NodeC["Device"] --> Host
@@ -926,7 +928,7 @@ transition: slide-left
 ---
 
 <RenderWhen context="slide">
-<TermPrinter size="3rem" text="Лучше один раз отправить обновление на устройство, чем всё время дудосить сервер" />
+<TermPrinter size="2.8rem" text="Лучше один раз отправить обновление на устройство, чем всё время дудосить сервер" />
 </RenderWhen>
 
 ---
@@ -942,7 +944,7 @@ layout: center
 
 ```mermaid {scale: 1.5}
 flowchart TD
-    Host["BROKER_"] --> NodeA["Device"]
+    Host["BROKER<span style='opacity: 0;'>_</span>"] --> NodeA["Device"]
     Host --> NodeB["Device"]
     Host --> NodeC["Device"]
 ```
@@ -1041,12 +1043,12 @@ image: /pad/e-ink-pins.webp
 layout: image-right
 image: /lain/cat-static.jpg
 ---
-<div class="bg-blur" style="font-size: 2rem; flex: 1;">
+<div class="bg-blur" style="font-size: 1.9rem; flex: 1;">
 Дорогой<span class="orange">,</span> хватит ломать технику<span class="orange">,</span>
 ты не реверс<span class="orange">-</span>инженер<span class="orange">...</span>
 </div>
 
-<img src="/cry.webp" />
+<img src="/cry.webp" style="position: absolute; bottom: 0; width: 30rem;"/>
 
 ---
 layout: layer
@@ -1283,7 +1285,7 @@ preload: false
 
 ---
 layout: video-side
-video: /diode-glow-orange.mp4
+video: /vids/diode.mp4
 ---
 
 # Диод
@@ -1336,7 +1338,7 @@ preload: false
 
 ---
 layout: video-side
-video: /capacitor-glow-orange.mp4
+video: /vids/capacitor.mp4
 transition: slide-left
 ---
 
@@ -1347,7 +1349,7 @@ transition: slide-left
 <v-clicks>
 
 - Конденсатор накапливает электрический заряд
-- Когда ёмкость конденсатора заполняется<span class="orange">,</span> он разряжается<span class="orange">,</span> если есть нагрузка
+- Разряжается после полной зарядки<span class="orange">,</span> если есть нагрузка
 - <span class="orange">~</span> Сифон
 
 </v-clicks>
@@ -1361,7 +1363,7 @@ preload: false
 
 ---
 layout: video-side
-video: /capacitor-glow-orange.mp4
+video: /vids/capacitor.mp4
 side: left
 preload: false
 ---
@@ -1392,7 +1394,7 @@ preload: false
 
 ---
 layout: video-side
-video: /transformer-glow-orange.mp4
+video: /vids/transformer.mp4
 ---
 
 # Трансформатор
@@ -1441,7 +1443,7 @@ preload: false
 ---
 layout: video-side
 side: right
-video: /transistor-glow-orange.mp4
+video: /vids/transistor.mp4
 ---
 
 # Транзистор
@@ -1631,6 +1633,11 @@ layout: center
 <Source value="https://commons.wikimedia.org/wiki/File:Ohm's-law-triangle.svg" />
 
 ---
+layout: image
+image: /schematics/resistance-is-useless.webp
+---
+
+---
 transition: slide-left
 ---
 
@@ -1710,7 +1717,7 @@ R <span class="orange">=</span> U <span class="orange">÷</span> I
 
 ---
 layout: video-side
-video: /resistor-glow-orange.mp4
+video: /vids/resistor.mp4
 ---
 
 # Резистор
@@ -1719,16 +1726,15 @@ video: /resistor-glow-orange.mp4
 
 <v-clicks>
 
-- Все проводники обладают сопротивлением
-- Выше сопротивление <span class="orange">—</span> ниже сила тока
-- Выше сопротивление <span class="orange">—</span> сильнее нагрев
+- У всего есть сопротивление
+- Чем оно выше<span class="orange">,</span> тем ниже сила тока и сильнее нагрев
 - <span class="orange">~</span> Редуктор
 
 </v-clicks>
 
 ---
 layout: video-side
-video: /potentiometer-glow-orange.mp4
+video: /vids/potentiometer.mp4
 ---
 
 # Потенциометр
@@ -1737,7 +1743,7 @@ video: /potentiometer-glow-orange.mp4
 
 <v-clicks>
 
-- Можно думать о потенциометре как о настраиваемом резистре
+- Настраиваемый резистор
 
 </v-clicks>
 
@@ -1910,7 +1916,7 @@ transition: slide-down
 <br>
 <br>
 
-# I<sup class="white">2</sup>C | I<span class="white">2</span>C | IIC
+# I<sup class="orange">2</sup>C | I<span class="orange">2</span>C | IIC
 
 ---
 layout: image
