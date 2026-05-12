@@ -9,7 +9,7 @@
 <template>
 		<div class="slidev-layout terminal" :style="`font-size: ${size};`">
 			<RenderWhen context="slide">
-				<span style="padding-right: 1rem;">></span>
+				<span style="padding-right: 1rem;" class="orange">></span>
 				<Printer :text="text" class="txt"/>
 				<span class="carret"></span>
 			</RenderWhen>
@@ -23,19 +23,10 @@
 	.terminal * {
 		font-family: "Press Start 2P" !important;
 		color: var(--orange);
-		text-shadow: 0 0 1px var(--orange), 0 0 2px var(--orange), 0 0 3px var(--orange);
-	}
-
-	.terminal :deep(.red) {
-		text-shadow: 0 0 1px red, 0 0 2px red, 0 0 3px red;
-	}
-
-	.terminal :deep(.white) {
-		text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff;
 	}
 
 	.txt {
-		color: var(--orange);
+		color: #fff;
 		padding-right: 1rem;
 	}
 

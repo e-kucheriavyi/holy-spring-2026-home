@@ -10,7 +10,7 @@
 <template>
 	<div class="term">
 		<div class="term-body" :style="`font-size: ${size}`">
-			<span class="term-input" style="padding-right: 1rem;">></span>
+			<span class="term-input orange" style="padding-right: 1rem;">></span>
 			<RenderWhen context="slide">
 				<Printer :text="text" class="term-text" style="padding-right: 1rem;" />
 			</RenderWhen>
@@ -44,7 +44,7 @@
 	
 	.term-body {
 		padding: 1rem;
-		color: var(--orange);
+		color: #fff;
 	}
 
 	.term-input {

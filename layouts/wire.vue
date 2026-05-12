@@ -37,8 +37,8 @@
 
 	.wire {
 		z-index: 1;
-		color: var(--orange);
-		text-shadow: 0 0 1px var(--orange), 0 0 2px var(--orange), 0 0 3px var(--orange);
+		color: #fff;
+		text-shadow: 0 0 1px #fff, 0 0 2px #ff, 0 0 3px #ff;
 	}
 
 	.wire :deep(h1) {

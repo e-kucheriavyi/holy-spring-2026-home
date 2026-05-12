@@ -1,25 +1,11 @@
 <script setup>
-	import { onMounted, computed } from "vue"
-
-	const delay = 1000
-
-	const update = async () => {
-		// $nav.value.next()
-
-		setTimeout(() => {
-			update()
-		}, delay)
-	}
+	import { computed } from "vue"
 
 	const pos = computed(() => {
 		if (["default", "cover", "center"].includes($nav.value.currentLayout)) {
 			return "top-0"
 		}
 		return "bottom-0"
-	})
-
-	onMounted(() => {
-		update()
 	})
 </script>
 

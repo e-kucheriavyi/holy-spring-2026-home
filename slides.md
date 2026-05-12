@@ -207,7 +207,6 @@ transition: slide-left
 <div style="font-size: 2.8rem;">Застать крах ИИ и убытки ИТ<span class="orange">-</span>гигантов</div>
 
 
-
 ---
 layout: image
 image: /chat-gpt-wiring.webp
@@ -246,11 +245,22 @@ backgroundSize: 78rem
 <Source value="ChatGPT" />
 
 ---
-layout: terminal
-text: Соблюдайте технику безопасности!
-preload: false
-transition: slide-left
+layout: image-left
+image: /tb.jpg
+backgroundSize: 39rem
 ---
+
+# Техника безопасности
+
+<br>
+
+<v-clicks>
+
+- При работе с электричеством нет <kbd style="font-size: 2rem">CTRL</kbd><span class="orange">+</span><kbd style="font-size: 2rem">Z</kbd>
+- Загуглите сами — я крайним не буду
+- Не повторяйте дома
+
+</v-clicks>
 
 ---
 layout: layer
@@ -269,6 +279,19 @@ class: bg-black
 <div style="position: absolute; top: 2rem; left: 29rem; font-size: 2rem; background: #000;">
 Zigbee<span class="orange">?</span><br>
 </div>
+
+---
+layout: wire
+transition: slide-down
+---
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+# База
 
 ---
 layout: layer
@@ -322,12 +345,7 @@ backgroundSize: 70rem
 
 ---
 layout: image
-image: /pad/duck.webp
----
-
----
-layout: image
-image: /pad/pi.webp
+image: /pad/duck-pi.webp
 ---
 
 ---
@@ -398,10 +416,10 @@ style="position: absolute; width: 100%; height: 100%; top: 0; bottom: 0; left: 0
 </div>
 
 ---
+layout: image
+image: /pad/pi-device.webp
 transition: slide-left
 ---
-
-TODO: device photo
 
 ---
 layout: terminal
@@ -626,6 +644,16 @@ class: text-center
 
 ---
 layout: image
+image: /pad/duck-esp.webp
+---
+
+---
+layout: image
+image: /pad/duck-programmer.webp
+---
+
+---
+layout: image
 image: /esp32.png
 backgroundSize: 30rem
 transition: slide-left
@@ -651,12 +679,12 @@ backgroundSize: 30rem
 
 ---
 layout: image
-image: /pad/duck.webp
+image: /pad/duck-devkit.webp
 ---
 
 ---
 layout: image
-image: /pad/esp.webp
+image: /pad/duck-3.webp
 transition: slide-left
 ---
 
@@ -669,24 +697,13 @@ transition: slide-left
 
 ---
 layout: cover
-background: /lain/wires-2.png
-preload: false
-transition: fade-out
----
-
-<RenderWhen context="slide">
-<TermPrinter text="1. Потому что мы можем" />
-</RenderWhen>
-
----
-layout: cover
 background: /lain/fan.png
 preload: false
 transition: slide-down
 ---
 
 <RenderWhen context="slide">
-<TermPrinter size="3rem" text="2. Всё, что может быть написано на JS, будет написано на JS" />
+<TermPrinter size="3rem" text="1. Потому что мы можем<br><br>2. Всё, что может быть написано на JS, будет написано на JS" />
 </RenderWhen>
 
 ---
@@ -830,6 +847,7 @@ layout: two-cols
 - MQTT
 - I<sup class="orange">2</sup>C
 - USB
+- Тысячи их
 
 </v-clicks>
 
@@ -1009,8 +1027,6 @@ image: /lain/psyche.jpg
 
 </v-click>
 
-<Source value="а/с Эксперименты Лэйн"/>
-
 ---
 layout: image
 image: /pad/e-ink.webp
@@ -1023,7 +1039,7 @@ image: /pad/e-ink-pins.webp
 
 ---
 layout: image-right
-image: /lain/static.jpg
+image: /lain/cat-static.jpg
 ---
 <div class="bg-blur" style="font-size: 2rem; flex: 1;">
 Дорогой<span class="orange">,</span> хватит ломать технику<span class="orange">,</span>
@@ -1031,8 +1047,6 @@ image: /lain/static.jpg
 </div>
 
 <img src="/cry.webp" />
-
-<Source value="а/с Эксперименты Лэйн"/>
 
 ---
 layout: layer
@@ -1077,6 +1091,11 @@ transition: slide-left
 # Будет же<span class="orange">,</span> да<span class="orange">?</span>
 
 <Source value="х/ф Звёздные войны: Эпизод 2 — Атака клонов" />
+
+---
+layout: image
+image: /schematics/full.webp
+---
 
 ---
 layout: terminal
@@ -1142,7 +1161,7 @@ clicks: 1
 
 ---
 layout: image
-image: /acdc/lamp.webp
+image: /schematics/lamp.webp
 transition: slide-left
 ---
 
@@ -1150,7 +1169,7 @@ transition: slide-left
 
 ---
 layout: image-left
-image: /acdc/lamp-8.webp
+image: /schematics/lamp-s.webp
 ---
 
 <div style="display: flex; align-items: center; justify-content: center;">
@@ -1170,7 +1189,7 @@ image: /acdc/lamp-8.webp
 
 ---
 layout: image
-image: /acdc/lamp-with-button.webp
+image: /schematics/lamp-btn.webp
 ---
 
 # Лампа с кнопкой
@@ -1181,13 +1200,13 @@ image: /acdc/lamp-with-button.webp
 
 ---
 layout: image
-image: /acdc/base.webp
+image: /schematics/ps-1.webp
 transition: slide-left
 ---
 
 ---
 layout: image-left
-image: /acdc/base-8.webp
+image: /schematics/ps-1-s.webp
 preload: false
 ---
 
@@ -1252,7 +1271,7 @@ transition: slide-left
 
 ---
 layout: image-left
-image: /acdc/base-8.webp
+image: /schematics/ps-1-s.webp
 preload: false
 ---
 
@@ -1281,13 +1300,13 @@ video: /diode-glow-orange.mp4
 
 ---
 layout: image
-image: /acdc/diode.webp
+image: /schematics/ps-2.webp
 transition: slide-left
 ---
 
 ---
 layout: image-left
-image: /acdc/diode-8.webp
+image: /schematics/ps-2-s.webp
 preload: false
 ---
 
@@ -1299,13 +1318,13 @@ preload: false
 
 ---
 layout: image
-image: /acdc/bridge.webp
+image: /schematics/ps-3.webp
 transition: slide-left
 ---
 
 ---
 layout: image-left
-image: /acdc/bridge-8.webp
+image: /schematics/ps-3-s.webp
 preload: false
 ---
 
@@ -1355,13 +1374,13 @@ preload: false
 
 ---
 layout: image
-image: /acdc/capacitor.webp
+image: /schematics/ps-4.webp
 transition: slide-left
 ---
 
 ---
 layout: image-left
-image: /acdc/capacitor-8.webp
+image: /schematics/ps-4-s.webp
 preload: false
 ---
 
@@ -1403,13 +1422,13 @@ clicks: 7
 
 ---
 layout: image
-image: /acdc/coil.webp
+image: /schematics/ps-5.webp
 transition: slide-left
 ---
 
 ---
 layout: image-left
-image: /acdc/coil-8.webp
+image: /schematics/ps-5-s.webp
 preload: false
 ---
 
@@ -1439,13 +1458,13 @@ video: /transistor-glow-orange.mp4
 
 ---
 layout: image
-image: /acdc/pwm.webp
+image: /schematics/ps-6.webp
 transition: slide-left
 ---
 
 ---
 layout: image-left
-image: /acdc/pwm-8.webp
+image: /schematics/ps-6-s.webp
 preload: false
 ---
 
@@ -1513,12 +1532,12 @@ clicks: 2
 
 ---
 layout: image
-image: /esp-lamp.webp
+image: /schematics/full.webp
 ---
 
 ---
 layout: two-images
-image-left: /esp-lamp-8-9.webp
+image-left: /schematics/full-s.webp
 image-right: /pad/lamp.webp
 transition: slide-left
 ---
@@ -1538,7 +1557,7 @@ image: /pad/lamp.webp
 layout: center
 ---
 
-<div class="big-title">DEMO</div>
+<DemoLamp />
 
 ---
 layout: cover
@@ -1925,7 +1944,7 @@ var g = require("SSD1306").connect(I2C1, 0x3C, function()
 
 ---
 layout: image
-image: /larana-display.webp
+image: /larana-display-orange.webp
 transition: slide-left
 ---
 

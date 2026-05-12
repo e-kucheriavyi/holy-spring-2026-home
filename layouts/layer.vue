@@ -18,7 +18,7 @@
 </script>
 
 <template>
-	<div class="slidev-layout layer text-outline" :style="style">
+	<div class="slidev-layout layer" :style="style">
 		<div
 			class="my-auto w-full bg position-absolute h-full top-0 bottom-0 left-0 right-0 p-20 pt-50"
 			:class="glitchClass"
@@ -26,7 +26,7 @@
 			<slot />
 		</div>
 		<div :class="glitchClass">
-			<div class="layer-label">Layer<span class="white">:</span> {{ String(layer).padStart(2, "0") }}</div>
+			<div class="layer-label">Layer<span class="orange">:</span> {{ String(layer).padStart(2, "0") }}</div>
 		</div>
 	</div>
 </template>
@@ -34,8 +34,8 @@
 <style scoped>
 	.layer {
 		/*background: url(/crt-1.jpg);*/
-		color: var(--orange);
-		text-shadow: 0 0 1px var(--orange), 0 0 2px var(--orange), 0 0 3px var(--orange);
+		color: #fff;
+		text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff;
 	}
 
 	.bg {
@@ -48,8 +48,8 @@
 		line-height: 5.8rem;
 	}
 
-	.layer .white {
-		text-shadow: 0 0 1px #fff, 0 0 2px #fff, 0 0 3px #fff;
+	.layer .orange {
+		text-shadow: 0 0 1px var(--orange), 0 0 2px var(--orange), 0 0 3px var(--orange);
 	}
 
 	.glitch :deep(h1), .glitch *, .glitch .layer-label {

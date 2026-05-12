@@ -31,7 +31,7 @@
 		if (el === null) {
 			return
 		}
-		const kill = initCurrentChart(el.value, { lineColor: "#ffbe30" })
+		const kill = initCurrentChart(el.value)
 		onUnmounted(() => {
 			kill()
 		})

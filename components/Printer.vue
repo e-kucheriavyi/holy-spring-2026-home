@@ -41,7 +41,7 @@
 		for (let i = 0; i < txt.length; i++) {
 			const c = txt[i]
 			if (chars.includes(c)) {
-				r.push(`<span class="white">${c}</span>`)
+				r.push(`<span class="orange">${c}</span>`)
 				continue
 			}
 			r.push(c)
