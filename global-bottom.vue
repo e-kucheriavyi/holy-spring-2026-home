@@ -11,13 +11,14 @@
 
 <template>
 	<footer
-		v-if="$nav.currentPage != 1"
+		v-show="$nav.currentPage != 1"
 		class="footer absolute left-0 right-0 p-2 text-right"
 		:class="pos"
 	>
 		<div class="block">
 			{{ String($nav.currentPage).padStart(2, "0") }} <span class="orange">/</span> {{ String($nav.total).padStart(2, "0") }}
 		</div>
+		<MediaPreloader />
 	</footer>
 </template>
 

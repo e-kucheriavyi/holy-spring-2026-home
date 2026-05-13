@@ -460,12 +460,7 @@ const model = new vosk.Model(modelPath)
 const rec = new vosk.Recognizer({ model, sampleRate })
 
 const mic = record.record({
-    sampleRateHertz: sampleRate,
-    threshold: 0,
-    verbose: false,
-    recordProgram: "rec",
-    channels: 1,
-    audioType: "raw",
+  // Всякие опции
 })
 ```
 
@@ -475,43 +470,43 @@ const micStream = mic.stream()
 micStream.on("error", console.error)
 
 process.on("SIGINT", () => {
-    mic.stop()
-    const final = rec.finalResult()
-    rec.free()
-    model.free()
-    process.exit(0)
+  mic.stop()
+  const final = rec.finalResult()
+  rec.free()
+  model.free()
+  process.exit(0)
 })
 ```
 
 ```js{all|2-4|4-11}
 micStream.on("data", (data) => {
-    if (rec.acceptWaveform(data)) {
-        // end of phrase
-    } else {
-        const partial = rec.partialResult()
-        if (partial && partial.partial) {
-            process.stdout.write(
-                `\rPartial: ${partial.partial}`,
-            )
-        }
+  if (rec.acceptWaveform(data)) {
+    // end of phrase
+  } else {
+    const partial = rec.partialResult()
+    if (partial && partial.partial) {
+      process.stdout.write(
+        `\rPartial: ${partial.partial}`,
+      )
     }
+  }
 })
 ```
 
 ```js{all|2-13|3|4|9|11-12}
 micStream.on("data", (data) => {
-    if (rec.acceptWaveform(data)) {
-        const res = rec.result()
-        if (!res || !res.text) {
-            return
-        }
-        console.log("\nResult:", res.text)
+  if (rec.acceptWaveform(data)) {
+    const res = rec.result()
+    if (!res || !res.text) {
+      return
+    }
+    console.log("\nResult:", res.text)
 
-        const text = res.text.replace(`${ALIAS} `, "")
+    const text = res.text.replace(`${ALIAS} `, "")
 
-        const c = commands[text]
-        c && c()
-    } else {/* Partial */}
+    const c = commands[text]
+    c && c()
+  } else {/* Partial */}
 })
 ```
 
@@ -519,25 +514,25 @@ micStream.on("data", (data) => {
 const ALIAS = "жаба"
 
 const commands = {
-    "пауза": handlePause,
-    "играй": handlePlay,
-    "дальше": handleNext,
-    "назад": handlePrev,
-    "свет": handleLampToggle,
-    "зелёный свет": () => handleLightState({
-        on: true, r: 0, g: 255, b: 0,
-    }),
+  "пауза": handlePause,
+  "играй": handlePlay,
+  "дальше": handleNext,
+  "назад": handlePrev,
+  "свет": handleLampToggle,
+  "зелёный свет": () => handleLightState({
+    on: true, r: 0, g: 255, b: 0,
+  }),
 }
 ```
 
 ```js
 function run(cmd) {
-    return new Promise((resolve, reject) => {
-        exec(cmd, {shell: true}, (err, stdout, stderr) => {
-            if (err) return reject({err, stderr})
-            resolve(stdout)
-        })
-    })
+  return new Promise((resolve, reject) => {
+    exec(cmd, {shell: true}, (err, stdout, stderr) => {
+      if (err) return reject({err, stderr})
+        resolve(stdout)
+      })
+  })
 }
 
 const handlePause = () => run("mpc pause")
@@ -550,13 +545,13 @@ const handleNext = () => run("mpc next")
 const SERVER = "http://0.0.0.0:3000"
 
 const handleLampToggle = async () => {
-    await fetch(SERVER + "/lamp/toggle")
+  await fetch(SERVER + "/lamp/toggle")
 }
 
 const handleLightState = async (data) => {
-    await fetch(SERVER + "/led/state", {
-        method: "post", body: JSON.stringify(data),
-    })
+  await fetch(SERVER + "/led/state", {
+    method: "post", body: JSON.stringify(data),
+  })
 }
 ```
 
@@ -796,8 +791,8 @@ pinMode(LED_PIN, "output");
 var on = false;
 
 setInterval(function () {
-    digitalWrite(LED_PIN, on);
-    on = !on;
+  digitalWrite(LED_PIN, on);
+  on = !on;
 }, 500);
 ```
 
@@ -884,14 +879,14 @@ transition: slide-left
 let state = false
 
 const server = http.createServer(async (req, res) => {
-    switch (req.url) {
-        case "/lamp/state":
-            reply(res, 200, state ? "1" : "0")
-            break
-        case·"/lamp/toggle":
-            state = !state
-            reply(res, 200, state ? "1" : "0")
-    }
+  switch (req.url) {
+    case "/lamp/state":
+      reply(res, 200, state ? "1" : "0")
+      break
+    case·"/lamp/toggle":
+      state = !state
+      reply(res, 200, state ? "1" : "0")
+  }
 })
 ```
 
@@ -900,14 +895,14 @@ const server = http.createServer(async (req, res) => {
 pinMode(RELAY_PIN, "output");
 
 function update() {
-    httpGet(BASE_URL, "/lamp", function (_, _, body) {
-        if (body === "1") {
-            digitalWrite(RELAY_PIN, 1);
-        } else {
-            digitalWrite(RELAY_PIN, 0);
-        }
-    });
-    setTimeout(function() { update(); }, 400);
+  httpGet(BASE_URL, "/lamp", function (_, _, body) {
+    if (body === "1") {
+      digitalWrite(RELAY_PIN, 1);
+    } else {
+      digitalWrite(RELAY_PIN, 0);
+    }
+  });
+  setTimeout(function() { update(); }, 400);
 }
 ```
 
@@ -960,13 +955,13 @@ layout: code
 let state = false
 
 const server = http.createServer(async (req, res) => {
-    switch (req.url) {
-        case·"/lamp/toggle":
-            state = !state
-            const endpoint = state ? "1" : "0"
-            await fetch(`${DEVICE_IP}/${endpoint}`)
-            res.end(body)
-    }
+  switch (req.url) {
+    case·"/lamp/toggle":
+      state = !state
+      const endpoint = state ? "1" : "0"
+      await fetch(`${DEVICE_IP}/${endpoint}`)
+      res.end(body)
+  }
 })
 ```
 
@@ -975,13 +970,13 @@ const server = http.createServer(async (req, res) => {
 pinMode(RELAY_PIN, "output");
 
 const server = http.createServer(function (req, res) {
-    if (req.url === "/1") {
-        digitalWrite(RELAY_PIN, 1);
-        res.end("ACK: ON");
-    } else if (req.url === "/0") {
-        digitalWrite(RELAY_PIN, 0);
-        res.end("ACK: OFF");
-    }
+  if (req.url === "/1") {
+    digitalWrite(RELAY_PIN, 1);
+    res.end("ACK: ON");
+  } else if (req.url === "/0") {
+    digitalWrite(RELAY_PIN, 0);
+    res.end("ACK: OFF");
+  }
 });
 ```
 
@@ -1230,7 +1225,7 @@ preload: false
 <v-clicks>
 
 - Переменный ток <span class="orange">(</span>AC<span class="orange">),</span> который меняет полярность<br>50 раз в секунду <span class="orange">(</span>Гц<span class="orange">)</span>
-- Напряжение <span class="orange">~</span>230 V
+- <span class="orange">~</span>230 V
 
 </v-clicks>
 
@@ -1294,7 +1289,7 @@ video: /vids/diode.mp4
 
 <v-clicks>
 
-- Диод пропускает электричесткий ток только в одном направлении
+- Пропускает ток только в одном направлении
 - Некоторые диоды при прохождении тока светятся
 - <span class="orange">~</span> Клапан
 
@@ -1592,8 +1587,8 @@ pinMode(LED_PIN, "output");
 var on = false;
 
 setInterval(function () {
-    digitalWrite(LED_PIN, on);
-    on = !on;
+  digitalWrite(LED_PIN, on);
+  on = !on;
 }, 1000);
 ```
 
@@ -1606,8 +1601,8 @@ pinMode(LED_PIN, "output");
 var on = false;
 
 setInterval(function () {
-    digitalWrite(LED_PIN, on);
-    on = !on;
+  digitalWrite(LED_PIN, on);
+  on = !on;
 }, 1000);
 ```
 
@@ -1793,10 +1788,10 @@ pinMode(LED_PIN, "output");
 var brightness = 0.5;
 
 setInterval(function () {
-    analogWrite(
-        LED_PIN,
-        brightness,
-    );
+  analogWrite(
+    LED_PIN,
+    brightness,
+  );
 }, 500);
 ```
 
@@ -1934,17 +1929,17 @@ layout: code
 
 ```js
 // DEVICE
-I2C1.setup({sda: A4, scl: A5});
+I2C1.setup({ sda: A4, scl: A5 });
 
 var g = require("SSD1306").connect(I2C1, 0x3C, function()
 {
-    g.clear();
-    g.flip();
+  g.clear();
+  g.flip();
 
-    g.drawRect(90, 0, 127, 31);
-    g.fillRect(90, 34, 127, 63);
+  g.drawRect(90, 0, 127, 31);
+  g.fillRect(90, 34, 127, 63);
 
-    g.flip();
+  g.flip();
 });
 ```
 
